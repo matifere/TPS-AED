@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.3)  3 SEP 2024 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.3)  3 SEP 2024 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,6 +405,30 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 52.
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 52.
 
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.61 		$ \}}
+            
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 61.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 61.
+
+! Extra \right.
+<argument> ...DeCiudades[i]_{0} \right )} \right )
+                                                   $ \}
+l.61 		$ \}}
+            
+I'm ignoring a \right that had no matching \left.
+
 
 Package caption Warning: Unused \captionsetup[sub] on input line 7.
 See the caption package documentation for explanation.
@@ -438,7 +462,7 @@ msfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsro
 m10.pfb>
-Output written on TP1.pdf (2 pages, 497252 bytes).
+Output written on TP1.pdf (2 pages, 498627 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
