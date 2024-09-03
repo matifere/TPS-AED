@@ -45,11 +45,21 @@
 \subsection{grandesCiudades}
 
 \begin{proc}{grandesCiudades}{\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } %la macros no anda muy bien y no genera los corchetes
-    \requiere{\{   \(\|ciudades\| > 0\) \implica \paraTodo[unalinea]{i}{\nat}{0<i \leq \| ciudades \|}\}}
-    \asegura{\{ res \}}
-\end{proc} \}
+    \requiere{\{\True\}}
+    \asegura{\{ $ \existe{i}{\ent}{ 
+    		\left( 0 \leq i \textless |ciudades| \right) \wedge
+    		 \left( \left( ciudades[i] \in res \right) \implicaLuego \left( ciudades[i]_{1} \textgreater 50000 \right)  \right)
+    		} $ \}}
+\end{proc} \} %aca lo mismo que antes
 
+\subsection{sumaDeHabitantes}
 
+\begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } 
+	\requiere{\{TODO\}}
+	\asegura{\{ 
+		TODO
+		 \}}
+\end{proc} \} 
 
 
 
