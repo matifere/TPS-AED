@@ -57,16 +57,45 @@
 \begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } 
 	\requiere{\{ 
 		$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right) \yLuego \left( \paraTodo{i,j}{\ent_{\geq 0}}{ 0 \leq i,j < |menoresDeCiudades| \wedge menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }  \right) $
-.		\}} 
+		\}} 
 	\asegura{\{ 
-		\paraTodo{m,n}{\ent}{ 0 \leq m,n < |menoresDeCiudades| $\wedge$ $\left( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} \right) \wedge \\ \left( \langle menoresDeCiudades[n]_{0}, menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \rangle \in \res \right)$}
+		\paraTodo{m,n}{\ent}{ $\left 
+			( 0 \leq m,n < |menoresDeCiudades| 
+			\right)$  $\wedge$
+			 $\left(
+			  menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
+			  \right) 
+			  \wedge \\ 
+			  \left( \langle menoresDeCiudades[n]_{0}, menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \rangle \in \res 
+			  \right)$}
 		 \}}
 \end{proc} \}
 
+\subsection{hayCamino}
 
+\begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
+	\requiere{\{ \True\}}
+	\asegura{\{\True\}}
+	\}
+\end{proc}
 
+\subsection{cantidadCaminosNSaltos}
 
+\begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
+	\requiere{\{ \True\}}
+	\asegura{\{\True\}}
+	\}
+\end{proc}
 
+\subsection{caminoMinimo}
+
+\begin{proc}{hayCamino}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
+	\requiere{\{ \True\}}
+	\asegura{\{\True\}}
+	\}
+\end{proc}
+
+\section{Demostraciones de correctitud}
 
 
 
