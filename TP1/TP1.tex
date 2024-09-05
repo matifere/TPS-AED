@@ -74,7 +74,7 @@
 \subsection{hayCamino}
 
 \begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
-	\requiere{\{ \True\}}
+	\requiere{\{ (\paraTodo{i,j}{\ent}{ $\left( 0 \leq i,j,desde,hasta < \sqrt{\text{distancias.Length}} \right)$ $\yLuego$ $\left( \left( i = j\right) \longrightarrow \left( distancias[i][j] = 0 \right) \right)$ $\wedge$ $\left( distancias[i][j] = distancias[j][i] \right)$} \}}
 	\asegura{\{\True\}}
 	\}
 \end{proc}
@@ -90,7 +90,7 @@
 \subsection{caminoMinimo}
 
 \begin{proc}{hayCamino}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
-	\requiere{\{ \True\}}
+	\requiere{\{ \True \}}
 	\asegura{\{\True\}}
 	\}
 \end{proc}
