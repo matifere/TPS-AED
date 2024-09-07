@@ -80,12 +80,12 @@
 	
 	    \asegura{
 		\{ 
-		\res = \True \leftrightarrow 
+		\res = \True \ \leftrightarrow 
 		\existe{p}{\TLista{\ent}}{
 			$\left( p[0]=desde \right)$
 			$\wedge$
 			$\left( p[|p|-1]=hasta \right)$
-			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-1 \right)$  $\rightarrow$ distancias[p[k]][p[k+1]]\textgreater 0}}
+			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-1 \right)$  $\rightarrow$$\left( distancias[p[k]][p[k+1]]\textgreater 0 \right)$}}
 		\}
 	}
 	\}
@@ -101,7 +101,7 @@
 
 \subsection{caminoMinimo}
 
-\begin{proc}{hayCamino}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
+\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
 	\requiere{\{ \True \}}
 	\asegura{\{\True\}}
 	\}
