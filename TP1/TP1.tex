@@ -77,7 +77,7 @@
 	\requiere{\{ (\paraTodo{i,j}{\ent}{ $\left( 0 \leq i,j,desde,hasta < \sqrt{ |distancias| } \right)$ $\yLuego$ $\left( \left( i = j\right) \longrightarrow \left( distancias[i][j] = 0 \right) \right)$ $\wedge$ $\left( distancias[i][j] = distancias[j][i] \right)$} \}}
 	
 	%HAY QUE PREGUNTAR EL TEMA DEL LARGO DE LA MATRIZ
-	
+	%cambie el rango de k para que no se rompa (no estoy seguro de que tenga que ser asi)
 	    \asegura{
 		\{ 
 		\res = \True \ \leftrightarrow 
@@ -85,7 +85,7 @@
 			$\left( p[0]=desde \right)$
 			$\wedge$
 			$\left( p[|p|-1]=hasta \right)$
-			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-1 \right)$  $\rightarrow$$\left( distancias[p[k]][p[k+1]]\textgreater 0 \right)$}}
+			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-2 \right)$  $\rightarrow$$\left( distancias[p[k]][p[k+1]]\textgreater 0 \right)$}}
 		\}
 	}
 	\}
