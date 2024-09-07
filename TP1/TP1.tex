@@ -74,8 +74,20 @@
 \subsection{hayCamino}
 
 \begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
-	\requiere{\{ (\paraTodo{i,j}{\ent}{ $\left( 0 \leq i,j,desde,hasta < \sqrt{\text{distancias.Length}} \right)$ $\yLuego$ $\left( \left( i = j\right) \longrightarrow \left( distancias[i][j] = 0 \right) \right)$ $\wedge$ $\left( distancias[i][j] = distancias[j][i] \right)$} \}}
-	\asegura{\{\True\}}
+	\requiere{\{ (\paraTodo{i,j}{\ent}{ $\left( 0 \leq i,j,desde,hasta < \sqrt{ |distancias| } \right)$ $\yLuego$ $\left( \left( i = j\right) \longrightarrow \left( distancias[i][j] = 0 \right) \right)$ $\wedge$ $\left( distancias[i][j] = distancias[j][i] \right)$} \}}
+	
+	%HAY QUE PREGUNTAR EL TEMA DEL LARGO DE LA MATRIZ
+	
+	    \asegura{
+		\{ 
+		\res = \True \leftrightarrow 
+		\existe{p}{\TLista{\ent}}{
+			$\left( p[0]=desde \right)$
+			$\wedge$
+			$\left( p[|p|-1]=hasta \right)$
+			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-1 \right)$  $\rightarrow$ distancias[p[k]][p[k+1]]\textgreater 0}}
+		\}
+	}
 	\}
 \end{proc}
 
