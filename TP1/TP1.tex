@@ -91,17 +91,31 @@
 			\left( p[0] = desde \right) \wedge
 			\left( p[|p|-1] = hasta \right) \wedge
 			\paraTodo{k}{\ent}{ 
-				(0 \leq k < |p|-1) \longrightarrow (distancias[p[k]][p[k+1]] > 0)
+				(0 \leq k < |p|-2) \yLuego (distancias[p[k]][p[k+1]] > 0)
 			}
 		}\}}
 \end{proc}
 
 
 \}
-\end{proc}
+
 
 \subsection{cantidadCaminosNSaltos}
+\paragraph{Para la siguiente especificación tendremos en cuenta que:}{Dada la matriz de orden 1:}
 
+\[
+M_{1} = \begin{bmatrix} 0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0 \end{bmatrix} \]
+\text{Si queremos encontrar la matriz $M_{2}$ de orden 2, nos queda que:}\\
+\[
+M_{2} = M_{1} \times M_{1} =
+\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
+\times
+\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
+=
+\begin{bmatrix}	1 & 0 & 1 \\	0 & 2 & 0 \\	1 & 0 & 1\end{bmatrix}
+\]
+
+\text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
 \begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
 \requiere{\{ \True\}}
 \asegura{\{\True\}}
