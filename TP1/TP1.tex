@@ -44,71 +44,78 @@
 
 \subsection{grandesCiudades}
 
-\begin{proc}{grandesCiudades}{\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } %la macros no anda muy bien y no genera los corchetes
-    \requiere{\{\True\}}
-    \asegura{\{ $ \paraTodo{i}{\ent}{ %no estoy muy seguro de si aca va un para todo o un existe
-    		\left( 0 \leq i \textless |ciudades| \right) \wedge
-    		 \left( \left( ciudades[i] \in \res \right) \implicaLuego \left( ciudades[i]_{1} \textgreater 50000 \right)  \right)
-    		} $ \}}
-\end{proc} \} %aca lo mismo que antes
+\begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } 
+	\requiere{\{\True\}}
+	\asegura{\{ $ \paraTodo{i}{\ent}{
+			\left( 0 \leq i \textless |ciudades| \right) \yLuego
+			\left( \left( ciudades[i] \in \res \right) \implicaLuego \left( ciudades[i]_{1} \textgreater 50000 \right)  \right)
+		} $ \}}
+\end{proc} \} 
 
 \subsection{sumaDeHabitantes}
 
-\begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } 
-	\requiere{\{ 
-		$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right) \yLuego \left( \paraTodo{i,j}{\ent_{\geq 0}}{ 0 \leq i,j < |menoresDeCiudades| \wedge menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }  \right) $
-		\}} 
-	\asegura{\{ 
-		\paraTodo{m,n}{\ent}{ $\left 
-			( 0 \leq m,n < |menoresDeCiudades| 
-			\right)$  $\wedge$
-			 $\left(
-			  menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
-			  \right) 
-			  \wedge \\ 
-			  \left( \langle menoresDeCiudades[n]_{0}, menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \rangle \in \res 
-			  \right)$}
-		 \}}
-\end{proc} \}
+\begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}} 
+	{\TLista{Ciudad}\{ }
+	\requiere{\{$(|menoresDeCiudades| = |mayoresDeCiudades|)$\}} 
+	\asegura{\{\paraTodo{n,m}{\ent}{ $\left 
+			(0 \leq n,m < |menoresDeCiudades| 
+			\right)$  $\yLuego$
+			$\left(
+			( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
+			\right) 
+			\wedge \\ 
+			( ciudades[n] \in \res)
+			\implicaLuego ( \left( ciudades[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( ciudades[n]_{0} = menoresDeCiudades[n]_{0} \right)  
+			)$}\}} 
+\end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
 
 \subsection{hayCamino}
 
 \begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
-	\requiere{\{ (\paraTodo{i,j}{\ent}{ $\left( 0 \leq i,j,desde,hasta < \sqrt{ |distancias| } \right)$ $\yLuego$ $\left( \left( i = j\right) \longrightarrow \left( distancias[i][j] = 0 \right) \right)$ $\wedge$ $\left( distancias[i][j] = distancias[j][i] \right)$} \}}
-	
-	%HAY QUE PREGUNTAR EL TEMA DEL LARGO DE LA MATRIZ
-	%cambie el rango de k para que no se rompa (no estoy seguro de que tenga que ser asi)
-	    \asegura{
-		\{ 
-		\res = \True \ \leftrightarrow 
-		\existe{p}{\TLista{\ent}}{
-			$\left( p[0]=desde \right)$
-			$\wedge$
-			$\left( p[|p|-1]=hasta \right)$
-			$\wedge$ \paraTodo{k}{\ent}{ \ \ \ \ \ \  $\left( 0 \leq k < |p|-2 \right)$  $\rightarrow$$\left( distancias[p[k]][p[k+1]]\textgreater 0 \right)$}}
+	\requiere{
+		\{
+		\paraTodo{i,j}{\ent}{
+			\left( 0 \leq i,j,desde,hasta < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
+		}
 		\}
 	}
-	\}
+	
+	\asegura{\{ 
+		\res = \True \ \leftrightarrow 
+		\existe{p}{\TLista{\ent}}{
+			\left( p[0] = desde \right) \wedge
+			\left( p[|p|-1] = hasta \right) \wedge
+			\paraTodo{k}{\ent}{ 
+				(0 \leq k < |p|-1) \longrightarrow (distancias[p[k]][p[k+1]] > 0)
+			}
+		}\}}
+\end{proc}
+
+
+\}
 \end{proc}
 
 \subsection{cantidadCaminosNSaltos}
 
 \begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
-	\requiere{\{ \True\}}
-	\asegura{\{\True\}}
-	\}
+\requiere{\{ \True\}}
+\asegura{\{\True\}}
+\}
 \end{proc}
 
 \subsection{caminoMinimo}
 
 \begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
-	\requiere{\{ \True \}}
-	\asegura{\{\True\}}
-	\}
+\requiere{\{ \True \}}
+\asegura{\{\True\}}
+\}
 \end{proc}
 
 \section{Demostraciones de correctitud}
 
+
+
+\end{document}
 
 
 \end{document}
