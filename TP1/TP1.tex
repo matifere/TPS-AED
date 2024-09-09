@@ -56,7 +56,12 @@
 
 \begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}} 
 	{\TLista{Ciudad}\{ }
-	\requiere{\{$(|menoresDeCiudades| = |mayoresDeCiudades|)$\}} 
+    \requiere{\{ 
+    	$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
+    	\yLuego 
+    	\left( \paraTodo{i,j}{\ent_{\geq 0}}{ 0 \leq i,j < |menoresDeCiudades| \wedge menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }  \right) $
+    	\}}
+
 	\asegura{\{\paraTodo{n,m}{\ent}{ $\left 
 			(0 \leq n,m < |menoresDeCiudades| 
 			\right)$  $\yLuego$
@@ -65,7 +70,7 @@
 			\right) 
 			\wedge \\ 
 			( ciudades[n] \in \res)
-			\implicaLuego ( \left( ciudades[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( ciudades[n]_{0} = menoresDeCiudades[n]_{0} \right)  
+			\longrightarrow ( \left( ciudades[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( ciudades[n]_{0} = menoresDeCiudades[n]_{0} \right)  
 			)$}\}} 
 \end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
 

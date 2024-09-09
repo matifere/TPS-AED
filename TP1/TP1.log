@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.9)  9 SEP 2024 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.9)  9 SEP 2024 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,10 +428,28 @@ LaTeX Warning: Command \textgreater invalid in math mode on input line 52.
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 52.
 
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.63     	\}}
+             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \right.
+<argument> ... mayoresDeCiudades[j]_{0} } \right )
+                                                   $ \}
+l.63     	\}}
+             
+I'm ignoring a \right that had no matching \left.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.69 			)$}\}}
+l.74 			)$}\}}
               
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -443,7 +461,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 			)$}\}}
+l.74 			)$}\}}
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -455,7 +473,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 			)$}\}}
+l.74 			)$}\}}
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -467,7 +485,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 			)$}\}}
+l.74 			)$}\}}
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -475,7 +493,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.69 			)$}\}}
+l.74 			)$}\}}
               
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -486,7 +504,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.91 		}\}}
+l.96 		}\}}
            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -494,7 +512,7 @@ you left one out. Proceed, with fingers crossed.
 ! Extra }, or forgotten $.
 \\asegura ...\ {\normalfont \ttfamily #1} :}\ {#2}
                                                   {\normalfont \bfseries \,\...
-l.91 		}\}}
+l.96 		}\}}
            
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -509,14 +527,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 		}\}}
+l.96 		}\}}
            
 Please use the math alphabet \mathbf instead of the \bfseries command. 
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.91 		}\}}
+l.96 		}\}}
            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -524,7 +542,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.91 		}\}}
+l.96 		}\}}
            
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -539,8 +557,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96 \end{proc}
-               
+l.101 \end{proc}
+                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -548,8 +566,8 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.96 \end{proc}
-               
+l.101 \end{proc}
+                
 Things are pretty mixed up, but I think the worst is over.
 
 
@@ -570,7 +588,7 @@ L3 programming layer <2024-08-16>
 Here is how much of TeX's memory you used:
  7338 strings out of 473899
  121256 string characters out of 5726501
- 1936960 words of memory out of 5000000
+ 1937960 words of memory out of 5000000
  30140 multiletter control sequences out of 15000+600000
  562003 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -587,11 +605,12 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/
 javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 ><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 msy10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmtt10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/doublestroke/dsrom10.pfb>
-Output written on TP1.pdf (2 pages, 512681 bytes).
+onts/cm/cmsy7.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmtt10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/doublestroke/dsrom10.pfb>
+Output written on TP1.pdf (2 pages, 521501 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
