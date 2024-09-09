@@ -105,7 +105,7 @@
 
 \[
 M_{1} = \begin{bmatrix} 0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0 \end{bmatrix} \]
-\text{Si queremos encontrar la matriz $M_{2}$ de orden 2, nos queda que:}\\
+\text{ \ \ \ \ Si queremos encontrar la matriz $M_{2}$ de orden 2, nos queda que:}\\
 \[
 M_{2} = M_{1} \times M_{1} =
 \begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
@@ -116,8 +116,15 @@ M_{2} = M_{1} \times M_{1} =
 \]
 
 \text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
+
 \begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
-\requiere{\{ \True\}}
+\requiere{
+	\{ $n>0 \ \wedge$
+	\paraTodo{i,j}{\ent}{
+		\left( 0 \leq i,j < |conexión| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( conexión[i][j] = 0 \right) \right) \wedge \left( conexión[i][j] = conexión[j][i] \right) \ $\wedge$ $\left($ 0 \leq conexión[i[j] \leq 1 ] $\right)$
+	}
+	\}
+}
 \asegura{\{\True\}}
 \}
 \end{proc}
