@@ -91,7 +91,7 @@
 			\left( p[0] = desde \right) \wedge
 			\left( p[|p|-1] = hasta \right) \wedge
 			\paraTodo{k}{\ent}{ 
-				(0 \leq k < |p|-2) \yLuego (distancias[p[k]][p[k+1]] > 0)
+				(0 \leq k < |p|-1) \yLuego (distancias[p[k]][p[k+1]] > 0)
 			}
 		}\}}
 \end{proc}
@@ -116,7 +116,7 @@ M_{2} = M_{1} \times M_{1} =
 \]
 
 \text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
-
+\\
 \begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
 \requiere{
 	\{ $n>0 \ \wedge$
@@ -125,9 +125,15 @@ M_{2} = M_{1} \times M_{1} =
 	}
 	\}
 }
-\asegura{\{\True\}}
+\asegura{\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{\paraTodo{i,j,k}{\ent}{\left( 0 \leq k < n-1 \right) \wedge \left( 0 \leq i,j < n \right) \yLuego \left( p[k] = \text{conexión} \right) \yLuego \\ \left( \text{conexión}[i][j] = multEntreMatrices(p[k], p[k+1]) \right)}} \}}
 \}
+
 \end{proc}
+
+\aux{multEntreMatrices}{mUno : \TLista{\TLista{\ent}}, mDos : \TLista{\TLista{\ent}}}{\ent}{ \paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |mUno| \right) \yLuego \sum_{k=1}^{|mUno|} mUno[i][k] \times mDos[k][j]} }
+
+
+
 
 \subsection{caminoMinimo}
 
