@@ -151,17 +151,19 @@ M_{2} = M_{1} \times M_{1} =
 \} \\
 
 
-\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, p : \TLista{\ent}}{
-    (\paraTodo{k}{\ent}{ 0 $\leq$ i, j, origen, destino $ < |p|$} \yLuego distancias[p[k]][p[k + 1]])
+\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, p : \TLista{\ent}}{\{ 
+    \paraTodo{k}{\ent}{ (0 $\leq$ i, j, origen, destino $ < |p|$) \yLuego distancias[p[k]][p[k + 1]] } \\ \}
 }
-\\\aux{sumaDistancias}{distancias : \TLista{\TLista{\ent}, origen : \ent, destino : \ent, s : \TLista{\ent}}}{\ent}\\{$\sum_{j = origen}^{destino} distancias[j][j + 1]$}
+
+\aux{sumaDistancias}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, s : \TLista{\ent}}{\ent}{$\sum_{j = origen}^{destino} \text{distancias}[j][j + 1]$}
 
 
+\end{proc}
 \section{Demostraciones de correctitud}
 
 
 
-\end{document}
+
 
 
 \end{document}
