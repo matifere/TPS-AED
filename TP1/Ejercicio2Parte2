@@ -1,0 +1,16 @@
+
+\subsection{Ejercicio 2.2}
+
+Para demostrar que \text{res > 50000} vamos a probar la correctitud del programa redefiniendo la poscondición y a su vez el invariante.
+
+Redefinimos:
+
+\begin{equation}
+    \begin{align}
+    Q_{c}= &\equiv \{ i = |ciudades| \land \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[j].habitantes \width res>50000\} \\
+    & \text{Por teorema del Invariante entonces tenemos que reforzar el Invariante, ya que:} \\
+    & I \wedge \; \neg B \implica Q_{c} \\
+    \vspace{0.3cm}
+    I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge res[i] + k>50000\}
+    \end{align}
+\end{equation}
