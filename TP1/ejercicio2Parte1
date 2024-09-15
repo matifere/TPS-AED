@@ -220,7 +220,7 @@ Por el \textbf{Axioma 2}:
 
 \vspace{0.3cm}
 
-\item Para demostrar P_{c} \implica \textit{wp} {S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ \textbf{Teorema del Invariante y Teorema de Terminación}
+\item Para demostrar P_{c} \implica \textit{wp} \{{S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ \textbf{Teorema del Invariante y Teorema de Terminación}
 
 
 \end{itemize}
