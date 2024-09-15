@@ -1,0 +1,380 @@
+
+\documentclass{article}
+\usepackage[spanish,activeacute,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{dsfont}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage[strict]{changepage}
+\usepackage[top=1cm,bottom=2cm,left=1cm,right=1cm]{geometry}%
+\usepackage{color}%
+\usepackage{amssymb}
+
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\begin{document}
+
+\newcommand{\tocarEspacios}{%
+	\addtolength{\leftskip}{3em}%
+	\setlength{\parindent}{0em}%
+}
+
+% Especificacion de procs
+
+\newcommand{\In}{\textsf{in }}
+\newcommand{\Out}{\textsf{out }}
+\newcommand{\Inout}{\textsf{inout }}
+
+\newcommand{\encabezadoDeProc}[4]{%
+	% Ponemos la palabrita problema en tt
+	%  \noindent%
+	{\normalfont\bfseries\ttfamily proc}%
+	% Ponemos el nombre del problema
+	\ %
+	{\normalfont\ttfamily #2}%
+	\
+	% Ponemos los parametros
+	(#3)%
+	\ifthenelse{\equal{#4}{}}{}{%
+		% Por ultimo, va el tipo del resultado
+		\ : #4}
+}
+
+\newenvironment{proc}[4][res]{%
+	
+	% El parametro 1 (opcional) es el nombre del resultado
+	% El parametro 2 es el nombre del problema
+	% El parametro 3 son los parametros
+	% El parametro 4 es el tipo del resultado
+	% Preambulo del ambiente problema
+	% Tenemos que definir los comandos requiere, asegura, modifica y aux
+	\newcommand{\requiere}[2][]{%
+		{\normalfont\bfseries\ttfamily requiere}%
+		\ifthenelse{\equal{##1}{}}{}{\ {\normalfont\ttfamily ##1} :}\ %
+		\{\ensuremath{##2}\}%
+		{\normalfont\bfseries\,\par}%
+	}
+	\newcommand{\asegura}[2][]{%
+		{\normalfont\bfseries\ttfamily asegura}%
+		\ifthenelse{\equal{##1}{}}{}{\ {\normalfont\ttfamily ##1} :}\
+		\{\ensuremath{##2}\}%
+		{\normalfont\bfseries\,\par}%
+	}
+	\renewcommand{\aux}[4]{%
+		{\normalfont\bfseries\ttfamily aux\ }%
+		{\normalfont\ttfamily ##1}%
+		\ifthenelse{\equal{##2}{}}{}{\ (##2)}\ : ##3\, = \ensuremath{##4}%
+		{\normalfont\bfseries\,;\par}%
+	}
+	\renewcommand{\pred}[3]{%
+		{\normalfont\bfseries\ttfamily pred }%
+		{\normalfont\ttfamily ##1}%
+		\ifthenelse{\equal{##2}{}}{}{\ (##2) }%
+		\{%
+		\begin{adjustwidth}{+5em}{}
+			\ensuremath{##3}
+		\end{adjustwidth}
+		\}%
+		{\normalfont\bfseries\,\par}%
+	}
+	
+	\newcommand{\res}{#1}
+	\vspace{1ex}
+	\noindent
+	\encabezadoDeProc{#1}{#2}{#3}{#4}
+	% Abrimos la llave
+	\par%
+	\tocarEspacios
+}
+{
+	% Cerramos la llave
+	\vspace{1ex}
+}
+
+\newcommand{\aux}[4]{%
+	{\normalfont\bfseries\ttfamily\noindent aux\ }%
+	{\normalfont\ttfamily #1}%
+	\ifthenelse{\equal{#2}{}}{}{\ (#2)}\ : #3\, = \ensuremath{#4}%
+	{\normalfont\bfseries\,;\par}%
+}
+
+\newcommand{\pred}[3]{%
+	{\normalfont\bfseries\ttfamily\noindent pred }%
+	{\normalfont\ttfamily #1}%
+	\ifthenelse{\equal{#2}{}}{}{\ (#2) }%
+	\{%
+	\begin{adjustwidth}{+2em}{}
+		\ensuremath{#3}
+	\end{adjustwidth}
+	\}%
+	{\normalfont\bfseries\,\par}%
+}
+
+% Tipos
+
+\newcommand{\nat}{\ensuremath{\mathds{N}}}
+\newcommand{\ent}{\ensuremath{\mathds{Z}}}
+\newcommand{\float}{\ensuremath{\mathds{R}}}
+\newcommand{\bool}{\ensuremath{\mathsf{Bool}}}
+\newcommand{\cha}{\ensuremath{\mathsf{Char}}}
+\newcommand{\str}{\ensuremath{\mathsf{String}}}
+
+% Logica
+
+\newcommand{\True}{\ensuremath{\mathrm{true}}}
+\newcommand{\False}{\ensuremath{\mathrm{false}}}
+\newcommand{\Then}{\ensuremath{\rightarrow}}
+\newcommand{\Iff}{\ensuremath{\leftrightarrow}}
+\newcommand{\implica}{\ensuremath{\longrightarrow}}
+\newcommand{\IfThenElse}[3]{\ensuremath{\mathsf{if}\ #1\ \mathsf{then}\ #2\ \mathsf{else}\ #3\ \mathsf{fi}}}
+\newcommand{\yLuego}{\land _L}
+\newcommand{\oLuego}{\lor _L}
+\newcommand{\implicaLuego}{\implica _L}
+
+\newcommand{\cuantificador}[5]{%
+	\ensuremath{(#2 #3: #4)\ (%
+		\ifthenelse{\equal{#1}{unalinea}}{
+			#5
+		}{
+			$ % exiting math mode
+			\begin{adjustwidth}{+2em}{}
+				$#5$%
+			\end{adjustwidth}%
+			$ % entering math mode
+		}
+		)}
+}
+
+\newcommand{\existe}[4][]{%
+	\cuantificador{#1}{\exists}{#2}{#3}{#4}
+}
+\newcommand{\paraTodo}[4][]{%
+	\cuantificador{#1}{\forall}{#2}{#3}{#4}
+}
+
+%listas
+
+\newcommand{\TLista}[1]{\ensuremath{seq \langle #1\rangle}}
+\newcommand{\lvacia}{\ensuremath{[\ ]}}
+\newcommand{\lv}{\ensuremath{[\ ]}}
+\newcommand{\longitud}[1]{\ensuremath{|#1|}}
+\newcommand{\cons}[1]{\ensuremath{\mathsf{addFirst}}(#1)}
+\newcommand{\indice}[1]{\ensuremath{\mathsf{indice}}(#1)}
+\newcommand{\conc}[1]{\ensuremath{\mathsf{concat}}(#1)}
+\newcommand{\cab}[1]{\ensuremath{\mathsf{head}}(#1)}
+\newcommand{\cola}[1]{\ensuremath{\mathsf{tail}}(#1)}
+\newcommand{\sub}[1]{\ensuremath{\mathsf{subseq}}(#1)}
+\newcommand{\en}[1]{\ensuremath{\mathsf{en}}(#1)}
+\newcommand{\cuenta}[2]{\mathsf{cuenta}\ensuremath{(#1, #2)}}
+\newcommand{\suma}[1]{\mathsf{suma}(#1)}
+\newcommand{\twodots}{\ensuremath{\mathrm{..}}}
+\newcommand{\masmas}{\ensuremath{++}}
+\newcommand{\matriz}[1]{\TLista{\TLista{#1}}}
+\newcommand{\seqchar}{\TLista{\cha}}
+
+\renewcommand{\lstlistingname}{Código}
+\lstset{% general command to set parameter(s)
+	language=Java,
+	morekeywords={endif, endwhile, skip},
+	basewidth={0.47em,0.40em},
+	columns=fixed, fontadjust, resetmargins, xrightmargin=5pt, xleftmargin=15pt,
+	flexiblecolumns=false, tabsize=4, breaklines, breakatwhitespace=false, extendedchars=true,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=9pt,
+	frame=l, framesep=3pt,
+	captionpos=b,
+}
+
+\title{EJ 2 TP 1}
+\author{javier esteban}
+\date{September 2024}
+
+\maketitle
+
+\section*{2. Demostraciones de correctitud}
+
+\begin{align}
+\begin{itemize}   
+
+\item \text{Para demostrar la correctitud del programa probamos que:} \\ 
+\{P\}S1;S2;S3;S4\{Q\}\; &\text es válida \\
+\vspace{0.1cm}  \\
+1. P \implica \textit{wp} \{S1;S2;P_{c}\} \\
+2. P_{c} \implica \textit{wp}\{S3,Q_{c}\} \\
+3. Q_{c} \implica \textit{wp} \{S4,Q\} \\
+
+\vspace {0.1cm}
+
+Por \textbf{monotonía} esto permite demostrar que P \implica \textit{wp}\text{\{S1;S2;S3;S4;Q\}} es verdadera por lo cual la Tripla de Hoare es válida.
+
+\vspace{0.3cm}
+
+Elijo Q_{c} = Q
+
+Demuestro:
+Q_{c} \implica \textit{wp}(S4,Q)
+
+Por el \textbf{Axioma 2}:
+\textit{wp}(S4,Q_{c}) &\equiv Q_{c}
+
+\vspace{0.3cm}
+
+\item Para demostrar P_{c} \implica \textit{wp} {S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ \textbf{Teorema del Invariante y Teorema de Terminación}
+
+
+\end{itemize}
+\end{align}
+
+\textbf{Teorema del Invariante:}
+
+Si existe un predicado I tal que:
+\begin{equation}
+    \begin{aligned}
+        
+    1. \, P_{c} \implica I 
+    
+    2. \, \{I \wedge B\} S \{I\}
+    
+
+    3. \, I \wedge \; \neg B \implica Q_{c}
+    \end{aligned}
+\end{equation}
+
+Entonces el ciclo while(B) {\{S\}} es parcialmente correcto respecto de la especificación (Pc , Qc )
+
+\vspace{0.3cm}
+\begin{itemize}
+
+\item{Definimos}
+\begin{align}
+  
+P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \wedge ( \exists i \in \mathbb{Z}\,) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes \geq 50.000 \wedge ciudades[j].habitantes >0 \wedge (0<i<j<|ciudades|) \yLuego ciudades[i].nombre \neq ciudades[j].habitantes   \} \\
+\vspace{0.1cm}
+Q_{c} &\equiv \{ i = |ciudades| \land \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[j].habitantes \} \\
+\vspace{0.1cm}
+B &\equiv \{ I < |ciudades| \} \\
+\vspace{0.1cm}
+I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \} 
+
+\end{itemize}
+\end{align}
+
+
+\begin{equation}
+1. \, Pc \implica I
+\end{equation}
+\begin{itemize}
+    \item $i = 0 \implica 0 \leq 0 \leq |ciudades| \checkmark$
+    \item $\text{res} = 0 \land i = 0 \implica \text{res} = \sum\limits_{j=0}^{0-1}ciudades[j].habitantes = 0$\ $\checkmark$
+\end{itemize}
+
+Pc \implica I es válido \checkmark
+
+\vspace{0.3cm}
+
+Ahora demuestro que:\\
+\vspace{0.3cm}
+2.  {\{I \land B\}} \text{ciclo} {\{{I}\} \implica {I \land B} \implica \textit{wp(ciclo, I)}
+
+\begin{itemize}
+\item 
+$\textit{wp(ciclo, I)}$
+$\equiv \textit{wp}(\textbf{S1; S2}, I) $ \\
+$\equiv \textit{wp}(\textbf{S1},\text{wp}(\textbf{S2,I}) $ \\
+$\equiv \textit{wp}(\textbf{S1};\;\text{i:=i+1}\;,\textit{I})$ \\
+$\equiv \textit{wp}(\text{res:= res + ciudad[j].habitantes};\;(0 \leq i+1 \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i+1-1}ciudades[j].habitantes $ \\
+$ \equiv (0 \leq i+1 \leq |ciudades|) \land \text{res + ciudad[j].habitantes} = \sum\limits_{j=0}^{i}ciudades[j].habitantes $ \\
+$ \equiv (0 \leq i+1 \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i}ciudades[j].habitantes - ciudad[j].habitantes $
+$ \equiv (0 \leq i+1 \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \; \checkmark
+$
+
+\vspace{0.3cm}
+3.  {\{I \land  \neg B\}} \implica\text{Qc}
+
+\begin{equation}
+\text{Se que} \; B= i < |ciudades| \; \text{por lo que} \; \neg B = i \geqslant |ciudades|
+
+\end{equation}
+
+\begin{itemize}
+    \item $(0 \leq i \leq |ciudades|) \longrightarrow i \leq |ciudades| \land i \geqslant |s| \implica i = |s| \checkmark $
+\end{itemize}
+
+
+Por el Teorema del Invariante podemos concluir que
+el ciclo while(B) S es parcialmente correcto respecto de la
+especificación \{Pc, Qc\}
+
+
+\textbf{Teorema de Terminación}
+
+\begin{equation}
+    \begin{align}
+    4. &\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \}\\
+    5. &( I \wedge fv \leq 0) \implica \neg B 
+    \end{align}
+\end{equation}
+
+Elijo como función variante:
+
+\begin{equation}
+{fv}= |ciudades| -i
+\end{equation}
+
+\begin{itemize}
+    \item Verifico 4.
+\end{itemize}
+
+\begin{equation}
+    \begin{align}
+&\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \} \longleftrightarrow \{ I \wedge B \wedge fv= V_{o} \} \implica \textit{wp} (S, fv < V_{o}) \\
+&\textit{wp} (S, fv < V_{o}) \equiv \textit{wp} (res:= res + ciudades[i].habitantes; i:= i+1, |ciudades|-i < V_{o} ) \\
+& \equiv \textit{wp}(res:= res + ciudades[i].habitantes, \textit{wp} (i:i+1; |ciudades|-i < V_{o} )) \\
+& \equiv \textit{wp} (res:= res + ciudades[i].habitantes, |ciudades|-1-i<V_{o} )) \\
+\vspace{0.1cm}
+&\text{Puedo ignorar la res ya que no es relevante en este caso}\\
+& \equiv |ciudades| -1 -i < |ciudades| -i \\
+& -1 < 0 \checkmark
+$$
+    \end{align}
+\end{equation}}
+
+\vspace{0.3cm}
+\begin{itemize}
+    \item Verifico 5.
+\end{itemize}
+
+\begin{equation}
+    \begin{align}
+&( I \wedge fv \leq 0) \implica \neg B \\
+&( I \wedge fv \leq 0) \equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \} \wedge |ciudades| -i \leq 0 \\
+&\text{Ignoro res} \\
+&\equiv i \equiv |ciudades| \wedge |ciudades| \wedge i \ \longleftrightarrow |ciudades| = i \implica \neg (i < |ciudades|) \\
+&\equiv|ciudades| = i \implica (i \geq |ciudades|) \checkmark \\
+$$
+    \end{align}
+\end{equation}}
+
+
+Queda verificado el Teorema de Terminación por lo que podemos concluir que el ciclo termina\\
+Como ambos teoremas se cumplen, \textbf{el ciclo es correcto}.
+\vspace{0.5cm}
+
+\item Luego me falta ver que P \implica \textit{wp} \{S1;S2;P_{c}\}
+
+\begin{equation}
+    \begin{align}
+& P \implica \textit{wp} \{S1;S2;P_{c}\} \equiv \textit{wp} (S1,\textit{wp}(S2,P_{c})) \\
+&\equiv \textit{wp}(S2, P_{c}) \equiv def (i) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \\
+&\equiv \textit{wp}(S1, P_{c})  \equiv def(res) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \equiv P_{c} \\
+& P \implica P_{c}
+    \end{align}
+\end{equation}}
+
+\item Queda demostrado que \textbf{la tripla \{P\}S1;S2;S3;S4\{Q\}\; es válida}
+
+\end{itemize}
+
+
+\end{document}
