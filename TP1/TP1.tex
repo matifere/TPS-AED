@@ -277,7 +277,7 @@ $P_{c}$ \implica \text{I es válido}
 
 Ahora demuestro que:\\
 \vspace{0.3cm}
-2.  {\{I \land B\}} \text{S} {\{{I}\} \implica {I \land B} \implica \textit{wp(S, I)}
+2.  {\{I \land B\}} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \implica \textit{wp(S, I)}
 	
 	\begin{itemize}
 		\item 
@@ -391,6 +391,42 @@ P \longrightarrow P_{c}
 
 \subsection{Demostracion res $>$ 50000}
 
-
+\begin{multiline}
+	\text{Se utiliza la misma definición del ejercicio anterior para $P,B,fv$. Se redefinen:  }\\
+	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} }  \} \\
+	Q &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \wedge res>50000 \} \\
+	\text{Se procede de manera similar al ejercicio anterior probando por monotonía la validez del programa y la tripla de Hoare.} \\
+	\text{Resta chequear la validez del ciclo con el nuevo invariante y postcondicion. } \\
+	\textbf{Teorema del invariante} \\
+	P_{c} \longrightarrow I \\
+	\text{Como se probo en el punto anterior, las implicancias para $0\leq i<|ciudades|$ y $\text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes$ }\\
+	\text{se analiza lo agregado al invariante. Como lo agregado esta presente en $P_{c}$ queda probado trivialmente que  $P_{c} \longrightarrow I$ }\\
+	$\{I \land B\} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \implica \textit{wp(S, I)} $\\
+	\text{Lo agregado al invariante no afecta a la implicancia. Luego vale que: ${I \land B} \implica \textit{wp(S, I)}$}\\
+	\vspace{0.2cm}\\
+	\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
+	\text{$I \wedge \neg B \equiv  0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
+	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge \neg \left( i<|ciudades| \right)$}\\
+	\text{$\equiv 0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
+	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge  i\geq|ciudades| $}\\
+	\text{$\equiv i=|ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
+	\text{$\equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
+	\vspace*{0.3cm}\\
+	\text{Sea $k$ una posición en la sucesión $ciudades$ que cumple con la precondición de tener mas de 50000 habitantes}\\
+	\text{$\sum\limits_{j=0}^{k-2} ciudades[j].habitantes$ Para los elementos a la izquierda de la k-esima posición}\\
+	\text{n para el numero de habitantes de la k-esima posición }\\
+	\text{$\sum\limits_{j=k+1}^{i-1} ciudades[j].habitantes$ Para los elementos a la derecha de la k-esima posición}\\
+	\text{Luego }\\
+	\text{$res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge $}\\
+	\text{$res>50000$}\\
+	\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
+	\text{Las implicancias del teorema de terminación no se ven afectadas por los cambios en el invariante y la postcondicion. Luego siguen siendo validas.}\\
+	\text{Habiendo analizado todos los cambios y siguiendo los razonamientos del ejercicio anterior,}\\ \text{queda demostrado que el resultado devuelto es mayor a 50000}
+	
+	
+\end{multiline}
 
 \end{document}

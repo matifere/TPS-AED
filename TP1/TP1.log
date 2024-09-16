@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.3)  15 SEP 2024 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.3)  15 SEP 2024 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1539,13 +1539,13 @@ and I'll forget about whatever was undefined.
 <inserted text> 
                 $
 l.280 2.  {\{I \land
-                     B\}} \text{S} {\{{I}\} \implica {I \land B} \implica \t...
+                     B\}} \text{S} {\{{I}\} \longleftrightarrow {I \land B} ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 l.280 2.  {\{I \land B\}}
-                          \text{S} {\{{I}\} \implica {I \land B} \implica \t...
+                          \text{S} {\{{I}\} \longleftrightarrow {I \land B} ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1929,6 +1929,481 @@ Underfull \hbox (badness 10000) detected at line 389
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 389.
 
+! LaTeX Error: Environment multiline undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 \begin{multiline}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.396 	I &
+          \equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.396 	I &\equiv
+                 \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.397 	Q &
+          \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habit...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.404 	$\{I \land
+                  B\} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \imp...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.404 ... {I \land B} \implica \textit{wp(S, I)} $
+                                                  \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.407 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.407 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.409 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.411 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.415 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.425 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.425 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.12755pt too wide) in paragraph at lines 396--428
+[] 
+ []
+
+
+Overfull \hbox (95.62097pt too wide) in paragraph at lines 396--428
+[] 
+ []
+
+
+! LaTeX Error: \begin{equation} on input line 380 ended by \end{multiline}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 \end{multiline}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 Package caption Warning: Unused \captionsetup[sub] on input line 7.
 See the caption package documentation for explanation.
 
@@ -1939,7 +2414,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.396 \end{document}
+l.432 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1965,7 +2440,7 @@ Here is how much of TeX's memory you used:
  29325 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 72i,11n,79p,422b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,79p,482b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1982,7 +2457,7 @@ onts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on TP1.pdf (6 pages, 574595 bytes).
+Output written on TP1.pdf (6 pages, 577249 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
