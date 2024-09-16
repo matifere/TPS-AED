@@ -141,7 +141,7 @@ M_{2} = M_{1} \times M_{1} =
 \requiere{\{ \paraTodo{i,j}{\ent}{
 		\left( 0 \leq i,j < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
 		}}}
-\asegura{\{(hayCamino(distancias, origen, destino) \wedge \space (($\forall$k: \TLista{\ent}, $\exists$p: \TLista{\ent})(esCamino(distancias, origen, destino, p) $\wedge$ \\ (sumaDistancias(distancias, origen, destino, p) \leq 
+\asegura{\{(hayCamino(distancias, origen, destino) \wedge \space (($\forall$k: \TLista{\ent})($\exists$p: \TLista{\ent})(esCamino(distancias, origen, destino, p) $\wedge$ \\ (sumaDistancias(distancias, origen, destino, p) \leq 
 	sumaDistancias(distancias, origen, destino, k))) 
 	\implica res = p 
 	) $\wedge$ \\ (($\neg$hayCamino(distancias, origen, destino)  
@@ -160,9 +160,236 @@ M_{2} = M_{1} \times M_{1} =
 
 \end{proc}
 \section{Demostraciones de correctitud}
+		\vspace{0.1cm}  \\
+\subsection{Demostración de implementación}
+
+
+\begin{multiline}
+	\text{Definimos como precondicion y postcondicion de nuestro programa: } \\
+	P &\equiv \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} } \} \\
+	\vspace{0.1cm}
+	Q &\equiv \{\sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
+\end{multiline}
+
+
+\begin{align}
+	\begin{itemize}   
+		
+		\text{Para demostrar la correctitud del programa probamos que:} \\ 
+		\{P\}S1;S2;S3;S4\{Q\}\; &\text es válida, con: \\
+		\vspace{0.1cm}  \\
+		%arreglar despues
+		\text{S1} \equiv res:= 0 \\
+	    \text{S2} \equiv i:=0 \\
+	    %esto esta feo
+	    \text{S3} \equiv \\
+	    	w hil e ( i < ci u d a d e s . l e n g t h ) do \\
+	    		r e s = r e s + ci u d a d e s [ i ] . h a bi t a n t e s \\
+	    		i = i + 1 \\
+	    	endwhile \\
+	    \text{S4} \equiv \( skip \)
+	    
+		\vspace{0.1cm} \\
+		
+		
+		\text{Se busca por monotonía demostrar que:} \\
+				\vspace {0.1cm} \\
+		1. P \implica \textit{wp} \{S1;S2,P_{c}\} \\
+		2. P_{c} \implica \textit{wp}\{S3,Q_{c}\} \\
+		3. Q_{c} \implica \textit{wp} \{S4,Q\} \\
+				\vspace {0.1cm} \\
+
+		
+		\text{Esto permite demostrar que P } \implica \textit{wp}\text{\{S1;S2;S3;S4,Q\}} \\ \text{Es verdadera por lo cual la Tripla de Hoare es válida}
+		.
+		
+		\vspace{0.3cm}
+		
+		Elijo Q_{c} = Q \\
+		
+		Demuestro: \\
+		Q_{c} \implica \textit{wp}(S4,Q) \\
+		
+		\text{Por el }\textbf{Axioma 2}: \\
+		\textit{wp}(S4,Q_{c}) &\equiv Q_{c} \\
+		
+		\vspace{0.3cm}
+		
+		\text{Para demostrar } P_{c} \implica \textit{wp} \{{S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ 
+		\vspace*{1cm} \\
+		\textbf{Teorema del Invariante y Teorema de Terminación}
+		
+		
+	\end{itemize}
+\end{align}
+
+\textbf{Teorema del Invariante:}
+
+Si existe un predicado I tal que:
+\begin{equation}
+	\begin{aligned}
+		
+		1. \, P_{c} \implica I 
+		
+		2. \, \{I \wedge B\} S \{I\}
+		
+		
+		3. \, I \wedge \; \neg B \implica Q_{c}
+	\end{aligned}
+\end{equation}
+
+Entonces el ciclo es parcialmente correcto respecto de la especificación
+
+\vspace{0.3cm}
+\begin{itemize}
+	
+	\item{Definimos}
+	\begin{align}
+		
+		P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} } \} \\
+		\vspace{0.1cm}
+		Q_{c} &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
+		\vspace{0.1cm}
+		B &\equiv \{i < |ciudades| \} \\
+		\vspace{0.1cm}
+		I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \} 
+		
+
+\end{align}
+	\end{itemize}
+
+\text{Según el teorema del invariante}
+
+\begin{enumerate}
+	\item P_{c} \implica I
+\end{enumerate}
+	\begin{itemize}
+		\item $0 \leq i \leq |ciudades| \equiv 0 \leq 0 \leq |ciudades| \checkmark$
+		\item $\text{res} = 0 \land i = 0 \implica \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \equiv \sum\limits_{j=0}^{0-1}ciudades[j].habitantes = 0$\ $\checkmark$
+	\end{itemize}
 
 
 
+
+$P_{c}$ \implica \text{I es válido}
+
+\vspace{0.3cm}
+
+Ahora demuestro que:\\
+\vspace{0.3cm}
+2.  {\{I \land B\}} \text{S} {\{{I}\} \implica {I \land B} \implica \textit{wp(S, I)}
+	
+	\begin{itemize}
+		\item 
+		\textit{wp(S, I)}
+		\equiv \textit{wp}(\textbf{S1; S2}, I)  \\
+		\equiv \textit{wp}(\textbf{S1},\text{wp}(\textbf{S2,I}))  \\
+		\equiv \textit{wp}(\textbf{S1};\;\text{i:=i+1}\;,\textit{I}) \\
+		\equiv \textit{wp}(\text{res:= res + ciudades[j].habitantes; i:=i+1}, I) \\
+		\equiv wp\left( res:=res+ciudades[j].habitantes, wp\left( i:=i, (0 \leq i \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \right) \right) \\
+		\equiv wp \left( res:=res + ciudades[j].habitantes, 0\leq i+1 \leq |ciudades| \wedge \sum\limits_{j=0}^{i+1-1}ciudades[j].habitantes \right) \\
+		\equiv wp \left( res:=res + ciudades[j].habitantes, -1\leq i \leq |ciudades|-1 \wedge \sum\limits_{j=0}^{i}ciudades[j].habitantes \right)\\
+		\equiv wp \left( res:=res + ciudades[j].habitantes, i < |ciudades| \wedge \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \right)\\
+		\equiv i<|ciudades| \wedge res + ciudades[j].habitantes = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \\
+		\equiv i<|ciudades| \wedge res=\sum\limits_{j=0}^{i-1}ciudades[j].habitantes
+	\end{itemize}
+		
+		\vspace{0.3cm}
+		
+		
+		\begin{enumerate}
+	    \setcounter{enumi}{2}  % Esto hace que comience en 3
+		\item {\{I \land  \neg B\}} \implica\text{Qc}
+			
+		\end{enumerate}
+		
+		\text{I $\wedge$ $\neg$ B} \\
+		$\equiv$ 0 $\leq$ i $\leq$ |ciudades| $\land$ \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge \neg \left( i<|ciudades| \right) \\
+		\equiv 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge i \geq|ciudades| \\
+		$\equiv$ \sum\limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes 
+		
+		
+		
+		
+		
+		
+		Por el Teorema del Invariante podemos concluir que
+		el ciclo es parcialmente correcto respecto de la
+		especificación 
+		
+		
+		\textbf{Teorema de Terminación}
+		
+		\begin{equation}
+			\begin{align}
+				4. &\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \}\\
+				5. &( I \wedge fv \leq 0) \implica \neg B 
+			\end{align}
+		\end{equation}
+		
+		Elijo como función variante:
+		
+		\begin{equation}
+			{fv}= |ciudades| -i
+		\end{equation}
+		
+		\begin{itemize}
+			\item Verifico 4.
+		\end{itemize}
+		
+		\begin{equation}
+			\begin{align}
+				&\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \} \longleftrightarrow \{ I \wedge B \wedge fv= V_{o} \} \implica \textit{wp} (S, fv < V_{o}) \\
+				&\textit{wp} (S, fv < V_{o}) \equiv \textit{wp} (res:= res + ciudades[i].habitantes; i:= i+1, |ciudades|-i < V_{o} ) \\
+				& \equiv \textit{wp}(res:= res + ciudades[i].habitantes, \textit{wp} (i:i+1; |ciudades|-i < V_{o} )) \\
+				& \equiv \textit{wp} (res:= res + ciudades[i].habitantes, |ciudades|-1-i<V_{o} )) \\
+				\vspace{0.1cm}
+				&\text{Puedo ignorar la res ya que no es relevante en este caso}\\
+				& \equiv |ciudades| -1 -i < |ciudades| -i \\
+				& -1 < 0 \checkmark
+				$$
+			\end{align}
+	\end{equation}}
+	
+	\vspace{0.3cm}
+	\begin{itemize}
+		\item Verifico 5.
+	\end{itemize}
+	
+	\begin{equation}
+		\begin{align}
+			&( I \wedge fv \leq 0) \implica \neg B \\
+			&( I \wedge fv \leq 0) \equiv  0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes  \wedge |ciudades| -i \leq 0 \\
+			&\text{Ignoro res} \\
+			&\equiv i \leq |ciudades| \wedge |ciudades| \leq i \ \longleftrightarrow |ciudades| = i \implica \neg (i < |ciudades|) \\
+			&\equiv|ciudades| = i \implica \neg (i < |ciudades|) \checkmark \\
+			$$
+		\end{align}
+\end{equation}}
+
+
+Queda verificado el Teorema de Terminación por lo que podemos concluir que el ciclo termina\\
+Como ambos teoremas se cumplen, \textbf{el ciclo es correcto}.
+\vspace{0.5cm}
+
+\item Luego me falta ver que P \implica \textit{wp} \left( S1;S2,P_{c} \right) \\
+
+wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp\left( res:=0,def(i) \yLuego P_{c} \right) \equiv def(res) \yLuego P_{c} \equiv P_{c} \vspace{0.3cm}\\
+P \longrightarrow P_{c}
+
+\begin{equation}
+	\begin{align}
+		& P \implica \textit{wp} \{S1;S2;P_{c}\} \equiv \textit{wp} (S1,\textit{wp}(S2,P_{c})) \\
+		&\equiv \textit{wp}(S2, P_{c}) \equiv def (i) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \\
+		&\equiv \textit{wp}(S1, P_{c})  \equiv def(res) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \equiv P_{c} \\
+		& P \implica P_{c}
+	
+	
+	
+	\item Queda demostrado que \textbf{la tripla \{P\}S1;S2;S3;S4\{Q\}\; es válida}
+	
+
+\subsection{Demostracion res $>$ 50000}
 
 
 
