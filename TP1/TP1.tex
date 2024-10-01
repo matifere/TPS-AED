@@ -44,23 +44,37 @@
 
 \subsection{grandesCiudades}
 
-\begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ } 
-	\requiere{\{\True\}}
+\begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ }
+	%no hay ciudades repetidas
+	 
+	\requiere{\{ \paraTodo{i,j}{\ent}{0 \leq i,j < |ciudades| \implicaLuego ciudades[i]_{0} \neq ciudades[j]_{0}}\}}
+	
+	%se permuto el implica luego
+	
 	\asegura{\{ $ \paraTodo{i}{\ent}{
 			\left( 0 \leq i \textless |ciudades| \right) \yLuego
-			\left( \left( ciudades[i] \in \res \right) \implicaLuego \left( ciudades[i]_{1} \textgreater 50000 \right)  \right)
+			 \left( \left( ciudades[i]_{1} \textgreater 50000 \right)
+			 \implicaLuego 
+			  \left( ciudades[i] \in \res \right)  \right)
 		} $ \}}
 \end{proc} \} 
 
 \subsection{sumaDeHabitantes}
 
+%diosmio habia hecho cualquiera
+%preguntar si el requiere ahora funca (deberia quedar como una funcion biyectiva)
+
 \begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}} 
 	{\TLista{Ciudad}\{ }
     \requiere{\{ 
     	$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
-    	\yLuego 
-    	\left( \paraTodo{i,j}{\ent_{\geq 0}}{ 0 \leq i,j < |menoresDeCiudades| \wedge menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }  \right) $
+    	\wedge
+    	\left( \paraTodo{i}{\ent}{ 
+    		\existe{!j}{\ent}{0 \leq i,j < |menoresDeCiudades| \longrightarrow menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }
+    		}  \right) $
     	\}}
+
+%aca se reemplazo ciudades por res directamente
 
 	\asegura{\{\paraTodo{n,m}{\ent}{ $\left 
 			(0 \leq n,m < |menoresDeCiudades| 
@@ -68,9 +82,8 @@
 			$\left(
 			( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
 			\right) 
-			\wedge \\ 
-			( ciudades[n] \in \res)
-			\longrightarrow ( \left( ciudades[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( ciudades[n]_{0} = menoresDeCiudades[n]_{0} \right)  
+			\implicaLuego \\ 
+			( \left( res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( res[n]_{0} = menoresDeCiudades[n]_{0} \right)  
 			)$}\}} 
 \end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
 
