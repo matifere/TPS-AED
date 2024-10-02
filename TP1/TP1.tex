@@ -89,6 +89,10 @@
 
 \subsection{hayCamino}
 
+%la correccion dice que le faltan cosas al requiere pero estan ahi PREGUNTAR
+%se cambio el yLuego por implicaLuego
+%se agrego que |p|>=1
+
 \begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
 	\requiere{
 		\{
@@ -101,12 +105,13 @@
 	\asegura{\{ 
 		\res = \True \ \leftrightarrow 
 		\existe{p}{\TLista{\ent}}{
+			\left( |p| \geq 1 \right) \yLuego \left(  
 			\left( p[0] = desde \right) \wedge
 			\left( p[|p|-1] = hasta \right) \wedge
 			\paraTodo{k}{\ent}{ 
-				(0 \leq k < |p|-1) \yLuego (distancias[p[k]][p[k+1]] > 0)
+				(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
 			}
-		}\}}
+		} \right) \}}
 \end{proc}
 
 
