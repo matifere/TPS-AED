@@ -135,15 +135,26 @@ M_{2} = M_{1} \times M_{1} =
 
 \text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
 \\
+
+%el requiere y el asegura son falsos
+
 \begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
+	
+	%se corrigio un parentesis y se cambio el yluego por un implicaluego
+	
 \requiere{
 	\{ $n>0 \ \wedge$
 	\paraTodo{i,j}{\ent}{
-		\left( 0 \leq i,j < |conexión| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( conexión[i][j] = 0 \right) \right) \wedge \left( conexión[i][j] = conexión[j][i] \right) \ $\wedge$ $\left($ 0 \leq conexión[i[j] \leq 1 ] $\right)$
+		\left( 0 \leq i,j < |conexión| \right) \implicaLuego \left( \left( i = j \right) \longrightarrow \left( conexión[i][j] = 0 \right)  \wedge \left( conexión[i][j] = conexión[j][i] \right) \ \wedge \left( 0 \leq conexión[i[j] \leq 1  \right) \right)
 	}
 	\}
 }
-\asegura{\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{\paraTodo{i,j,k}{\ent}{\left( 0 \leq k < n-1 \right) \wedge \left( 0 \leq i,j < n \right) \yLuego \left( p[k] = \text{conexión} \right) \yLuego \\ \left( \text{conexión}[i][j] = multEntreMatrices(p[k], p[k+1]) \right)}} \}}
+
+	%de esto no estoy uy seguro pero creo que al menos esta mejor
+
+\asegura{\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{\paraTodo{i,j,k}{\ent}{
+			\left( \left( 0 \leq k < n-1 \right) \wedge \left( 0 \leq i,j < |conexión| \right) \right) \implicaLuego
+			 \left( \text{conexión}[i][j] = multEntreMatrices(p[k], p[k+1]) \right) }} \}}
 \}
 
 \end{proc}
@@ -152,6 +163,7 @@ M_{2} = M_{1} \times M_{1} =
 
 
 
+%ambos (requiere y asegura) son falsos:
 
 \subsection{caminoMinimo}
 
