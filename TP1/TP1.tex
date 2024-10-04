@@ -425,7 +425,7 @@ wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp
 
 \begin{multiline}
 	\text{Se utiliza la misma definición del ejercicio anterior para $P,B,fv$. Se redefinen:  }\\
-	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} }  \} \\
+	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right))} }  \} \\
 	Q &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \wedge res>50000 \} \\
 	\text{Se procede de manera similar al ejercicio anterior probando por monotonía la validez del programa y la tripla de Hoare.} \\
 	\text{Resta chequear la validez del ciclo con el nuevo invariante y postcondicion. } \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  4 OCT 2024 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  4 OCT 2024 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1988,6 +1988,15 @@ l.428 	I &\equiv
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Extra }, or forgotten $.
+l.428 ...ciudades[j].habitantes \geq 0 \right))} }
+                                                    \} \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Misplaced alignment tab character &.
 l.429 	Q &
           \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habit...
@@ -2449,7 +2458,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[5] [6] (TP1.aux
+[5] (TP1.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -2469,7 +2478,7 @@ Here is how much of TeX's memory you used:
  29613 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,79p,484b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,79p,399b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmbsy10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTe
@@ -2490,9 +2499,9 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/
 sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/ds
 rom10.pfb>
-Output written on TP1.pdf (7 pages, 591569 bytes).
+Output written on TP1.pdf (6 pages, 590822 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
