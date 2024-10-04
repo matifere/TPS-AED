@@ -206,7 +206,7 @@ M_{2} = M_{1} \times M_{1} =
 	\begin{itemize}   
 		
 		\text{Para demostrar la correctitud del programa probamos que:} \\ 
-		\{P\}S1;S2;S3;S4\{Q\}\; &\text es válida, con: \\
+		\{P\}S1;S2;S3\{Q\}\; &\text es válida, con: \\
 		\vspace{0.1cm}  \\
 		%arreglar despues
 		\text{S1} \equiv res:= 0 \\
@@ -217,7 +217,7 @@ M_{2} = M_{1} \times M_{1} =
 	    		r e s = r e s + ci u d a d e s [ i ] . h a bi t a n t e s \\
 	    		i = i + 1 \\
 	    	endwhile \\
-	    \text{S4} \equiv \( skip \)
+	  
 	    
 		\vspace{0.1cm} \\
 		
@@ -235,7 +235,7 @@ M_{2} = M_{1} \times M_{1} =
 		
 		\vspace{0.3cm}
 		
-		Elijo Q_{c} = Q \\
+		Elijo Q_{c} \equiv Q \\
 		
 		Demuestro: \\
 		Q_{c} \implica \textit{wp}(S4,Q) \\
@@ -276,7 +276,7 @@ Entonces el ciclo es parcialmente correcto respecto de la especificación
 	\item{Definimos}
 	\begin{align}
 		
-		P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} } \} \\
+		P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \} \\
 		\vspace{0.1cm}
 		Q_{c} &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
 		\vspace{0.1cm}
@@ -323,8 +323,9 @@ Ahora demuestro que:\\
 		\equiv i<|ciudades| \wedge res + ciudades[j].habitantes = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \\
 		\equiv i<|ciudades| \wedge res=\sum\limits_{j=0}^{i-1}ciudades[j].habitantes
 	\end{itemize}
-		
-		\vspace{0.3cm}
+	 \\ \\Ahora pruebo {I $\wedge$ B} \implica wp(S, I)
+	 I \wedge B \equiv 0 \leq i \leq |ciudades| \wedge res = \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
+		 $\wedge$ i $< |ciudades|$ \\ \equiv i < |ciudades| \wedge \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
 		
 		
 		\begin{enumerate}
@@ -404,8 +405,9 @@ Como ambos teoremas se cumplen, \textbf{el ciclo es correcto}.
 
 \item Luego me falta ver que P \implica \textit{wp} \left( S1;S2,P_{c} \right) \\
 
-wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp\left( res:=0,def(i) \yLuego P_{c} \right) \equiv def(res) \yLuego P_{c} \equiv P_{c} \vspace{0.3cm}\\
-P \longrightarrow P_{c}
+wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp\left( res:=0,def(i) \yLuego P_{c}\space_{i}^{0} \right) \equiv wp(S_{2}, res = 0 \wedge 0 = 0)) \\ \equiv wp(S_{2}, \True \yLuego res = 0))\equiv def(res) \yLuego P_{c}\space_{res} ^{0}  \equiv 0 = 0 \equiv \True \\
+
+\\ Luego, como P \implica \space \True \space es tautología, siempre se cumple
 
 \begin{equation}
 	\begin{align}
