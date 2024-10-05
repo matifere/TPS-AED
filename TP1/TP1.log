@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  4 OCT 2024 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.3)  5 OCT 2024 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./TP1.tex
-(TP1.tex
+**TP1.tex
+(./TP1.tex
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
@@ -23,25 +23,17 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count195
 \U@D=\dimen141
-\l@unhyphenated=\language79
+\l@unhyphenated=\language8
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count196
 
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
-df
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks17
 \es@quotdepth=\count197
@@ -51,21 +43,20 @@ Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 Package babel Info: Making ' an active character on input line 740.
 ))
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
--spanish.tex
+(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 11.
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -82,27 +73,27 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \lst@lineno=\count269
 \lst@maxwidth=\dimen145
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \c@lstnumber=\count270
 \lst@skipnumbers=\count271
 \lst@framebox=\box52
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.sty
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen146
 \captionmargin=\dimen147
@@ -122,24 +113,25 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count274
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count275
-) (C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen154
 ))
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen155
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count276
@@ -190,19 +182,18 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
-ty
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count288
 \cp@tempcnt=\count289
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count290
@@ -217,37 +208,34 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen169
 \Gm@layoutvoffset=\dimen170
 \Gm@dimlist=\toks27
-
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-) (AEDmacros.tex
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./AEDmacros.tex (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)) (caratula.sty
+)) (./caratula.sty
 Package: caratula 2013/08/04 v0.5 Para componer caratulas de TPs del DC
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
@@ -268,13 +256,12 @@ Cargando package 'caratula' v0.5 (2013/08/04)
 \c@coDirectoresCount=\count295
 \codirecTabNombre=\toks35
 \codirecTabEmail=\toks36
-)
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box55
-) (TP1.aux
+)
+(./TP1.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -337,9 +324,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count298
 \scratchdimen=\dimen175
@@ -352,16 +337,14 @@ ii
 \MPnumerator=\count302
 \makeMPintoPDFobject=\count303
 \everyMPtoPDFconversion=\toks38
-)
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 <logo_dc.jpg, id=1, 215.6055pt x 83.5923pt>
 File: logo_dc.jpg Graphic file (type jpg)
@@ -385,49 +368,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
 [1
 
-{C:/Users/sofin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logo_dc.jp
-g> <./logo_uba.jpg>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo_dc.jpg> <./logo_uba
+.jpg>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 47.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-7.
-
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 51.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+1.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
-0.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 6
+3.
 
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
+(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 
-LaTeX Warning: Command \textless invalid in math mode on input line 59.
+LaTeX Warning: Command \textless invalid in math mode on input line 63.
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
-9.
-(C:\Users\sofin\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 6
+3.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 59.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 63.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 59.
+LaTeX Warning: Command \textless invalid in math mode on input line 63.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 59.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 63.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 59.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 63.
 
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.75     	\}}
-             
+l.86 			\}}
+           
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -435,17 +417,17 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Extra \right.
-<argument> ...ayoresDeCiudades[j]_{0} } } \right )
+<argument> ...Ciudades[j]_{0}\right ) } } \right )
                                                    $ \}
-l.75     	\}}
-             
+l.86 			\}}
+           
 I'm ignoring a \right that had no matching \left.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.87 			)$}\}}
-              
+l.98 				)$}\}}
+               
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -456,8 +438,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 			)$}\}}
-              
+l.98 				)$}\}}
+               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -468,8 +450,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 			)$}\}}
-              
+l.98 				)$}\}}
+               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -480,16 +462,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 			)$}\}}
-              
+l.98 				)$}\}}
+               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.87 			)$}\}}
-              
+l.98 				)$}\}}
+               
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -499,16 +481,32 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.114 		} \right) \}}
-                     
+l.115 		}
+         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.115 		}
+         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.126 			} \right) \}}
+                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -518,15 +516,15 @@ my insertion and my current dilemma will both disappear.
 ! Extra \right.
 <argument> ...cias[p[k]][p[k+1]] > 0) } } \right )
                                                    \}
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 I'm ignoring a \right that had no matching \left.
 
 ! Extra }, or forgotten $.
 \\asegura ...\ {\normalfont \ttfamily #1} :}\ {#2}
                                                   {\normalfont \bfseries \,\...
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -540,23 +538,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 Please use the math alphabet \mathbf instead of the \bfseries command. 
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.114 		} \right) \}}
-                     
+l.126 			} \right) \}}
+                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -564,90 +562,90 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
+[1]
 
-LaTeX Warning: Command \' invalid in math mode on input line 151.
-
-! Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.151 }
-       
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 151.
+LaTeX Warning: Command \' invalid in math mode on input line 167.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \ifmmode \els...
-l.151 }
-       
+l.167 		}
+         
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 151.
+LaTeX Warning: Command \' invalid in math mode on input line 167.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \ifmmode \els...
-l.151 }
-       
+l.167 		}
+         
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 151.
+LaTeX Warning: Command \' invalid in math mode on input line 167.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \ifmmode \els...
-l.151 }
-       
+l.167 		}
+         
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 151.
+LaTeX Warning: Command \' invalid in math mode on input line 167.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \ifmmode \els...
-l.151 }
-       
+l.167 		}
+         
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
 
-Overfull \hbox (13.96922pt too wide) in paragraph at lines 151--151
+LaTeX Warning: Command \' invalid in math mode on input line 167.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.167 		}
+         
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+Overfull \hbox (13.96922pt too wide) in paragraph at lines 167--167
 []$[] [][]\OMS/cmsy/m/n/10 ![] []$ 
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 157.
+LaTeX Warning: Command \' invalid in math mode on input line 173.
 
 ! Please use \mathaccent for accents in math mode.
 \add@accent ... \let \ignorespaces \relax \accent 
                                                   #1 #2\egroup \ifmmode \els...
-l.157 ...ntreMatrices(p[k], p[k+1]) \right) }} \}}
+l.173 ...ntreMatrices(p[k], p[k+1]) \right) }} \}}
                                                   
 I'm changing \accent to \mathaccent here; wish me luck.
 (Accents are not the same in formulas as they are in text.)
 
-[1]
 ! Extra }, or forgotten \endgroup.
-l.173 		}}}
-           
+l.189 	}}}
+          
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -657,7 +655,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.180 }
+l.196 }
        }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -665,7 +663,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.180 }
+l.196 }
        }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -673,7 +671,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.180 }
+l.196 }
        }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -681,13 +679,13 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.180 }
+l.196 }
        }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten \endgroup.
-l.180 }}
+l.196 }}
         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -696,14 +694,14 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.186 }
+l.202 }
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -711,7 +709,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.186 }
+l.202 }
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -723,7 +721,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194 \subsection
+l.210 \subsection
                  {Demostración de implementación}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -736,15 +734,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.197 \begin{multiline}
+l.213 \begin{multiline}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.199 	P &
-          \equiv \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciuda...
+l.215 P &
+         \equiv \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudad...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -755,14 +753,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.199 	P &\equiv
-                 \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciuda...
+l.215 P &\equiv
+                \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudad...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.201 	Q &
-          \equiv \{\sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
+l.217 Q &
+         \equiv \{\sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -777,7 +775,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 \end{multiline}
+l.218 \end{multiline}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -786,7 +784,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.202 \end{multiline}
+l.218 \end{multiline}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -795,7 +793,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
 
  []
 
@@ -804,8 +802,8 @@ Runaway argument?
 ! Paragraph ended before \align was complete.
 <to be read again> 
                    \par 
-l.207 		
-        
+l.223 	
+       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
@@ -813,16 +811,16 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.207 		
-        
+l.223 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.207 		
-        
+l.223 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -832,14 +830,14 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.207 		
-        
+l.223 	
+       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 ! Misplaced alignment tab character &.
-l.209 		\{P\}S1;S2;S3\{Q\}\; &
-                              \text es válida, con: \\
+l.225 	\{P\}S1;S2;S3\{Q\}\; &
+                             \text es válida, con: \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -850,21 +848,21 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.212 		\text{S1} \equiv
-                         res:= 0 \\
+l.228 	\text{S1} \equiv
+                        res:= 0 \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.220 	
+l.236 	
        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--220
+Underfull \hbox (badness 10000) in paragraph at lines 224--236
 
  []
 
@@ -875,132 +873,75 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.223 		
-        
+l.239 	
+       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.227 		1. P \implica \textit{wp} \{S1;S2,P_
-                                            {c}\} \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.231 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 225--231
-
- []
 
 [2]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.238 		Elijo Q_
-                {c} \equiv Q \\
+l.243 	1. P \implica \textit{wp} \{S1;S2,P_
+                                           {c}\} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.239 		
-        
+l.246 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 241--246
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.241 		Q_
-          {c} \implica \textit{wp}(S4,Q) \\
+l.247 	Siendo que Q_
+                    {c} $ coincide con el final del còdigo, $ Q_{c} \equiv ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.242 		
-        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
-
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.244 		\textit{wp}(S4,Q_
-                         {c}) &\equiv Q_{c} \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Misplaced alignment tab character &.
-l.244 		\textit{wp}(S4,Q_{c}) &
-                               \equiv Q_{c} \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.245 		
-        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--245
-
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.248 		\text{Para demostrar } P_
-                                 {c} \implica \textit{wp} \{{S3,Q_{c}\}} \te...
+l.249 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.251 		
-        
+l.254 	\text{Para demostrar } P_
+                                {c} \implica \textit{wp} \{{S3,Q_{c}\}} \tex...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.257 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-! LaTeX Error: \begin{align} on input line 205 ended by \end{itemize}.
+! LaTeX Error: \begin{align} on input line 221 ended by \end{itemize}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.253 	\end{itemize}
-                    
+l.259 \end{itemize}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -1008,7 +949,7 @@ or  <return>  to continue without it.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.254 \end{align}
+l.260 \end{align}
                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1019,7 +960,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.254 \end{align}
+l.260 \end{align}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1027,7 +968,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.254 \end{align}
+l.260 \end{align}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1035,7 +976,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Too many }'s.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.254 \end{align}
+l.260 \end{align}
                  
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1047,7 +988,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.254 \end{align}
+l.260 \end{align}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1056,7 +997,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.254 \end{align}
+l.260 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1067,7 +1008,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.254 \end{align}
+l.260 \end{align}
                  
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -1075,23 +1016,23 @@ So I shall assume that you typed `$$' both times.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.254 \end{align}
+l.260 \end{align}
                  
 Things are pretty mixed up, but I think the worst is over.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.261 		
-        
+l.267 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.261 		
-        
+l.267 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1101,8 +1042,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.261 		
-        
+l.267 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1112,15 +1053,15 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.261 		
-        
+l.267 	
+       
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.261 		
-        
+l.267 	
+       
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -1128,56 +1069,56 @@ Try to go on, since this might almost work.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.261 		
-        
+l.267 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.262 		1. \, P_
-                {c} \implica I
+l.268 	1. \, P_
+               {c} \implica I
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.263 		
-        
+l.269 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.264 		2. \, \{I \wedge
-                         B\} S \{I\}
+l.270 	2. \, \{I \wedge
+                        B\} S \{I\}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.265 		
-        
+l.271 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.267 		3. \, I \wedge
-                       \; \neg B \implica Q_{c}
+l.273 	3. \, I \wedge
+                      \; \neg B \implica Q_{c}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced \crcr.
 \endaligned ->\crcr 
                     \egroup \restorecolumn@ \egroup 
-l.268 	\end{aligned}
-                    
+l.274 \end{aligned}
+                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
 up above has ended a previous alignment prematurely,
@@ -1187,8 +1128,8 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten $.
 \endaligned ->\crcr \egroup 
                             \restorecolumn@ \egroup 
-l.268 	\end{aligned}
-                    
+l.274 \end{aligned}
+                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1198,8 +1139,8 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten $.
 \endaligned ...cr \egroup \restorecolumn@ \egroup 
                                                   
-l.268 	\end{aligned}
-                    
+l.274 \end{aligned}
+                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1209,8 +1150,8 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.268 	\end{aligned}
-                    
+l.274 \end{aligned}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1220,8 +1161,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.268 	\end{aligned}
-                    
+l.274 \end{aligned}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1233,8 +1174,8 @@ Runaway argument?
 ! Paragraph ended before \align was complete.
 <to be read again> 
                    \par 
-l.278 		
-        
+l.284 	
+       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
@@ -1242,16 +1183,16 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.278 		
-        
+l.284 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.278 		
-        
+l.284 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1261,8 +1202,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.278 		
-        
+l.284 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1272,16 +1213,16 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.278 		
-        
+l.284 	
+       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.278 		
-        
+l.284 	
+       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1291,14 +1232,14 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.279 		P_
-          {c} &\equiv \{ \text{res} = 0 \wedge i=0 \} \\
+l.285 	P_
+         {c} &\equiv \{ \text{res} = 0 \wedge i=0 \} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.279 		P_{c} &
-               \equiv \{ \text{res} = 0 \wedge i=0 \} \\
+l.285 	P_{c} &
+              \equiv \{ \text{res} = 0 \wedge i=0 \} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1307,8 +1248,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.281 		Q_{c} &
-               \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i]....
+l.287 	Q_{c} &
+              \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].h...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1317,8 +1258,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.283 		B &
-           \equiv \{i < |ciudades| \} \\
+l.289 	B &
+          \equiv \{i < |ciudades| \} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1327,8 +1268,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.285 		I &
-           \equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits...
+l.291 	I &
+          \equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1339,16 +1280,16 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.286 		
-        
+l.292 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.286 		
-        
+l.292 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1358,8 +1299,8 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.286 		
-        
+l.292 	
+       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1369,7 +1310,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.288 \end{align}
+l.294 \end{align}
                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1380,7 +1321,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.288 \end{align}
+l.294 \end{align}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1388,7 +1329,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.288 \end{align}
+l.294 \end{align}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1396,7 +1337,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.288 \end{align}
+l.294 \end{align}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1407,7 +1348,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.288 \end{align}
+l.294 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1418,7 +1359,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.288 \end{align}
+l.294 \end{align}
                  
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -1426,8 +1367,8 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.294 	\item P_
-               {c} \implica I
+l.300 \item P_
+              {c} \implica I
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1438,7 +1379,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{enumerate}
+l.301 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1450,7 +1391,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{enumerate}
+l.301 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1462,7 +1403,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.295 \end{enumerate}
+l.301 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1470,7 +1411,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.295 \end{enumerate}
+l.301 \end{enumerate}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1479,7 +1420,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-l.297 ...equiv 0 \leq 0 \leq |ciudades| \checkmark
+l.303 ...equiv 0 \leq 0 \leq |ciudades| \checkmark
                                                   $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1490,7 +1431,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \checkmark 
                            
-l.298 ...}ciudades[j].habitantes = 0$\ $\checkmark
+l.304 ...}ciudades[j].habitantes = 0$\ $\checkmark
                                                   $
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1501,13 +1442,13 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.310 2.  {\{I \land
+l.316 2.  {\{I \land
                      B\}} \text{S} {\{{I}\} \longleftrightarrow {I \land B} ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.310 2.  {\{I \land B\}}
+l.316 2.  {\{I \land B\}}
                           \text{S} {\{{I}\} \longleftrightarrow {I \land B} ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1518,16 +1459,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.311 	
-       
+l.317 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.311 	
-       
+l.317 
+      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1537,8 +1478,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.315 		\equiv
-               \textit{wp}(\textbf{S1; S2}, I)  \\
+l.321 	\equiv
+              \textit{wp}(\textbf{S1; S2}, I)  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1549,8 +1490,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 	\end{itemize}
-                    
+l.331 \end{itemize}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1561,8 +1502,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 	\end{itemize}
-                    
+l.331 \end{itemize}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1573,16 +1514,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.325 	\end{itemize}
-                    
+l.331 \end{itemize}
+                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.325 	\end{itemize}
-                    
+l.331 \end{itemize}
+                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1592,37 +1533,37 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.327 	 I \wedge
-                 B \equiv 0 \leq i \leq |ciudades| \wedge res = \sum\limits_...
+l.333 I \wedge
+               B \equiv 0 \leq i \leq |ciudades| \wedge res = \sum\limits_{j...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.328 		 $\wedge
-                $ i $< |ciudades|$ \\ \equiv i < |ciudades| \wedge \sum\limi...
+l.334 $\wedge
+             $ i $< |ciudades|$ \\ \equiv i < |ciudades| \wedge \sum\limits_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.328 		 $\wedge$ i $< |ciudades|$ \\ \equiv
-                                             i < |ciudades| \wedge \sum\limi...
+l.334 $\wedge$ i $< |ciudades|$ \\ \equiv
+                                          i < |ciudades| \wedge \sum\limits_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.329 		
-        
+l.335 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--329
+Underfull \hbox (badness 10000) in paragraph at lines 320--335
 
  []
 
@@ -1630,14 +1571,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--329
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.333 		\item {\{I \land
-                          \neg B\}} \implica\text{Qc}
+l.339 	\item {\{I \land
+                         \neg B\}} \implica\text{Qc}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.333 		\item {\{I \land  \neg B\}}
-                                    \implica\text{Qc}
+l.339 	\item {\{I \land  \neg B\}}
+                                   \implica\text{Qc}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -1647,16 +1588,16 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.334 			
-         
+l.340 	
+       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.334 			
-         
+l.340 	
+       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1666,7 +1607,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.338 ...leq$ |ciudades| $\land$ \text{res} = \sum
+l.344 ...leq$ |ciudades| $\land$ \text{res} = \sum
                                                   \limits_{j=0}^{i-1}ciudade...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1674,24 +1615,24 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.340 		$\equiv
-               $ \sum\limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes
+l.346 $\equiv
+             $ \sum\limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.340 		$\equiv$ \sum
-                     \limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes
+l.346 $\equiv$ \sum
+                   \limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.341 		
-        
+l.347 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -1703,8 +1644,8 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.358 			\end{align}
-                    
+l.364 	\end{align}
+                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1716,16 +1657,16 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382 			\end{align}
-                    
+l.388 	\end{align}
+                  
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
 <argument> ...ciudades| -i \\ & -1 < 0 \checkmark 
                                                   $$ 
-l.382 			\end{align}
-                    
+l.388 	\end{align}
+                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1735,8 +1676,8 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.382 			\end{align}
-                    
+l.388 	\end{align}
+                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1746,8 +1687,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.382 			\end{align}
-                    
+l.388 	\end{align}
+                  
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -1760,16 +1701,16 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.398 		\end{align}
-                   
+l.404 \end{align}
+                 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
 <argument> ...ca \neg (i < |ciudades|) \checkmark 
                                                   \\ $$ 
-l.398 		\end{align}
-                   
+l.404 \end{align}
+                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1779,8 +1720,8 @@ and I'll forget about whatever was undefined.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.398 		\end{align}
-                   
+l.404 \end{align}
+                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1790,14 +1731,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.398 		\end{align}
-                   
+l.404 \end{align}
+                 
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 ! Too many }'s.
-l.399 \end{equation}}
+l.405 \end{equation}}
                      
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1809,21 +1750,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.406 \item L
+l.412 \item L
              uego me falta ver que P \implica \textit{wp} \left( S1;S2,P_{c}...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 406
+Underfull \hbox (badness 10000) detected at line 412
 [][]
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.406 ...alta ver que P \implica \textit{wp} \left
+l.412 ...alta ver que P \implica \textit{wp} \left
                                                   ( S1;S2,P_{c} \right) \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1831,44 +1772,44 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.407 
+l.413 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.408 wp \left
+l.414 wp \left
               (S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right)...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Double subscript.
-l.408 ...\left( res:=0,def(i) \yLuego P_{c}\space_
+l.414 ...\left( res:=0,def(i) \yLuego P_{c}\space_
                                                   {i}^{0} \right) \equiv wp(...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.408 ...= 0))\equiv def(res) \yLuego P_{c}\space_
+l.414 ...= 0))\equiv def(res) \yLuego P_{c}\space_
                                                   {res} ^{0}  \equiv 0 = 0 \...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.409 
+l.415 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
@@ -1879,7 +1820,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 \\ L
+l.416 \\ L
           uego, como P \implica \space \True \space es tautología, siempre ...
 
 Your command was ignored.
@@ -1893,8 +1834,8 @@ Runaway argument?
 ! Paragraph ended before \align was complete.
 <to be read again> 
                    \par 
-l.418 	
-       
+l.424 
+      
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
@@ -1902,16 +1843,16 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.418 	
-       
+l.424 
+      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.418 	
-       
+l.424 
+      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1921,8 +1862,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.418 	
-       
+l.424 
+      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -1932,8 +1873,8 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.418 	
-       
+l.424 
+      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
@@ -1944,19 +1885,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.421 	\item Q
-              ueda demostrado que \textbf{la tripla \{P\}S1;S2;S3;S4\{Q\}\; ...
+l.427 \item Q
+             ueda demostrado que \textbf{la tripla \{P\}S1;S2;S3\{Q\}\; es v...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 421
+Underfull \hbox (badness 10000) detected at line 427
 [][]
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 421.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 427.
 
 ! LaTeX Error: Environment multiline undefined.
 
@@ -1964,14 +1905,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.426 \begin{multiline}
+l.432 \begin{multiline}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.428 	I &
+l.434 	I &
           \equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1983,13 +1924,13 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.428 	I &\equiv
+l.434 	I &\equiv
                  \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.428 ...ciudades[j].habitantes \geq 0 \right))} }
+l.434 ... ciudades[j].habitantes \geq 0 \right)} }
                                                     \} \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1998,7 +1939,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Misplaced alignment tab character &.
-l.429 	Q &
+l.435 	Q &
           \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habit...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2010,7 +1951,7 @@ might try typing `S' now just to see what is salvageable.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.436 	$\{I \land
+l.442 	$\{I \land
                   B\} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \imp...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2018,7 +1959,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.436 ... {I \land B} \implica \textit{wp(S, I)} $
+l.442 ... {I \land B} \implica \textit{wp(S, I)} $
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2029,7 +1970,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.439 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.445 ...ext{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2037,7 +1978,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.439 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.445 ...ext{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2049,7 +1990,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2061,7 +2002,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2073,7 +2014,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2085,7 +2026,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2097,7 +2038,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2109,7 +2050,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 ...\wedge \neg \left( i<|ciudades| \right)$}
+l.447 ...\wedge \neg \left( i<|ciudades| \right)$}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2121,7 +2062,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2133,7 +2074,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2145,7 +2086,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2157,7 +2098,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2169,7 +2110,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2181,7 +2122,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.443 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+l.449 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2193,7 +2134,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2205,7 +2146,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2217,7 +2158,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2229,7 +2170,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2241,7 +2182,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2253,7 +2194,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.451 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2265,7 +2206,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2277,7 +2218,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2289,7 +2230,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2301,7 +2242,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2313,7 +2254,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2325,7 +2266,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.447 ...aLuego ciudades[j].habitantes \geq 0 } $}
+l.453 ...aLuego ciudades[j].habitantes \geq 0 } $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2337,7 +2278,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2349,7 +2290,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2361,7 +2302,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2373,7 +2314,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2385,7 +2326,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2397,7 +2338,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.455 ...ades|-1} ciudades[j].habitantes \wedge $}
+l.461 ...ades|-1} ciudades[j].habitantes \wedge $}
                                                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2405,7 +2346,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.457 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.463 ...ext{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2413,30 +2354,30 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.457 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.463 ...ext{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (21.12755pt too wide) in paragraph at lines 428--460
+Overfull \hbox (21.12755pt too wide) in paragraph at lines 434--466
 [] 
  []
 
 
-Overfull \hbox (95.62097pt too wide) in paragraph at lines 428--460
+Overfull \hbox (95.62097pt too wide) in paragraph at lines 434--466
 [] 
  []
 
 
-! LaTeX Error: \begin{equation} on input line 412 ended by \end{multiline}.
+! LaTeX Error: \begin{equation} on input line 418 ended by \end{multiline}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.462 \end{multiline}
-                     
+l.468 	\end{multiline}
+                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -2446,62 +2387,59 @@ Package caption Warning: Unused \captionsetup[sub] on input line 7.
 See the caption package documentation for explanation.
 
 
-! LaTeX Error: \begin{equation} on input line 412 ended by \end{document}.
+! LaTeX Error: \begin{equation} on input line 418 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.464 \end{document}
+l.470 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[5] (TP1.aux
+[5] (./TP1.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+L3 programming layer <2024-01-22>
  ***********
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 412 (\begingroup)
+### semi simple group (level 1) entered at line 418 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7410 strings out of 474486
- 122329 string characters out of 5743756
- 1946542 words of memory out of 5000000
- 29613 multiletter control sequences out of 15000+600000
+ 7396 strings out of 476120
+ 120038 string characters out of 5793658
+ 1942975 words of memory out of 5000000
+ 29328 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 72i,11n,79p,399b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmbsy10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sofin/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/sofin/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sofin/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
-s/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-<C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmss10.pfb><C:/Users/sofin/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/sofin/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sofin/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/sofin/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/
-sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-C:/Users/sofin/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/ds
-rom10.pfb>
-Output written on TP1.pdf (6 pages, 590822 bytes).
+ 40 hyphenation exceptions out of 8191
+ 72i,11n,79p,397b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on TP1.pdf (6 pages, 578409 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

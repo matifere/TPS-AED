@@ -33,156 +33,172 @@
 \graphicspath{{../static/}}
 
 \begin{document}
-
-\maketitle
-
-\section{Especificación}
-
-%
-% EJERCICIO 1
-%
-
-\subsection{grandesCiudades}
-
-\begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ }
-	%no hay ciudades repetidas
-	 
-	\requiere{\{ \paraTodo{i,j}{\ent}{0 \leq i,j < |ciudades| \implicaLuego ciudades[i]_{0} \neq ciudades[j]_{0}}\}}
 	
-	%se permuto el implica luego
+	\maketitle
 	
-	\asegura{\{ $ \paraTodo{i}{\ent}{
-			\left( 0 \leq i \textless |ciudades| \right) \yLuego
-			 \left( \left( ciudades[i]_{1} \textgreater 50000 \right)
-			 \implicaLuego 
-			  \left( ciudades[i] \in \res \right)  \right)
-		} $ \}}
-\end{proc} \} 
-
-\subsection{sumaDeHabitantes}
-
-%diosmio habia hecho cualquiera
-%preguntar si el requiere ahora funca (deberia quedar como una funcion biyectiva)
-
-\begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}} 
-	{\TLista{Ciudad}\{ }
-    \requiere{\{ 
-    	$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
-    	\wedge
-    	\left( \paraTodo{i}{\ent}{ 
-    		\existe{!j}{\ent}{0 \leq i,j < |menoresDeCiudades| \longrightarrow menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} }
-    		}  \right) $
-    	\}}
-
-%aca se reemplazo ciudades por res directamente
-
-	\asegura{\{\paraTodo{n,m}{\ent}{ $\left 
-			(0 \leq n,m < |menoresDeCiudades| 
-			\right)$  $\yLuego$
-			$\left(
-			( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
-			\right) 
-			\implicaLuego \\ 
-			( \left( res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( res[n]_{0} = menoresDeCiudades[n]_{0} \right)  
-			)$}\}} 
-\end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
-
-\subsection{hayCamino}
-
-%la correccion dice que le faltan cosas al requiere pero estan ahi PREGUNTAR
-%se cambio el yLuego por implicaLuego
-%se agrego que |p|>=1
-
-\begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
-	\requiere{
-		\{
-		\paraTodo{i,j}{\ent}{
-			\left( 0 \leq i,j,desde,hasta < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
+	%
+	%IMPLEMENTAR ESTA EN EL RANGO (para las matrices, hacer un pred)
+	%
+	
+	\section{Especificación}
+	
+	%
+	% EJERCICIO 1
+	%
+	
+	\subsection{grandesCiudades}
+	
+	\begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ }
+		%no hay ciudades repetidas
+		
+		\requiere{\{ noHayNombresRepetidos(ciudades)\}}
+		
+		%se permuto el implica luego
+		
+		\asegura{\{ $ \paraTodo{i}{\ent}{
+				\left( 0 \leq i \textless |ciudades| \right) \implicaLuego
+				\left( \left( ciudades[i]_{1} \textgreater 50000 \right)
+				\implicaLuego 
+				\left( ciudades[i] \in \res \right)  \right)
+			} $ \}}
+	\end{proc} \} 
+	
+	\pred{noHayNombresRepetidos}{lista: \TLista{Ciudad}}{
+		\paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |lista| \right) \implicaLuego \left( lista[i]_{0} \neq lista[j]_{0} \right)}
+	}
+	
+	\subsection{sumaDeHabitantes}
+	
+	%diosmio habia hecho cualquiera
+	%preguntar si el requiere ahora funca (deberia quedar como una funcion biyectiva)
+	
+	%no hay repetidos y el implica tienen que ser positivos
+	
+	\begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}} 
+		{\TLista{Ciudad}\{ }
+		\requiere{\{ 
+			$\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
+			\wedge
+			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades) \wedge
+			\left( \paraTodo{i}{\ent}{ 
+				\left( 0 \leq i < |menoresDeCiudades| \right) \implicaLuego \existe{!j}{\ent}{\left( 0 \leq j < |menoresDeCiudades| \right) \yLuego \left(menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0}\right) }
+			}  \right) $
+			\}}
+		
+		%aca se reemplazo ciudades por res directamente
+		
+		\asegura{\{\paraTodo{n,m}{\ent}{ $\left 
+				(0 \leq n,m < |menoresDeCiudades| 
+				\right)$  $\implicaLuego$
+				$\left(
+				( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} 
+				\right) 
+				\implicaLuego \\ 
+				( \left( res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( res[n]_{0} = menoresDeCiudades[n]_{0} \right)  
+				)$}\}} 
+	\end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
+	
+	
+	
+	\subsection{hayCamino}
+	
+	%la correccion dice que le faltan cosas al requiere pero estan ahi PREGUNTAR
+	%se cambio el yLuego por implicaLuego
+	%se agrego que |p|>=1
+	%falta cuadradas
+	
+	\begin{proc}{hayCamino}{\In distancias : \TLista{\TLista{\ent}}, \In desde : \ent, \In hasta : \ent}{\bool \{ } 
+		\requiere{
+			\{
+			\left( 0 \leq desde,hasta < |distancias| \right) $\wedge$ matrizCuadradaSimetrica(distancias)
+			\}
 		}
-		\}
-	}
-	
-	\asegura{\{ 
-		\res = \True \ \leftrightarrow 
-		\existe{p}{\TLista{\ent}}{
-			\left( |p| \geq 1 \right) \yLuego \left(  
-			\left( p[0] = desde \right) \wedge
-			\left( p[|p|-1] = hasta \right) \wedge
-			\paraTodo{k}{\ent}{ 
-				(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
-			}
-		} \right) \}}
-\end{proc}
-
-
-\}
-
-
-\subsection{cantidadCaminosNSaltos}
-\paragraph{Para la siguiente especificación tendremos en cuenta que:}{Dada la matriz de orden 1:}
-
-\[
-M_{1} = \begin{bmatrix} 0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0 \end{bmatrix} \]
-\text{ \ \ \ \ Si queremos encontrar la matriz $M_{2}$ de orden 2, nos queda que:}\\
-\[
-M_{2} = M_{1} \times M_{1} =
-\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
-\times
-\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
-=
-\begin{bmatrix}	1 & 0 & 1 \\	0 & 2 & 0 \\	1 & 0 & 1\end{bmatrix}
-\]
-
-\text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
-\\
-
-%el requiere y el asegura son falsos
-
-\begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
-	
-	%se corrigio un parentesis y se cambio el yluego por un implicaluego
-	
-\requiere{
-	\{ $n>0 \ \wedge$
-	\paraTodo{i,j}{\ent}{
-		\left( 0 \leq i,j < |conexión| \right) \implicaLuego \left( \left( i = j \right) \longrightarrow \left( conexión[i][j] = 0 \right)  \wedge \left( conexión[i][j] = conexión[j][i] \right) \ \wedge \left( 0 \leq conexión[i[j] \leq 1  \right) \right)
-	}
+		
+		\asegura{\{ 
+			\res = \True \ \leftrightarrow 
+			\existe{p}{\TLista{\ent}}{
+				\left( |p| > 1 \right) \yLuego \left(  
+				\left( p[0] = desde \right) \wedge
+				\left( p[|p|-1] = hasta \right) \wedge
+				\paraTodo{k}{\ent}{ 
+					(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
+				}
+			} \right) \}}
+	\end{proc}
 	\}
-}
-
-	%de esto no estoy uy seguro pero creo que al menos esta mejor
-
-\asegura{\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{\paraTodo{i,j,k}{\ent}{
-			\left( \left( 0 \leq k < n-1 \right) \wedge \left( 0 \leq i,j < |conexión| \right) \right) \implicaLuego
-			 \left( \text{conexión}[i][j] = multEntreMatrices(p[k], p[k+1]) \right) }} \}}
-\}
-
-\end{proc}
-
-\aux{multEntreMatrices}{mUno : \TLista{\TLista{\ent}}, mDos : \TLista{\TLista{\ent}}}{\ent}{ \paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |mUno| \right) \yLuego \sum_{k=1}^{|mUno|} mUno[i][k] \times mDos[k][j]} }
-
-
-
-%ambos (requiere y asegura) son falsos:
-
-\subsection{caminoMinimo}
-
-\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
-\requiere{\{ \paraTodo{i,j}{\ent}{
-		\left( 0 \leq i,j < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
-		}}}
-\asegura{\{(hayCamino(distancias, origen, destino) \wedge \space (($\forall$k: \TLista{\ent})($\exists$p: \TLista{\ent})(esCamino(distancias, origen, destino, p) $\wedge$ \\ (sumaDistancias(distancias, origen, destino, p) \leq 
-	sumaDistancias(distancias, origen, destino, k))) 
-	\implica res = p 
-	) $\wedge$ \\ (($\neg$hayCamino(distancias, origen, destino)  
-	$\lor$ (origen = destino)) \implica res = \lvacia)
-	\\)
+	
+	\pred{matrizCuadradaSimetrica}{matriz: \TLista{\TLista{\ent}}}{
+		\paraTodo{i,j,k}{\ent}{
+			\left( 0 \leq i,j,k < |matriz| \right) \yLuego \left( 0 \leq i,j < |matriz[k]| \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
+		}
+	}
+	
+	
+	\subsection{cantidadCaminosNSaltos}
+	\paragraph{Para la siguiente especificación tendremos en cuenta que:}{Dada la matriz de orden 1:}
+	
+	\[
+	M_{1} = \begin{bmatrix} 0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0 \end{bmatrix} \]
+	\text{ \ \ \ \ Si queremos encontrar la matriz $M_{2}$ de orden 2, nos queda que:}\\
+	\[
+	M_{2} = M_{1} \times M_{1} =
+	\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
+	\times
+	\begin{bmatrix}	0 & 1 & 0 \\	1 & 0 & 1 \\	0 & 1 & 0\end{bmatrix}
+	=
+	\begin{bmatrix}	1 & 0 & 1 \\	0 & 2 & 0 \\	1 & 0 & 1\end{bmatrix}
+	\]
+	
+	\text{Luego $M_{2}$ contiene la cantidad de 2-saltos asociados a cada par i,j que se encuentre dentro de la matriz}
+	\\
+	
+	%el requiere y el asegura son falsos
+	
+	\begin{proc}{cantidadCaminosNSaltos}{\Inout conexión : \TLista{\TLista{\ent}}, \In n : \ent}{ \{ } 
+		
+		%se corrigio un parentesis y se cambio el yluego por un implicaluego
+		
+		\requiere{
+			\{ $n>0 \ \wedge$
+			\paraTodo{i,j}{\ent}{
+				\left( 0 \leq i,j < |conexión| \right) \implicaLuego \left( \left( i = j \right) \longrightarrow \left( conexión[i][j] = 0 \right)  \wedge \left( conexión[i][j] = conexión[j][i] \right) \ \wedge \left( 0 \leq conexión[i[j] \leq 1  \right) \right)
+			}
+			\}
+		}
+		
+		%de esto no estoy uy seguro pero creo que al menos esta mejor
+		
+		\asegura{\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{\paraTodo{i,j,k}{\ent}{
+					\left( \left( 0 \leq k < n-1 \right) \wedge \left( 0 \leq i,j < |conexión| \right) \right) \implicaLuego
+					\left( \text{conexión}[i][j] = multEntreMatrices(p[k], p[k+1]) \right) }} \}}
+		\}
+		
+	\end{proc}
+	
+	\aux{multEntreMatrices}{mUno : \TLista{\TLista{\ent}}, mDos : \TLista{\TLista{\ent}}}{\ent}{ \paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |mUno| \right) \yLuego \sum_{k=1}^{|mUno|} mUno[i][k] \times mDos[k][j]} }
+	
+	
+	
+	%ambos (requiere y asegura) son falsos:
+	
+	\subsection{caminoMinimo}
+	
+	\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ } 
+		\requiere{\{ \paraTodo{i,j}{\ent}{
+				\left( 0 \leq i,j < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
+	}}}
+	\asegura{\{(hayCamino(distancias, origen, destino) \wedge \space (($\forall$k: \TLista{\ent})($\exists$p: \TLista{\ent})(esCamino(distancias, origen, destino, p) $\wedge$ \\ (sumaDistancias(distancias, origen, destino, p) \leq 
+		sumaDistancias(distancias, origen, destino, k))) 
+		\implica res = p 
+		) $\wedge$ \\ (($\neg$hayCamino(distancias, origen, destino)  
+		$\lor$ (origen = destino)) \implica res = \lvacia)
+		\\)
 }}
 \} \\
 
 
 \pred{esCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, p : \TLista{\ent}}{\{ 
-    \paraTodo{k}{\ent}{ (0 $\leq$ i, j, origen, destino $ < |p|$) \yLuego distancias[p[k]][p[k + 1]] } \\ \}
+	\paraTodo{k}{\ent}{ (0 $\leq$ i, j, origen, destino $ < |p|$) \yLuego distancias[p[k]][p[k + 1]] } \\ \}
 }
 
 \aux{sumaDistancias}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, s : \TLista{\ent}}{\ent}{$\sum_{j = origen}^{destino} \text{distancias}[j][j + 1]$}
@@ -190,113 +206,103 @@ M_{2} = M_{1} \times M_{1} =
 
 \end{proc}
 \section{Demostraciones de correctitud}
-		\vspace{0.1cm}  \\
+\vspace{0.1cm}  \\
 \subsection{Demostración de implementación}
 
 
 \begin{multiline}
-	\text{Definimos como precondicion y postcondicion de nuestro programa: } \\
-	P &\equiv \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} } \} \\
-	\vspace{0.1cm}
-	Q &\equiv \{\sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
+\text{Definimos como precondicion y postcondicion de nuestro programa: } \\
+P &\equiv \{( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right) \wedge \paraTodo{i,j}{\ent}{\left( 0\leq i,j < |ciudades| \implicaLuego ciudades[j].nombre \neq ciudades[i].nombre \right)} } \} \\
+\vspace{0.1cm}
+Q &\equiv \{\sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
 \end{multiline}
 
 
 \begin{align}
-	\begin{itemize}   
-		
-		\text{Para demostrar la correctitud del programa probamos que:} \\ 
-		\{P\}S1;S2;S3\{Q\}\; &\text es válida, con: \\
-		\vspace{0.1cm}  \\
-		%arreglar despues
-		\text{S1} \equiv res:= 0 \\
-	    \text{S2} \equiv i:=0 \\
-	    %esto esta feo
-	    \text{S3} \equiv \\
-	    	w hil e ( i < ci u d a d e s . l e n g t h ) do \\
-	    		r e s = r e s + ci u d a d e s [ i ] . h a bi t a n t e s \\
-	    		i = i + 1 \\
-	    	endwhile \\
-	  
-	    
-		\vspace{0.1cm} \\
-		
-		
-		\text{Se busca por monotonía demostrar que:} \\
-				\vspace {0.1cm} \\
-		1. P \implica \textit{wp} \{S1;S2,P_{c}\} \\
-		2. P_{c} \implica \textit{wp}\{S3,Q_{c}\} \\
-		3. Q_{c} \implica \textit{wp} \{S4,Q\} \\
-				\vspace {0.1cm} \\
-
-		
-		\text{Esto permite demostrar que P } \implica \textit{wp}\text{\{S1;S2;S3;S4,Q\}} \\ \text{Es verdadera por lo cual la Tripla de Hoare es válida}
-		.
-		
-		\vspace{0.3cm}
-		
-		Elijo Q_{c} \equiv Q \\
-		
-		Demuestro: \\
-		Q_{c} \implica \textit{wp}(S4,Q) \\
-		
-		\text{Por el }\textbf{Axioma 2}: \\
-		\textit{wp}(S4,Q_{c}) &\equiv Q_{c} \\
-		
-		\vspace{0.3cm}
-		
-		\text{Para demostrar } P_{c} \implica \textit{wp} \{{S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ 
-		\vspace*{1cm} \\
-		\textbf{Teorema del Invariante y Teorema de Terminación}
-		
-		
-	\end{itemize}
+\begin{itemize}   
+	
+	\text{Para demostrar la correctitud del programa probamos que:} \\ 
+	\{P\}S1;S2;S3\{Q\}\; &\text es válida, con: \\
+	\vspace{0.1cm}  \\
+	%arreglar despues
+	\text{S1} \equiv res:= 0 \\
+	\text{S2} \equiv i:=0 \\
+	%esto esta feo
+	\text{S3} \equiv \\
+	w hil e ( i < ci u d a d e s . l e n g t h ) do \\
+	r e s = r e s + ci u d a d e s [ i ] . h a bi t a n t e s \\
+	i = i + 1 \\
+	endwhile \\
+	
+	
+	\vspace{0.1cm} \\
+	
+	
+	\text{Se busca por monotonía demostrar que:} \\
+	\vspace {0.1cm} \\
+	1. P \implica \textit{wp} \{S1;S2,P_{c}\} \\
+	2. P_{c} \implica \textit{wp}\{S3,Q_{c}\} \\
+	\vspace {0.1cm} \\
+	
+	Siendo que Q_{c} $ coincide con el final del còdigo, $ Q_{c} \equiv Q \\
+	\text{Esto permite demostrar que P } \implica \textit{wp}\text{\{S1;S2;S3,Q\}}  \text{es verdadera por lo cual la Tripla de Hoare es válida}
+	
+	
+	
+	\vspace{0.3cm}
+	
+	\text{Para demostrar } P_{c} \implica \textit{wp} \{{S3,Q_{c}\}} \text{se prueba la correctitud del ciclo mediante:} \\ 
+	\vspace*{1cm} \\
+	\textbf{Teorema del Invariante y Teorema de Terminación}
+	
+	
+\end{itemize}
 \end{align}
 
 \textbf{Teorema del Invariante:}
 
 Si existe un predicado I tal que:
 \begin{equation}
-	\begin{aligned}
-		
-		1. \, P_{c} \implica I 
-		
-		2. \, \{I \wedge B\} S \{I\}
-		
-		
-		3. \, I \wedge \; \neg B \implica Q_{c}
-	\end{aligned}
+\begin{aligned}
+	
+	1. \, P_{c} \implica I 
+	
+	2. \, \{I \wedge B\} S \{I\}
+	
+	
+	3. \, I \wedge \; \neg B \implica Q_{c}
+\end{aligned}
 \end{equation}
 
 Entonces el ciclo es parcialmente correcto respecto de la especificación
 
 \vspace{0.3cm}
 \begin{itemize}
-	
-	\item{Definimos}
-	\begin{align}
-		
-		P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \} \\
-		\vspace{0.1cm}
-		Q_{c} &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
-		\vspace{0.1cm}
-		B &\equiv \{i < |ciudades| \} \\
-		\vspace{0.1cm}
-		I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \} 
-		
 
+\item{Definimos}
+\begin{align}
+	
+	P_{c} &\equiv \{ \text{res} = 0 \wedge i=0 \} \\
+	\vspace{0.1cm}
+	Q_{c} &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \} \\
+	\vspace{0.1cm}
+	B &\equiv \{i < |ciudades| \} \\
+	\vspace{0.1cm}
+	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \} 
+	
+	
 \end{align}
-	\end{itemize}
+\end{itemize}
 
 \text{Según el teorema del invariante}
 
 \begin{enumerate}
-	\item P_{c} \implica I
+\item P_{c} \implica I
 \end{enumerate}
-	\begin{itemize}
-		\item $0 \leq i \leq |ciudades| \equiv 0 \leq 0 \leq |ciudades| \checkmark$
-		\item $\text{res} = 0 \land i = 0 \implica \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \equiv \sum\limits_{j=0}^{0-1}ciudades[j].habitantes = 0$\ $\checkmark$
-	\end{itemize}
+\begin{itemize}
+\item $0 \leq i \leq |ciudades| \equiv 0 \leq 0 \leq |ciudades| \checkmark$
+\item $\text{res} = 0 \land i = 0 \implica \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \equiv \sum\limits_{j=0}^{0-1}ciudades[j].habitantes = 0$\ $\checkmark$
+\end{itemize}
 
 
 
@@ -308,94 +314,94 @@ $P_{c}$ \implica \text{I es válido}
 Ahora demuestro que:\\
 \vspace{0.3cm}
 2.  {\{I \land B\}} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \implica \textit{wp(S, I)}
+
+\begin{itemize}
+	\item 
+	\textit{wp(S, I)}
+	\equiv \textit{wp}(\textbf{S1; S2}, I)  \\
+	\equiv \textit{wp}(\textbf{S1},\text{wp}(\textbf{S2,I}))  \\
+	\equiv \textit{wp}(\textbf{S1};\;\text{i:=i+1}\;,\textit{I}) \\
+	\equiv \textit{wp}(\text{res:= res + ciudades[j].habitantes; i:=i+1}, I) \\
+	\equiv wp\left( res:=res+ciudades[j].habitantes, wp\left( i:=i, (0 \leq i \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \right) \right) \\
+	\equiv wp \left( res:=res + ciudades[j].habitantes, 0\leq i+1 \leq |ciudades| \wedge \sum\limits_{j=0}^{i+1-1}ciudades[j].habitantes \right) \\
+	\equiv wp \left( res:=res + ciudades[j].habitantes, -1\leq i \leq |ciudades|-1 \wedge \sum\limits_{j=0}^{i}ciudades[j].habitantes \right)\\
+	\equiv wp \left( res:=res + ciudades[j].habitantes, i < |ciudades| \wedge \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \right)\\
+	\equiv i<|ciudades| \wedge res + ciudades[j].habitantes = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \\
+	\equiv i<|ciudades| \wedge res=\sum\limits_{j=0}^{i-1}ciudades[j].habitantes
+\end{itemize}
+\\ \\Ahora pruebo {I $\wedge$ B} \implica wp(S, I)
+I \wedge B \equiv 0 \leq i \leq |ciudades| \wedge res = \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
+$\wedge$ i $< |ciudades|$ \\ \equiv i < |ciudades| \wedge \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
+
+
+\begin{enumerate}
+	\setcounter{enumi}{2}  % Esto hace que comience en 3
+	\item {\{I \land  \neg B\}} \implica\text{Qc}
 	
-	\begin{itemize}
-		\item 
-		\textit{wp(S, I)}
-		\equiv \textit{wp}(\textbf{S1; S2}, I)  \\
-		\equiv \textit{wp}(\textbf{S1},\text{wp}(\textbf{S2,I}))  \\
-		\equiv \textit{wp}(\textbf{S1};\;\text{i:=i+1}\;,\textit{I}) \\
-		\equiv \textit{wp}(\text{res:= res + ciudades[j].habitantes; i:=i+1}, I) \\
-		\equiv wp\left( res:=res+ciudades[j].habitantes, wp\left( i:=i, (0 \leq i \leq |ciudades|) \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \right) \right) \\
-		\equiv wp \left( res:=res + ciudades[j].habitantes, 0\leq i+1 \leq |ciudades| \wedge \sum\limits_{j=0}^{i+1-1}ciudades[j].habitantes \right) \\
-		\equiv wp \left( res:=res + ciudades[j].habitantes, -1\leq i \leq |ciudades|-1 \wedge \sum\limits_{j=0}^{i}ciudades[j].habitantes \right)\\
-		\equiv wp \left( res:=res + ciudades[j].habitantes, i < |ciudades| \wedge \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \right)\\
-		\equiv i<|ciudades| \wedge res + ciudades[j].habitantes = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes + ciudades[i].habitantes \\
-		\equiv i<|ciudades| \wedge res=\sum\limits_{j=0}^{i-1}ciudades[j].habitantes
-	\end{itemize}
-	 \\ \\Ahora pruebo {I $\wedge$ B} \implica wp(S, I)
-	 I \wedge B \equiv 0 \leq i \leq |ciudades| \wedge res = \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
-		 $\wedge$ i $< |ciudades|$ \\ \equiv i < |ciudades| \wedge \sum\limits_{j = 0}^{i-1}ciudades[j].habitantes
-		
-		
-		\begin{enumerate}
-	    \setcounter{enumi}{2}  % Esto hace que comience en 3
-		\item {\{I \land  \neg B\}} \implica\text{Qc}
-			
-		\end{enumerate}
-		
-		\text{I $\wedge$ $\neg$ B} \\
-		$\equiv$ 0 $\leq$ i $\leq$ |ciudades| $\land$ \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge \neg \left( i<|ciudades| \right) \\
-		\equiv 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge i \geq|ciudades| \\
-		$\equiv$ \sum\limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes 
-		
-		
-		
-		
-		
-		
-		Por el Teorema del Invariante podemos concluir que
-		el ciclo es parcialmente correcto respecto de la
-		especificación 
-		
-		
-		\textbf{Teorema de Terminación}
-		
-		\begin{equation}
-			\begin{align}
-				4. &\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \}\\
-				5. &( I \wedge fv \leq 0) \implica \neg B 
-			\end{align}
-		\end{equation}
-		
-		Elijo como función variante:
-		
-		\begin{equation}
-			{fv}= |ciudades| -i
-		\end{equation}
-		
-		\begin{itemize}
-			\item Verifico 4.
-		\end{itemize}
-		
-		\begin{equation}
-			\begin{align}
-				&\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \} \longleftrightarrow \{ I \wedge B \wedge fv= V_{o} \} \implica \textit{wp} (S, fv < V_{o}) \\
-				&\textit{wp} (S, fv < V_{o}) \equiv \textit{wp} (res:= res + ciudades[i].habitantes; i:= i+1, |ciudades|-i < V_{o} ) \\
-				& \equiv \textit{wp}(res:= res + ciudades[i].habitantes, \textit{wp} (i:i+1; |ciudades|-i < V_{o} )) \\
-				& \equiv \textit{wp} (res:= res + ciudades[i].habitantes, |ciudades|-1-i<V_{o} )) \\
-				\vspace{0.1cm}
-				&\text{Puedo ignorar la res ya que no es relevante en este caso}\\
-				& \equiv |ciudades| -1 -i < |ciudades| -i \\
-				& -1 < 0 \checkmark
-				$$
-			\end{align}
+\end{enumerate}
+
+\text{I $\wedge$ $\neg$ B} \\
+$\equiv$ 0 $\leq$ i $\leq$ |ciudades| $\land$ \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge \neg \left( i<|ciudades| \right) \\
+\equiv 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge i \geq|ciudades| \\
+$\equiv$ \sum\limits_{j=0}^{|ciudades|-1}ciudades[j].habitantes 
+
+
+
+
+
+
+Por el Teorema del Invariante podemos concluir que
+el ciclo es parcialmente correcto respecto de la
+especificación 
+
+
+\textbf{Teorema de Terminación}
+
+\begin{equation}
+	\begin{align}
+		4. &\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \}\\
+		5. &( I \wedge fv \leq 0) \implica \neg B 
+	\end{align}
+\end{equation}
+
+Elijo como función variante:
+
+\begin{equation}
+	{fv}= |ciudades| -i
+\end{equation}
+
+\begin{itemize}
+	\item Verifico 4.
+\end{itemize}
+
+\begin{equation}
+	\begin{align}
+		&\{ I \wedge B \wedge fv= V_{o} \} \textbf{S} \{fv < V_{o} \} \longleftrightarrow \{ I \wedge B \wedge fv= V_{o} \} \implica \textit{wp} (S, fv < V_{o}) \\
+		&\textit{wp} (S, fv < V_{o}) \equiv \textit{wp} (res:= res + ciudades[i].habitantes; i:= i+1, |ciudades|-i < V_{o} ) \\
+		& \equiv \textit{wp}(res:= res + ciudades[i].habitantes, \textit{wp} (i:i+1; |ciudades|-i < V_{o} )) \\
+		& \equiv \textit{wp} (res:= res + ciudades[i].habitantes, |ciudades|-1-i<V_{o} )) \\
+		\vspace{0.1cm}
+		&\text{Puedo ignorar la res ya que no es relevante en este caso}\\
+		& \equiv |ciudades| -1 -i < |ciudades| -i \\
+		& -1 < 0 \checkmark
+		$$
+	\end{align}
 	\end{equation}}
 	
 	\vspace{0.3cm}
 	\begin{itemize}
-		\item Verifico 5.
-	\end{itemize}
-	
-	\begin{equation}
-		\begin{align}
-			&( I \wedge fv \leq 0) \implica \neg B \\
-			&( I \wedge fv \leq 0) \equiv  0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes  \wedge |ciudades| -i \leq 0 \\
-			&\text{Ignoro res} \\
-			&\equiv i \leq |ciudades| \wedge |ciudades| \leq i \ \longleftrightarrow |ciudades| = i \implica \neg (i < |ciudades|) \\
-			&\equiv|ciudades| = i \implica \neg (i < |ciudades|) \checkmark \\
-			$$
-		\end{align}
+\item Verifico 5.
+\end{itemize}
+
+\begin{equation}
+\begin{align}
+	&( I \wedge fv \leq 0) \implica \neg B \\
+	&( I \wedge fv \leq 0) \equiv  0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes  \wedge |ciudades| -i \leq 0 \\
+	&\text{Ignoro res} \\
+	&\equiv i \leq |ciudades| \wedge |ciudades| \leq i \ \longleftrightarrow |ciudades| = i \implica \neg (i < |ciudades|) \\
+	&\equiv|ciudades| = i \implica \neg (i < |ciudades|) \checkmark \\
+	$$
+\end{align}
 \end{equation}}
 
 
@@ -410,22 +416,22 @@ wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp
 \\ Luego, como P \implica \space \True \space es tautología, siempre se cumple
 
 \begin{equation}
-	\begin{align}
-		& P \implica \textit{wp} \{S1;S2;P_{c}\} \equiv \textit{wp} (S1,\textit{wp}(S2,P_{c})) \\
-		&\equiv \textit{wp}(S2, P_{c}) \equiv def (i) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \\
-		&\equiv \textit{wp}(S1, P_{c})  \equiv def(res) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \equiv P_{c} \\
-		& P \implica P_{c}
-	
-	
-	
-	\item Queda demostrado que \textbf{la tripla \{P\}S1;S2;S3;S4\{Q\}\; es válida}
-	
+\begin{align}
+& P \implica \textit{wp} \{S1;S2;P_{c}\} \equiv \textit{wp} (S1,\textit{wp}(S2,P_{c})) \\
+&\equiv \textit{wp}(S2, P_{c}) \equiv def (i) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \\
+&\equiv \textit{wp}(S1, P_{c})  \equiv def(res) \yLuego P_{c} \equiv \textit{True} \yLuego P_{c} \equiv P_{c} \\
+& P \implica P_{c}
+
+
+
+\item Queda demostrado que \textbf{la tripla \{P\}S1;S2;S3\{Q\}\; es válida}
+
 
 \subsection{Demostracion res $>$ 50000}
 
 \begin{multiline}
 	\text{Se utiliza la misma definición del ejercicio anterior para $P,B,fv$. Se redefinen:  }\\
-	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right))} }  \} \\
+	I &\equiv \{ 0 \leq i \leq |ciudades| \land \text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes \wedge ( \exists h : \ent) (0 \leq h < |ciudades|) \yLuego ciudades[h].habitantes > 50.000 \wedge \paraTodo{j}{\ent}{ \left( 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 \right)} }  \} \\
 	Q &\equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habitantes \wedge res>50000 \} \\
 	\text{Se procede de manera similar al ejercicio anterior probando por monotonía la validez del programa y la tripla de Hoare.} \\
 	\text{Resta chequear la validez del ciclo con el nuevo invariante y postcondicion. } \\
@@ -434,31 +440,31 @@ wp \left(S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right) \equiv wp
 	\text{Como se probo en el punto anterior, las implicancias para $0\leq i<|ciudades|$ y $\text{res} = \sum\limits_{j=0}^{i-1}ciudades[j].habitantes$ }\\
 	\text{se analiza lo agregado al invariante. Como lo agregado esta presente en $P_{c}$ queda probado trivialmente que  $P_{c} \longrightarrow I$ }\\
 	$\{I \land B\} \text{S} {\{{I}\} \longleftrightarrow {I \land B} \implica \textit{wp(S, I)} $\\
-	\text{Lo agregado al invariante no afecta a la implicancia. Luego vale que: ${I \land B} \implica \textit{wp(S, I)}$}\\
-	\vspace{0.2cm}\\
-	\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
-	\text{$I \wedge \neg B \equiv  0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
-	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge \neg \left( i<|ciudades| \right)$}\\
-	\text{$\equiv 0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
-	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge  i\geq|ciudades| $}\\
-	\text{$\equiv i=|ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
-	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
-	\text{$\equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
-	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
-	\vspace*{0.3cm}\\
-	\text{Sea $k$ una posición en la sucesión $ciudades$ que cumple con la precondición de tener mas de 50000 habitantes}\\
-	\text{$\sum\limits_{j=0}^{k-2} ciudades[j].habitantes$ Para los elementos a la izquierda de la k-esima posición}\\
-	\text{n para el numero de habitantes de la k-esima posición }\\
-	\text{$\sum\limits_{j=k+1}^{i-1} ciudades[j].habitantes$ Para los elementos a la derecha de la k-esima posición}\\
-	\text{Luego }\\
-	\text{$res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
-	\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge $}\\
-	\text{$res>50000$}\\
-	\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
-	\text{Las implicancias del teorema de terminación no se ven afectadas por los cambios en el invariante y la postcondicion. Luego siguen siendo validas.}\\
-	\text{Habiendo analizado todos los cambios y siguiendo los razonamientos del ejercicio anterior,}\\ \text{queda demostrado que el resultado devuelto es mayor a 50000}
+		\text{Lo agregado al invariante no afecta a la implicancia. Luego vale que: ${I \land B} \implica \textit{wp(S, I)}$}\\
+		\vspace{0.2cm}\\
+		\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
+		\text{$I \wedge \neg B \equiv  0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
+		\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge \neg \left( i<|ciudades| \right)$}\\
+		\text{$\equiv 0\leq i\leq |ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $} \\
+		\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \wedge  i\geq|ciudades| $}\\
+		\text{$\equiv i=|ciudades| \wedge res = \sum\limits_{j=0}^{i-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+		\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
+		\text{$\equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+		\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } $}\\
+		\vspace*{0.3cm}\\
+		\text{Sea $k$ una posición en la sucesión $ciudades$ que cumple con la precondición de tener mas de 50000 habitantes}\\
+		\text{$\sum\limits_{j=0}^{k-2} ciudades[j].habitantes$ Para los elementos a la izquierda de la k-esima posición}\\
+		\text{n para el numero de habitantes de la k-esima posición }\\
+		\text{$\sum\limits_{j=k+1}^{i-1} ciudades[j].habitantes$ Para los elementos a la derecha de la k-esima posición}\\
+		\text{Luego }\\
+		\text{$res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge ( \exists i : \ent) (0 \leq i < |ciudades|) \yLuego ciudades[i].habitantes>50.000 $}\\
+		\text{$\wedge \paraTodo{j}{\ent}{ 0\leq j < |ciudades| \implicaLuego ciudades[j].habitantes \geq 0 } \equiv res = \sum\limits_{j=0}^{|ciudades|-1} ciudades[j].habitantes \wedge $}\\
+		\text{$res>50000$}\\
+		\text{\{I \land  \neg B\} $\implica Q_{c}$}\\
+		\text{Las implicancias del teorema de terminación no se ven afectadas por los cambios en el invariante y la postcondicion. Luego siguen siendo validas.}\\
+		\text{Habiendo analizado todos los cambios y siguiendo los razonamientos del ejercicio anterior,}\\ \text{queda demostrado que el resultado devuelto es mayor a 50000}
+		
+		
+	\end{multiline}
 	
-	
-\end{multiline}
-
 \end{document}
