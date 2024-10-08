@@ -166,12 +166,17 @@ profe si estas viendo esto es porque me olvide de borrarlo
 				\}$
 		}
 
-		%hay que ponerle que p[0] = matriz inicial y luego el resto
+		%asegura viejo:
+		% $\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{i,j,k}{\ent}{
+		% 				\left( \left( 0 < k < n \right) \wedge \left( 0 \leq i,j < |conexi \acute{o} n| \right) \right) \implicaLuego
+		% 				\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[k-1], p[k]) \right) }  } \}$ \\
 
 		\asegura{
 			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{i,j,k}{\ent}{
-						\left( \left( 0 < k < n \right) \wedge \left( 0 \leq i,j < |conexi \acute{o} n| \right) \right) \implicaLuego
-						\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[k-1], p[k]) \right) }  } \}$ \\
+						\left(\left( \left( 0 < k < n \right) \wedge \left( 0 \leq i,j < |conexi \acute{o} n| \right) \right)
+						\implicaLuego \left( p[k][i][j] = multEntreMatrices(p[k-1], p[k-1])  \right)\right)
+						\yLuego
+						\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[n-1], p[n-1]) \right) }  } \}$ \\
 		}
 
 		\}
