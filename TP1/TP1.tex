@@ -190,12 +190,9 @@ profe si estas viendo esto es porque me olvide de borrarlo
 
 \subsection{caminoMinimo}
 
-\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent}}{ \{
-		\requiere{$\{ \paraTodo{i,j}{\ent}{
-					\left( 0 \leq i,j < |distancias| \right) \yLuego \left( \left( i = j \right) \longrightarrow \left( distancias[i][j] = 0 \right) \right) \wedge \left( distancias[i][j] = distancias[j][i] \right)
-				}
-				\}$}
-		\asegura{$\{(hayCamino(distancias, origen, destino) \wedge \space ((\forall k: \TLista{\ent})(\exists p: \TLista{\ent})(esCamino(distancias, origen, destino, p)  \wedge \\ (sumaDistancias(distancias, origen, destino, p) \leq
+\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ }{ 
+		\requiere{$\{ matrizCuadradaSimetrica(distancias) \wedge \left( 0 \leq origen, destino < |distancias| \right) \}$}
+		\asegura{$\{ \\ (hayCamino(distancias, origen, destino) \wedge  ((\forall k: \TLista{\ent})(\exists p: \TLista{\ent})(esCamino(distancias, origen, destino, p)  \wedge \\ (sumaDistancias(distancias, origen, destino, p) \leq
 				sumaDistancias(distancias, origen, destino, k)))
 				\implica res = p
 				)  \wedge \\ ((\neg hayCamino(distancias, origen, destino)
@@ -205,7 +202,7 @@ profe si estas viendo esto es porque me olvide de borrarlo
 	}
 
 	\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, p : \TLista{\ent}}{$\{
-			\paraTodo{k}{\ent}{ (0 \leq i, j, origen, destino  < |p|) \yLuego distancias[p[k]][p[k + 1]] } \}$
+			\paraTodo{k}{\ent}{ (0 \leq k, origen, destino  < |p|) \yLuego distancias[p[k]][p[k + 1]] } \}$
 	}
 
 	\aux{sumaDistancias}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, s : \TLista{\ent}}{\ent}{$\sum_{j = origen}^{destino} \text{distancias}[j][j + 1]$}

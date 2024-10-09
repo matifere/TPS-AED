@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.5)  8 OCT 2024 13:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.5)  8 OCT 2024 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -370,30 +370,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--183
  []
 
 
-Overfull \hbox (11.66438pt too wide) in paragraph at lines 203--203
-[]\OT1/cmtt/m/n/10 asegura $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 hayCamino\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 distancias; origen; destino\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OT1/cmr/m/n/10 ((\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 seq\OMS/cmsy/m/n/10 h\U/dsrom/m/n/10 Z\OMS/cmsy/m/n/10 i\OT1/cmr/m/n/10 )(\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 p \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 seq\OMS/cmsy/m/n/10 h\U/dsrom/m/n/10 Z\OMS/cmsy/m/n/10 i\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 esCamino\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 distancias; origen; destino; p\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
 
  []
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 235.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 232.
 (c:/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 235.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 232.
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--239
+Underfull \hbox (badness 10000) in paragraph at lines 224--236
 
  []
 
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 242--247
+Underfull \hbox (badness 10000) in paragraph at lines 239--244
 
  []
 
@@ -401,35 +396,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--247
 
 [3]
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:347: Package amsmath Error: Erroneous nesting of equation structures;
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:344: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.347 	\end{align}
+l.344 	\end{align}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Package amsmath Error: Erroneous nesting of equation structures;
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.372 	\end{align}
+l.369 	\end{align}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing } inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing } inserted.
 <inserted text> 
                 }
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -437,27 +432,27 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing { inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing { inserted.
 <inserted text> 
                 {
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing $ inserted.
 <inserted text> 
                 $
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing } inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing } inserted.
 <inserted text> 
                 }
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -465,40 +460,40 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing { inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing { inserted.
 <inserted text> 
                 {
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:372: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:369: Missing $ inserted.
 <inserted text> 
                 $
-l.372 	\end{align}
+l.369 	\end{align}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:388: Package amsmath Error: Erroneous nesting of equation structures;
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:385: Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.388 	\end{align}
+l.385 	\end{align}
                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:388: Undefined control sequence.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:385: Undefined control sequence.
 <argument> ...ca \neg (i < |ciudades|) \checkmark 
                                                   \\ $$ 
-l.388 	\end{align}
+l.385 	\end{align}
                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -506,10 +501,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:388: Missing } inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:385: Missing } inserted.
 <inserted text> 
                 }
-l.388 	\end{align}
+l.385 	\end{align}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -517,92 +512,92 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:388: Missing { inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:385: Missing { inserted.
 <inserted text> 
                 {
-l.388 	\end{align}
+l.385 	\end{align}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:395: LaTeX Error: Lonely \item--perhaps a missing list environment.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:392: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.395 \item L
+l.392 \item L
              uego me falta ver que P \implica \textit{wp} \left( S1;S2,P_{c}...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 395
+Underfull \hbox (badness 10000) detected at line 392
 [][]
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:395: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:392: Missing $ inserted.
 <inserted text> 
                 $
-l.395 ...alta ver que P \implica \textit{wp} \left
+l.392 ...alta ver que P \implica \textit{wp} \left
                                                   ( S1;S2,P_{c} \right) \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:396: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:393: Missing $ inserted.
 <inserted text> 
                 $
-l.396 
+l.393 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:397: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:394: Missing $ inserted.
 <inserted text> 
                 $
-l.397 wp \left
+l.394 wp \left
               (S1;S2,P_{c}\right) \equiv wp\left(res:=0; i:=0, P_{c} \right)...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:398: Double subscript.
-l.398 wp\left( res:=0,def(i) \yLuego P_{c}\space_
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:395: Double subscript.
+l.395 wp\left( res:=0,def(i) \yLuego P_{c}\space_
                                                  {i}^{0} \right) \equiv wp(S...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:400: Double subscript.
-l.400 \yLuego P_{c}\space_
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:397: Double subscript.
+l.397 \yLuego P_{c}\space_
                           {res} ^{0} \equiv 0 = 0 \equiv \True \\
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:401: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:398: Missing $ inserted.
 <inserted text> 
                 $
-l.401 
+l.398 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--401
+Underfull \hbox (badness 10000) in paragraph at lines 394--398
 
  []
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:402: LaTeX Error: There's no line here to end.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:399: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.402 \\ L
+l.399 \\ L
           uego, como P \implica \space \True \space es tautología, siempre ...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -610,27 +605,27 @@ or  <return>  to continue without it.
 
 Runaway argument?
  & P \implica \textit {wp} \{S1;S2;P_{c}\} \equiv \textit {wp} (S1,\textit \ETC.
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:410: Paragraph ended before \align was complete.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:407: Paragraph ended before \align was complete.
 <to be read again> 
                    \par 
-l.410 
+l.407 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:410: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:407: Missing $ inserted.
 <inserted text> 
                 $
-l.410 
+l.407 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:410: Missing \endgroup inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:407: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.410 
+l.407 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -638,10 +633,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:410: Missing \endgroup inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:407: Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.410 
+l.407 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -649,51 +644,48 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:410: Display math should end with $$.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:407: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.410 
+l.407 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:411: LaTeX Error: Lonely \item--perhaps a missing list environment.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:408: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.411 \item Q
+l.408 \item Q
              ueda demostrado que \textbf{la tripla \{P\}S1;S2;S3\{Q\}\; es v...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 411
+Underfull \hbox (badness 10000) detected at line 408
 [][]
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 411.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 408.
 
-
-[4]
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:415: LaTeX Error: Environment multiline undefined.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:412: LaTeX Error: Environment multiline undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.415 \begin{multiline}
+l.412 \begin{multiline}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:417: Misplaced alignment tab character &.
-l.417 	I &
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:414: Misplaced alignment tab character &.
+l.414 	I &
           \equiv \{ 0 \leq i \leq |ciudades| \land res = \sum \limits_{j=0}^...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -702,16 +694,19 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:417: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:414: Missing $ inserted.
 <inserted text> 
                 $
-l.417 	I &\equiv
+l.414 	I &\equiv
                  \{ 0 \leq i \leq |ciudades| \land res = \sum \limits_{j=0}^...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:418: Misplaced alignment tab character &.
-l.418 	Q &
+
+
+[4]
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:415: Misplaced alignment tab character &.
+l.415 	Q &
           \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habit...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -720,424 +715,424 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:425: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:422: Missing $ inserted.
 <inserted text> 
                 $
-l.425 	$\{I \land
+l.422 	$\{I \land
                   B\} S \{{I}\} \longleftrightarrow {I \land B} \implica wp(...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:428: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:425: Missing $ inserted.
 <inserted text> 
                 $
-l.428 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.425 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:428: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:425: Missing $ inserted.
 <inserted text> 
                 $
-l.428 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
-                                                  \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:430: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.430 ...\wedge \neg \left( i<|ciudades| \right)$}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:432: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.432 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:434: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.434 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:436: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.436 ...aLuego ciudades[j].habitantes \geq 0 } $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:444: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.444 ...ades|-1} ciudades[j].habitantes \wedge $}
-                                                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:446: Missing $ inserted.
-<inserted text> 
-                $
-l.446 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
-                                                  \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:446: Missing $ inserted.
-<inserted text> 
-                $
-l.446 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+l.425 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
                                                   \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (21.12755pt too wide) in paragraph at lines 417--449
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:427: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...\wedge \neg \left( i<|ciudades| \right)$}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:429: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...antes \geq 0 } \wedge  i\geq|ciudades| $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:431: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:433: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...aLuego ciudades[j].habitantes \geq 0 } $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:441: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.441 ...ades|-1} ciudades[j].habitantes \wedge $}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:443: Missing $ inserted.
+<inserted text> 
+                $
+l.443 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:443: Missing $ inserted.
+<inserted text> 
+                $
+l.443 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
+                                                  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.12755pt too wide) in paragraph at lines 414--446
 [] 
  []
 
 
-Overfull \hbox (95.62097pt too wide) in paragraph at lines 417--449
+Overfull \hbox (95.62097pt too wide) in paragraph at lines 414--446
 [] 
  []
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:450: LaTeX Error: \begin{equation} on input line 404 ended by \end{multiline}.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:447: LaTeX Error: \begin{equation} on input line 401 ended by \end{multiline}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.450 \end{multiline}
+l.447 \end{multiline}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1148,13 +1143,13 @@ Package caption Warning: Unused \captionsetup[sub] on input line 7.
 See the caption package documentation for explanation.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:452: LaTeX Error: \begin{equation} on input line 404 ended by \end{document}.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:449: LaTeX Error: \begin{equation} on input line 401 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.452 \end{document}
+l.449 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1173,18 +1168,18 @@ L3 programming layer <2024-09-10>
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 404 (\begingroup)
+### semi simple group (level 1) entered at line 401 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  7409 strings out of 473579
  120131 string characters out of 5732263
- 718579 words of memory out of 5000000
+ 717579 words of memory out of 5000000
  30224 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,11n,79p,426b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on Tp1.pdf (6 pages, 578438 bytes).
+Output written on Tp1.pdf (6 pages, 578369 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
