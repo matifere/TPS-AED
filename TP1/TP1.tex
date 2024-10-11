@@ -190,22 +190,77 @@ profe si estas viendo esto es porque me olvide de borrarlo
 
 \subsection{caminoMinimo}
 
-\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ }{ 
+\begin{proc}{caminoMinimo}{\In origen : \ent, \In destino : \ent, \In distancias : \TLista{\TLista{\ent}}}{\TLista{\ent} \{ }{
+
+		%creo que el requiere ya esta
+
 		\requiere{$\{ matrizCuadradaSimetrica(distancias) \wedge \left( 0 \leq origen, destino < |distancias| \right) \}$}
-		\asegura{$\{ \\ (hayCamino(distancias, origen, destino) \wedge  ((\forall k: \TLista{\ent})(\exists p: \TLista{\ent})(esCamino(distancias, origen, destino, p)  \wedge \\ (sumaDistancias(distancias, origen, destino, p) \leq
-				sumaDistancias(distancias, origen, destino, k)))
-				\implica res = p
-				)  \wedge \\ ((\neg hayCamino(distancias, origen, destino)
-				\lor (origen = destino)) \implica res = \lvacia))
+
+		%ahora, cosas a cambiar en el asegura: la idea esta bien (a grandes rasgos), falta tomar bien la suma de distancias, es camino tiene que ser verdadero y p,k estan mal puestos 12
+		%OJO, no podemos usar hayCamino aca, es tan facil como cambiar hay camino por un auxiliar existeCamino
+
+		\asegura{$\{ \\ (
+				existeCamino(distancias, origen, destino) \yLuego \\
+				\left( menorCamino(distancias, origen, destino) = res \right)
+				)
+				\lor \\
+				(
+				(\neg existeCamino(distancias, origen, destino)
+				\lor (origen = destino)) \implicaLuego res = \lvacia
+				)
 				\}$}
 		\}
 	}
 
-	\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, p : \TLista{\ent}}{$\{
-			\paraTodo{k}{\ent}{ (0 \leq k, origen, destino  < |p|) \yLuego distancias[p[k]][p[k + 1]] } \}$
+	\aux{todosLosCaminos}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\TLista{\ent}}}{
+		$
+			\existe{!m}{\TLista{\TLista{\ent}}}{
+				\left( |m| > 1 \right) \yLuego
+				\existe{p}{\TLista{\ent}}{
+					(
+					\left( |p| > 1 \right) \yLuego (
+					\left( p[0] = origen \right) \wedge
+					\left( p[|p|-1] = destino \right) \wedge
+					\paraTodo{k}{\ent}{
+						(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
+					}
+					)
+					) \implicaLuego \left( p \in m \right)
+				}
+			}
+		$
 	}
 
-	\aux{sumaDistancias}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, s : \TLista{\ent}}{\ent}{$\sum_{j = origen}^{destino} \text{distancias}[j][j + 1]$}
+	\aux{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\ent}}{$
+		\existe{p}{\TLista{\ent}}{
+		\existe{i}{\ent}{\left(
+		0 \leq i < |todosLosCaminos(distancias, origen, destino)|
+		\right) \yLuego \paraTodo{j}{\ent}{
+		\left(
+		(0 \leq j < |todosLosCaminos(distancias, origen, destino)|)
+		% \wedge
+		% (0 \leq h < |todosLosCaminos(distancias, origen, destino)|)
+		\right)
+		\implicaLuego \\
+		\left( ((\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[i]|-1} distancias[n-1][n]) \leq $ \\ $(\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[j]|-1} distancias[n-1][n])) \implica $ \\ $
+		\left( p = todosLosCaminos(distancias, origen, destino)[i] \right) \right)
+		}}
+		}
+
+	$}
+
+	\aux{existeCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent}{\bool}{{
+				$
+					\True \longleftrightarrow
+					\existe{p}{\TLista{\ent}}{
+						\left( |p| > 1 \right) \yLuego (
+						\left( p[0] = desde \right) \wedge
+						\left( p[|p|-1] = hasta \right) \wedge
+						\paraTodo{k}{\ent}{
+							(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
+						}
+						)
+					}  $}}
 
 \end{proc}
 
