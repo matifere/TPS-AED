@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.5)  12 OCT 2024 12:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.5)  12 OCT 2024 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -364,72 +364,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--183
 
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.250 	$}
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Extra \right.
-<argument> ...rigen, destino)[i] \right ) \right )
-                                                   $\end {adjustwidth}$ 
-l.250 	$}
-         
-I'm ignoring a \right that had no matching \left.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Missing $ inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing $ inserted.
 <inserted text> 
                 $
-l.250 	$}
-         
+l.241 			$}
+           
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 	$}
-         
-Please use the math alphabet \mathbf instead of the \bfseries command. 
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Missing $ inserted.
-<inserted text> 
-                $
-l.250 	$}
-         
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Missing } inserted.
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing } inserted.
 <inserted text> 
                 }
-l.250 	$}
-         
+l.241 			$}
+           
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:250: Extra }, or forgotten \endgroup.
-\aux ... #3\, = #4{\normalfont \bfseries \,;\par }
-                                                  
-l.250 	$}
-         
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Extra }, or forgotten \endgroup.
+\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.241 			$}
+           
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Command \end{list} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 			$}
+           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 			$}
+           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 			$}
+           
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing $ inserted.
+<inserted text> 
+                $
+l.241 			$}
+           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 
@@ -1238,13 +1248,13 @@ L3 programming layer <2024-09-10>
 Here is how much of TeX's memory you used:
  7409 strings out of 473579
  120131 string characters out of 5732263
- 719579 words of memory out of 5000000
+ 718579 words of memory out of 5000000
  30224 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,11n,79p,439b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on Tp1.pdf (7 pages, 581106 bytes).
+Output written on Tp1.pdf (7 pages, 579675 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream

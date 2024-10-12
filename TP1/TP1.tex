@@ -173,7 +173,7 @@
 
 		\asegura{
 			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
-						\left( \left( 0 < k < n \right)  
+						\left( \left( 0 < k < n \right)
 						\implicaLuego \left( multEntreMatrices(p[k-1], p[k-1], p[k])  \right)\right)
 						\yLuego \\
 						\left(  multEntreMatrices(p[n-1], p[n-1], conexi \acute{o} n) \right) }  } \}$ \\
@@ -201,7 +201,7 @@
 
 		\asegura{$\{ \\ (
 				existeCamino(distancias, origen, destino) \yLuego \\
-				\left( menorCamino(distancias, origen, destino) = res \right)
+				\left( menorCamino(distancias, origen, destino, res) \right)
 				)
 				\lor \\
 				(
@@ -212,46 +212,46 @@
 		\}
 	}
 
-	\aux{todosLosCaminos}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\TLista{\ent}}}{
-		$
-			\existe{!m}{\TLista{\TLista{\ent}}}{
-				\left( |m| > 1 \right) \yLuego
-				\existe{p}{\TLista{\ent}}{
-					(
-					\left( |p| > 1 \right) \yLuego (
-					\left( p[0] = origen \right) \wedge
-					\left( p[|p|-1] = destino \right) \wedge
-					\paraTodo{k}{\ent}{
-						(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
-					}
-					)
-					) \implicaLuego \left( p \in m \right)
+	% \pred{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, resu : \TLista{\ent}}{$
+	% 	\existe{p}{\TLista{\ent}}{
+	% 	\existe{i}{\ent}{\left(
+	% 	0 \leq i < |todosLosCaminos(distancias, origen, destino)|
+	% 	\right) \yLuego \paraTodo{j}{\ent}{
+	% 	\left(
+	% 	(0 \leq j < |todosLosCaminos(distancias, origen, destino)|)
+	% 	% \wedge
+	% 	% (0 \leq h < |todosLosCaminos(distancias, origen, destino)|)
+	% 	\right)
+	% 	\implicaLuego \\
+	% 	\left( ((\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[i]|-1} distancias[n-1][n]) \leq $ \\ $(\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[j]|-1} distancias[n-1][n])) \implica $ \\ $
+	% 	\left( p = todosLosCaminos(distancias, origen, destino)[i] \right) \right)
+	% 	}}
+	% 	}
+
+	%$}
+	\pred{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, resu : \TLista{\ent}}{$ \{
+			\existe{p}{\TLista{\ent}}{
+				esCamino(distancias, origen, destino, p) \yLuego \paraTodo{k}{\TLista{\ent}}{
+					esCamino(distancias, origen, destino, k) \implicaLuego
+					((\sum_{n = 1}^{|p|-1} distancias[p[n-1]][p[n]]) \leq $ \\ $(\sum_{n = 1}^{|k|-1} distancias[k[n-1]][k[n]]) ) \yLuego \left( resu = p\right)
 				}
 			}
-		$
-	}
-
-	\aux{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\ent}}{$
-		\existe{p}{\TLista{\ent}}{
-		\existe{i}{\ent}{\left(
-		0 \leq i < |todosLosCaminos(distancias, origen, destino)|
-		\right) \yLuego \paraTodo{j}{\ent}{
-		\left(
-		(0 \leq j < |todosLosCaminos(distancias, origen, destino)|)
-		% \wedge
-		% (0 \leq h < |todosLosCaminos(distancias, origen, destino)|)
-		\right)
-		\implicaLuego \\
-		\left( ((\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[i]|-1} distancias[n-1][n]) \leq $ \\ $(\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[j]|-1} distancias[n-1][n])) \implica $ \\ $
-		\left( p = todosLosCaminos(distancias, origen, destino)[i] \right) \right)
-		}}
-		}
-
-	$}
-
-	\aux{existeCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent}{\bool}{{
+		
+			\}	
+			$}
+	\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent, listaComparar : \TLista{\ent}  }{ \{ 
 				$
-					\True \longleftrightarrow
+					\existe{p}{\TLista{\ent}}{
+						\left( |p| > 1 \right) \yLuego (
+						\left( p[0] = desde \right) \wedge
+						\left( p[|p|-1] = hasta \right) \wedge
+						\paraTodo{k}{\ent}{
+							(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
+						}
+						) \yLuego (p = listaComparar)
+					}  $ \}}
+	\pred{existeCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent}{\{
+				$
 					\existe{p}{\TLista{\ent}}{
 						\left( |p| > 1 \right) \yLuego (
 						\left( p[0] = desde \right) \wedge
@@ -260,7 +260,7 @@
 							(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
 						}
 						)
-					}  $}}
+					}  $ \} }
 
 \end{proc}
 
