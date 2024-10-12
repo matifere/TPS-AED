@@ -42,7 +42,6 @@
 
 \section{Especificación}
 
-profe si estas viendo esto es porque me olvide de borrarlo
 %
 % EJERCICIO 1
 %
@@ -52,14 +51,14 @@ profe si estas viendo esto es porque me olvide de borrarlo
 \begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ }
 	%no hay ciudades repetidas
 
-	\requiere{\{ noHayNombresRepetidos(ciudades)\}}
+	\requiere{$\{ noHayNombresRepetidos(ciudades) \wedge \left( |ciudades| > 0 \right)\}$}
 
 	%se permuto el implica luego
 
 	\asegura{\{ $ \paraTodo{i}{\ent}{
 				\left( 0 \leq i < |ciudades| \right) \implicaLuego
 				\left( \left( ciudades[i]_{1} > 50000 \right)
-				\implicaLuego
+				\implica
 				\left( ciudades[i] \in \res \right)  \right)
 			} $ \}}
 \end{proc} \}
