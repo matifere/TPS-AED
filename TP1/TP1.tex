@@ -51,7 +51,7 @@
 \begin{proc}{grandesCiudades} {\In ciudades : \TLista{Ciudad}}{\TLista{Ciudad}\{ }
 	%no hay ciudades repetidas
 
-	\requiere{$\{ noHayNombresRepetidos(ciudades) \wedge \left( |ciudades| > 0 \right)\}$}
+	\requiere{$\{\left( |ciudades| > 0 \right) \yLuego noHayNombresRepetidos(ciudades) \}$}
 
 	%se permuto el implica luego
 
@@ -77,6 +77,7 @@
 \begin{proc}{sumaDeHabitantes}{\In menoresDeCiudades : \TLista{Ciudad}, \In mayoresDeCiudades : \TLista{Ciudad}}
 	{\TLista{Ciudad}\{ }
 	\requiere{ $\{
+			\left( |menoresDeCiudades| > 0 \right) \yLuego \\
 			\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
 			\wedge
 			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades) \wedge
@@ -90,12 +91,12 @@
 	\asegura{$\{\paraTodo{n,m}{\ent}{ \left(
 				0 \leq n,m < |menoresDeCiudades|
 				\right)  \implicaLuego
-				\left(
+				( \left(
 				menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0}
 				\right)
 				\implicaLuego \\
 				( \left( res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( res[n]_{0} = menoresDeCiudades[n]_{0} \right)
-				)}\}$}
+				) )}\}$}
 \end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
 
 \subsection{hayCamino}
@@ -129,7 +130,7 @@
 
 \pred{matrizCuadradaSimetrica}{matriz: \TLista{\TLista{\ent}}}{
 	\paraTodo{i,j,k}{\ent}{
-		\left( 0 \leq i,j,k < |matriz| \right) \yLuego \left( 0 \leq i,j < |matriz[k]| \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
+		\left( \left( 0 \leq i,j,k < |matriz| \right) \yLuego \left( 0 \leq i,j < |matriz[k]| \right) \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
 	}
 }
 
