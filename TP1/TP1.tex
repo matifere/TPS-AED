@@ -59,12 +59,15 @@
 				\left( 0 \leq i < |ciudades| \right) \implicaLuego
 				\left( \left( ciudades[i]_{1} > 50000 \right)
 				\implica
-				\left( ciudades[i] \in \res \right)  \right)
+				\left( ciudades[i] \in \res \right) \right) \yLuego estaIncluida(res, ciudades)
 			} $ \}}
 \end{proc} \}
 
 \pred{noHayNombresRepetidos}{lista: \TLista{Ciudad}}{
 	\paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |lista| \right) \implicaLuego \left( lista[i]_{0} \neq lista[j]_{0} \right)}
+}
+\pred{estaIncluida}{s : \TLista{Ciudad}, t : \TLista{Ciudad}}{
+	\paraTodo{k}{Ciudad}{(k \in s) \implica (\# apariciones(e,s) \leq \# apariciones(e,t))}
 }
 
 \subsection{sumaDeHabitantes}
@@ -80,10 +83,7 @@
 			\left( |menoresDeCiudades| > 0 \right) \yLuego \\
 			\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
 			\wedge
-			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades) \wedge
-			( \paraTodo{i}{\ent}{
-				\left( 0 \leq i < |menoresDeCiudades| \right) \implicaLuego \existe{!j}{\ent}{ \left( 0 \leq j < |menoresDeCiudades| \right) \yLuego \left( menoresDeCiudades[i]_{0} = mayoresDeCiudades[j]_{0} \right) }
-			}  )
+			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades)
 			\}$ }
 
 	%aca se reemplazo ciudades por res directamente
@@ -130,7 +130,7 @@
 
 \pred{matrizCuadradaSimetrica}{matriz: \TLista{\TLista{\ent}}}{
 	\paraTodo{i,j,k}{\ent}{
-		\left( \left( 0 \leq i,j,k < |matriz| \right) \yLuego \left( 0 \leq i,j < |matriz[k]| \right) \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
+		\left( \left( 0 \leq i,j,k < |matriz| \right) \implicaLuego \left( |matriz[k]| = |matriz| \right) \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
 	}
 }
 
