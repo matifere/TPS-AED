@@ -28,7 +28,7 @@
 \[
 \text{requiere} ( \{ |\text{menoresDeCiudades}| > 0 \land $\\$ |\text{menoresDeCiudades}| = |\text{mayoresDeCiudades}| 
 \land \text{noHayNombresRepetidos}(\text{menoresDeCiudades}) 
-\land \text{noHayNombresRepetidos}(\text{mayoresDeCiudades}) ) \}
+\land \text{noHayNombresRepetidos}(\text{mayoresDeCiudades}) \right\}
 \]
 
 \subsection{1.3 hayCamino}
@@ -37,7 +37,7 @@
 \textbf{Nueva precondición:}
 \[
 \text{requiere} \left\{ \forall i : \mathbb{Z} \, \left( 0 \leq i < |\text{distancias}| \right) \rightarrow 
-|\text{distancias}[i]| = |\text{distancias}| \land $ \\ $ \forall i, j : \mathbb{Z} \, \left( 0 \leq i, j < |\text{distancias}| \right) \rightarrow 
+|\text{distancias}[i]| = |\text{distancias}| \land \forall i, j : \mathbb{Z} \, \left( 0 \leq i, j < |\text{distancias}| \right) \rightarrow 
 \text{distancias}[i][j] = \text{distancias}[j][i] \right\}
 \]
 

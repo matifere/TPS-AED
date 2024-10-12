@@ -172,11 +172,11 @@
 		% 				\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[k-1], p[k]) \right) }  } \}$ \\
 
 		\asegura{
-			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{i,j,k}{\ent}{
-						\left(\left( \left( 0 < k < n \right) \wedge \left( 0 \leq i,j < |conexi \acute{o} n| \right) \right)
-						\implicaLuego \left( p[k][i][j] = multEntreMatrices(p[k-1], p[k-1])  \right)\right)
-						\yLuego
-						\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[n-1], p[n-1]) \right) }  } \}$ \\
+			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
+						\left( \left( 0 < k < n \right)  
+						\implicaLuego \left( multEntreMatrices(p[k-1], p[k-1], p[k])  \right)\right)
+						\yLuego \\
+						\left(  multEntreMatrices(p[n-1], p[n-1], conexi \acute{o} n) \right) }  } \}$ \\
 		}
 
 		\}
@@ -184,7 +184,7 @@
 
 \end{proc}
 
-\aux{multEntreMatrices}{mUno : \TLista{\TLista{\ent}}, mDos : \TLista{\TLista{\ent}}}{\ent}{ \paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |mUno| \right) \yLuego \sum_{k=1}^{|mUno|} mUno[i][k] \times mDos[k][j]} }
+\pred{multEntreMatrices}{mUno : \TLista{\TLista{\ent}}, mDos : \TLista{\TLista{\ent}}, resu : \TLista{\TLista{\ent}}}{ \paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |resu| \right) \implicaLuego ( resu[i][j] = \sum_{k=1}^{|mUno|} mUno[i][k] \times mDos[k][j]} ) }
 
 %ambos (requiere y asegura) son falsos:
 
