@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.5)  13 OCT 2024 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.9)  13 OCT 2024 11:39
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex
-(c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex
+**./TP1.tex
+(TP1.tex
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-09-10>
-(c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2024-08-16>
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
-(c:/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count194
@@ -23,15 +22,26 @@ File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (c:/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2024/09/18 v24.10 The Babel package
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/08/29 v24.9 The Babel package
 \babel@savecnt=\count268
 \U@D=\dimen142
-\l@unhyphenated=\language89
- (c:/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
+\l@unhyphenated=\language79
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count269
- (c:/texlive/2024/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
+df
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks17
 \es@quotdepth=\count270
@@ -40,16 +50,22 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 Package babel Info: Making ' an active character on input line 740.
-)) (c:/texlive/2024/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+))
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
+-spanish.tex
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 11.
-) (c:/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
-) (c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.sty (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
@@ -65,24 +81,31 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \lst@newlines=\count275
 \lst@lineno=\count276
 \lst@maxwidth=\dimen146
- (c:/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
-File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-) (c:/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
 \c@lstnumber=\count277
 \lst@skipnumbers=\count278
 \lst@framebox=\box53
-) (c:/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2024/09/23 1.10c listings configuration
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/05/25 1.10b listings configuration
 ))
-Package: listings 2024/09/23 1.10c (Carsten Heinz)
- (c:/texlive/2024/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: listings 2024/05/25 1.10b (Carsten Heinz)
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-) (c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
- (c:/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (c:/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen147
 \captionmargin=\dimen148
@@ -102,21 +125,24 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count281
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count282
-) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen155
-)) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen156
-) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count283
@@ -166,15 +192,20 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (c:/texlive/2024/texmf-dist/tex/latex/changepage/changepage.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count295
 \cp@tempcnt=\count296
-) (c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (c:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count297
@@ -189,25 +220,37 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen170
 \Gm@layoutvoffset=\dimen171
 \Gm@dimlist=\toks27
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
- (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./AEDmacros.tex (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-)) (./caratula.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (AEDmacros.tex
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/05/25 1.10b listings language file
+)) (caratula.sty
 Package: caratula 2013/08/04 v0.5 Para componer caratulas de TPs del DC
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
@@ -228,13 +271,17 @@ Cargando package 'caratula' v0.5 (2013/08/04)
 \c@coDirectoresCount=\count302
 \codirecTabNombre=\toks35
 \codirecTabEmail=\toks36
-) (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box56
+) (TP1.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
 )
-No file Tp1.aux.
-\openout1 = `Tp1.aux'.
+\openout1 = `TP1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -258,6 +305,7 @@ Package caption Info: changepage package is loaded.
 \caption@adjustwidth@hsize=\dimen174
 \caption@adjustwidth@linewidth=\dimen175
 Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -292,7 +340,9 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count305
 \scratchdimen=\dimen176
@@ -305,11 +355,16 @@ Package caption Info: End \AtBeginDocument code.
 \MPnumerator=\count309
 \makeMPintoPDFobject=\count310
 \everyMPtoPDFconversion=\toks38
-) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 <logo_dc.jpg, id=1, 215.6055pt x 83.5923pt>
 File: logo_dc.jpg Graphic file (type jpg)
@@ -335,17 +390,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
 [1
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo_dc.jpg> <./logo_uba.jpg>]
+{C:/Users/javie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logo_dc.jp
+g> <./logo_uba.jpg>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 51.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 51.
- (c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+1.
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 63.
- (c:/texlive/2024/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 6
+3.
+
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 141--143
@@ -364,82 +424,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--183
 
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing $ inserted.
+! Missing \right. inserted.
 <inserted text> 
-                $
-l.241 			$}
-           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing } inserted.
-<inserted text> 
-                }
-l.241 			$}
-           
+                \right .
+l.250 	$}
+         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.241 			$}
-           
+! Extra \right.
+<argument> ...rigen, destino)[i] \right ) \right )
+                                                   $\end {adjustwidth}$ 
+l.250 	$}
+         
+I'm ignoring a \right that had no matching \left.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.250 	$}
+         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.250 	$}
+         
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.250 	$}
+         
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.250 	$}
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\aux ... #3\, = #4{\normalfont \bfseries \,;\par }
+                                                  
+l.250 	$}
+         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Command \end{list} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241 			$}
-           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241 			$}
-           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.241 			$}
-           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:241: Missing $ inserted.
-<inserted text> 
-                $
-l.241 			$}
-           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
 
 
@@ -448,8 +498,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--275
 
  []
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 287.
-(c:/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+87.
+(C:\Users\javie\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
@@ -468,7 +519,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--299
 
 [3]
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:399: Package amsmath Error: Erroneous nesting of equation structures;
+! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
@@ -481,7 +532,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Package amsmath Error: Erroneous nesting of equation structures;
+! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
@@ -493,7 +544,7 @@ l.424 	\end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing } inserted.
+! Missing } inserted.
 <inserted text> 
                 }
 l.424 	\end{align}
@@ -504,7 +555,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing { inserted.
+! Missing { inserted.
 <inserted text> 
                 {
 l.424 	\end{align}
@@ -513,7 +564,7 @@ I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.424 	\end{align}
@@ -521,7 +572,7 @@ l.424 	\end{align}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing } inserted.
+! Missing } inserted.
 <inserted text> 
                 }
 l.424 	\end{align}
@@ -532,7 +583,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing { inserted.
+! Missing { inserted.
 <inserted text> 
                 {
 l.424 	\end{align}
@@ -541,7 +592,7 @@ I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:424: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.424 	\end{align}
@@ -550,7 +601,7 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:440: Package amsmath Error: Erroneous nesting of equation structures;
+! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
 See the amsmath package documentation for explanation.
@@ -562,7 +613,7 @@ l.440 	\end{align}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:440: Undefined control sequence.
+! Undefined control sequence.
 <argument> ...ca \neg (i < |ciudades|) \checkmark 
                                                   \\ $$ 
 l.440 	\end{align}
@@ -573,7 +624,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:440: Missing } inserted.
+! Missing } inserted.
 <inserted text> 
                 }
 l.440 	\end{align}
@@ -584,7 +635,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:440: Missing { inserted.
+! Missing { inserted.
 <inserted text> 
                 {
 l.440 	\end{align}
@@ -597,7 +648,7 @@ Try to go on, since this might almost work.
 
 [4]
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:447: LaTeX Error: Lonely \item--perhaps a missing list environment.
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -605,6 +656,7 @@ Type  H <return>  for immediate help.
                                                   
 l.447 \item L
              uego me falta ver que P \implica \textit{wp} \left( S1;S2,P_{c}...
+
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -613,7 +665,7 @@ Underfull \hbox (badness 10000) detected at line 447
 [][]
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:447: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.447 ...alta ver que P \implica \textit{wp} \left
@@ -621,7 +673,7 @@ l.447 ...alta ver que P \implica \textit{wp} \left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:448: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.448 
@@ -634,7 +686,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:449: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.449 wp \left
@@ -642,17 +694,17 @@ l.449 wp \left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:450: Double subscript.
+! Double subscript.
 l.450 wp\left( res:=0,def(i) \yLuego P_{c}\space_
                                                  {i}^{0} \right) \equiv wp(S...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:452: Double subscript.
+! Double subscript.
 l.452 \yLuego P_{c}\space_
                           {res} ^{0} \equiv 0 = 0 \equiv \True \\
 I treat `x_1_2' essentially like `x_1{}_2'.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:453: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.453 
@@ -666,7 +718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--453
  []
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:454: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -674,13 +726,15 @@ Type  H <return>  for immediate help.
                                                   
 l.454 \\ L
           uego, como P \implica \space \True \space es tautología, siempre ...
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Runaway argument?
- & P \implica \textit {wp} \{S1;S2;P_{c}\} \equiv \textit {wp} (S1,\textit \ETC.
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:462: Paragraph ended before \align was complete.
+ & P \implica \textit {wp} \{S1;S2;P_{c}\} \equiv \textit {wp} (S1,\textit \ETC
+.
+! Paragraph ended before \align was complete.
 <to be read again> 
                    \par 
 l.462 
@@ -689,7 +743,7 @@ I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:462: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.462 
@@ -697,7 +751,7 @@ l.462
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:462: Missing \endgroup inserted.
+! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.462 
@@ -708,7 +762,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:462: Missing \endgroup inserted.
+! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.462 
@@ -719,7 +773,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:462: Display math should end with $$.
+! Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
 l.462 
@@ -728,7 +782,7 @@ The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:463: LaTeX Error: Lonely \item--perhaps a missing list environment.
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -736,6 +790,7 @@ Type  H <return>  for immediate help.
                                                   
 l.463 \item Q
              ueda demostrado que \textbf{la tripla \{P\}S1;S2;S3\{Q\}\; es v...
+
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -747,7 +802,7 @@ Underfull \hbox (badness 10000) detected at line 463
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 463.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:467: LaTeX Error: Environment multiline undefined.
+! LaTeX Error: Environment multiline undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -759,7 +814,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:469: Misplaced alignment tab character &.
+! Misplaced alignment tab character &.
 l.469 	I &
           \equiv \{ 0 \leq i \leq |ciudades| \land res = \sum \limits_{j=0}^...
 I can't figure out why you would want to use a tab mark
@@ -769,7 +824,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:469: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.469 	I &\equiv
@@ -777,7 +832,7 @@ l.469 	I &\equiv
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:470: Misplaced alignment tab character &.
+! Misplaced alignment tab character &.
 l.470 	Q &
           \equiv \{ \text{res} = \sum_{i=0}^{|ciudades|-1} ciudades[i].habit...
 I can't figure out why you would want to use a tab mark
@@ -787,7 +842,7 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:477: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.477 	$\{I \land
@@ -795,7 +850,7 @@ l.477 	$\{I \land
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:480: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.480 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
@@ -803,7 +858,7 @@ l.480 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:480: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.480 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
@@ -812,7 +867,7 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -824,7 +879,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -836,7 +891,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -848,7 +903,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -860,7 +915,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -872,7 +927,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:482: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -884,7 +939,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -896,7 +951,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -908,7 +963,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -920,7 +975,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -932,7 +987,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -944,7 +999,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:484: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -956,7 +1011,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -968,7 +1023,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -980,7 +1035,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -992,7 +1047,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1004,7 +1059,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1016,7 +1071,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:486: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1028,7 +1083,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1040,7 +1095,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1052,7 +1107,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1064,7 +1119,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1076,7 +1131,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1088,7 +1143,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:488: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1100,7 +1155,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1112,7 +1167,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1124,7 +1179,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1136,7 +1191,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1148,7 +1203,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1160,7 +1215,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:496: LaTeX Error: Something's wrong--perhaps a missing \item.
+! LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1171,7 +1226,7 @@ l.496 ...ades|-1} ciudades[j].habitantes \wedge $}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:498: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.498 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
@@ -1179,7 +1234,7 @@ l.498 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:498: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.498 	\text{\{I \land  \neg B\} $\implica Q_{c}$}
@@ -1201,7 +1256,7 @@ Overfull \hbox (95.62097pt too wide) in paragraph at lines 469--501
 
 [5]
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:502: LaTeX Error: \begin{equation} on input line 456 ended by \end{multiline}.
+! LaTeX Error: \begin{equation} on input line 456 ended by \end{multiline}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1218,7 +1273,7 @@ Package caption Warning: Unused \captionsetup[sub] on input line 7.
 See the caption package documentation for explanation.
 
 
-c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex:504: LaTeX Error: \begin{equation} on input line 456 ended by \end{document}.
+! LaTeX Error: \begin{equation} on input line 456 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1232,13 +1287,13 @@ or  <return>  to continue without it.
 
 
 
-[6] (./Tp1.aux
+[6] (TP1.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
  ***********
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-09-10>
+L3 programming layer <2024-08-16>
  ***********
  )
 (\end occurred inside a group at level 1)
@@ -1246,18 +1301,36 @@ L3 programming layer <2024-09-10>
 ### semi simple group (level 1) entered at line 456 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7406 strings out of 473579
- 120095 string characters out of 5732263
- 718579 words of memory out of 5000000
- 30223 multiletter control sequences out of 15000+600000
+ 7409 strings out of 473899
+ 122331 string characters out of 5726501
+ 1947960 words of memory out of 5000000
+ 30196 multiletter control sequences out of 15000+600000
  568228 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,79p,439b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on Tp1.pdf (7 pages, 579874 bytes).
+ 72i,11n,79p,400b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbsy10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/javie/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/javie/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/javie/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
+s/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+<C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmss10.pfb><C:/Users/javie/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/javie/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/javie/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/javie/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/
+javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
+C:/Users/javie/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/ds
+rom10.pfb>
+Output written on TP1.pdf (7 pages, 595925 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 113 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
