@@ -58,17 +58,15 @@
 	\asegura{\{ $ \paraTodo{i}{\ent}{
 				\left( 0 \leq i < |ciudades| \right) \implicaLuego
 				\left( \left( ciudades[i]_{1} > 50000 \right)
-				\implica
-				\left( ciudades[i] \in \res \right) \right) \yLuego estaIncluida(res, ciudades)
+				\longleftrightarrow
+				\left( ciudades[i] \in \res \right) \right) 
 			} $ \}}
 \end{proc} \}
 
 \pred{noHayNombresRepetidos}{lista: \TLista{Ciudad}}{
-	\paraTodo{i,j}{\ent}{\left( 0 \leq i,j < |lista| \right) \implicaLuego \left( lista[i]_{0} \neq lista[j]_{0} \right)}
+	\paraTodo{i,j}{\ent}{\left( 0 \leq i < j < |lista| \right) \implicaLuego \left( lista[i]_{0} \neq lista[j]_{0} \right)}
 }
-\pred{estaIncluida}{s : \TLista{Ciudad}, t : \TLista{Ciudad}}{
-	\paraTodo{k}{Ciudad}{(k \in s) \implica (\# apariciones(e,s) \leq \# apariciones(e,t))}
-}
+
 
 \subsection{sumaDeHabitantes}
 
@@ -83,21 +81,31 @@
 			\left( |menoresDeCiudades| > 0 \right) \yLuego \\
 			\left( |menoresDeCiudades| = |mayoresDeCiudades| \right)
 			\wedge
-			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades)
+			noHayNombresRepetidos(menoresDeCiudades) \wedge \\ noHayNombresRepetidos(mayoresDeCiudades) \wedge mismosNombres(menoresDeCiudades, mayoresDeCiudades)
 			\}$ }
 
 	%aca se reemplazo ciudades por res directamente
 
-	\asegura{$\{\paraTodo{n,m}{\ent}{ \left(
-				0 \leq n,m < |menoresDeCiudades|
+	\asegura{$\{
+	|res| = |menoresDeCiudades| \wedge noHayNombresRepetidos(res) \wedge	
+	\paraTodo{n}{\ent}{ \left(
+				0 \leq n < |menoresDeCiudades|
 				\right)  \implicaLuego
-				( \left(
-				menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0}
-				\right)
-				\implicaLuego \\
-				( \left( res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \right) \wedge \\ \left( res[n]_{0} = menoresDeCiudades[n]_{0} \right)
-				) )}\}$}
+				\existe{m}{\ent}{
+					0 \leq m < |menoresDeCiudades| \yLuego ( menoresDeCiudades[n]_{0} = mayoresDeCiudades[m]_{0} \wedge $\\$ res[n]_{1} = menoresDeCiudades[n]_{1} + mayoresDeCiudades[m]_{1} \wedge res[n]_{0} = menoresDeCiudades[n]_{0} )
+				}
+				}\}$}
 \end{proc} \} %Acá preguntar si esta bien el para todo o es para todo i existe k 
+
+\pred{mismosNombres}{ciudadesMen : \TLista{Ciudad}, CiudadesMay : \TLista{Ciudad}}{
+	%para todo elemento en ciudadesMen existe un elemento en ciudadesMay que tiene el mismo nombre
+	|ciudadesMen| = |ciudadesMay| \yLuego
+	\paraTodo{i}{\ent}{(0 \leq i < |ciudadesMen|) \implicaLuego 
+	\existe{j}{\ent}{
+		0 \leq j < |ciudadesMay| \yLuego \left( ciudadesMen[i]_{0} = ciudadesMay[j]_{0} \right) 
+	}
+	}
+}
 
 \subsection{hayCamino}
 
@@ -129,11 +137,18 @@
 \}
 
 \pred{matrizCuadradaSimetrica}{matriz: \TLista{\TLista{\ent}}}{
-	\paraTodo{i,j,k}{\ent}{
-		\left( \left( 0 \leq i,j,k < |matriz| \right) \implicaLuego \left( |matriz[k]| = |matriz| \right) \right)  \implicaLuego \\ \left( \left( i = j \right) \longrightarrow \left( matriz[i][j] = 0 \right) \right) \wedge \left( matriz[i][j] = matriz[j][i] \right)
-	}
+	matrizSimetrica(matriz) \wedge matrizCuadrada(matriz) \wedge matrizDiagonalCero(matriz)
 }
 
+\pred{matrizSimetrica}{matriz : \TLista{\TLista{\ent}}}{
+	\paraTodo{i,j}{\ent}{0 \leq i,j < |matriz| \implicaLuego matriz[i][j] = matriz[j][i]}
+}
+\pred{matrizCuadrada}{matriz : \TLista{\TLista{\ent}}}{
+	\paraTodo{i}{\ent}{0 \leq i < |matriz| \implicaLuego |matriz| = |matriz[i]|}
+}
+\pred{matrizDiagonalCero}{matriz : \TLista{\TLista{\ent}}}{
+	\paraTodo{i,j}{\ent}{0 \leq i,j < |matriz| \implicaLuego \left( i=j \longleftrightarrow matriz[i][j]=0 \right)}
+}
 \subsection{cantidadCaminosNSaltos}
 \paragraph{Para la siguiente especificación tendremos en cuenta que:}{Dada la matriz de orden 1:}
 
@@ -162,7 +177,7 @@
 			$\{ \left( n>0 \ \wedge matrizCuadradaSimetrica(conexi \acute{o} n)\right) \yLuego
 				\paraTodo{i,j}{\ent}{
 					\left(0 \leq i,j < |conexi \acute{o} n| \right) \implicaLuego \left(0 \leq conexi \acute{o} n[i][j] \leq 1\right)
-				} \wedge \left( C_{0} = conexi \acute{o} n \right)
+				} \wedge \left( conexi \acute{o} n = C_{0} \right)
 				\}$
 		}
 
@@ -172,11 +187,11 @@
 		% 				\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[k-1], p[k]) \right) }  } \}$ \\
 
 		\asegura{
-			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
-						\left( \left( 0 < k < n \right)  
-						\implicaLuego \left( multEntreMatrices(p[k-1], p[k-1], p[k])  \right)\right)
+			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ |p| = n-1 \wedge \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
+						\left( \left( 0 < k < n \right)
+						\implicaLuego \left( multEntreMatrices(p[k-1], p[0], p[k])  \right)\right)
 						\yLuego \\
-						\left(  multEntreMatrices(p[n-1], p[n-1], conexi \acute{o} n) \right) }  } \}$ \\
+						\left(  multEntreMatrices(p[n-1], p[0], conexi \acute{o} n) \right) } \yLuego p[n-1] = conexi \acute{o} n  } \}$ \\
 		}
 
 		\}
@@ -201,7 +216,7 @@
 
 		\asegura{$\{ \\ (
 				existeCamino(distancias, origen, destino) \yLuego \\
-				\left( menorCamino(distancias, origen, destino) = res \right)
+				\left( menorCamino(distancias, origen, destino, res) \right)
 				)
 				\lor \\
 				(
@@ -212,46 +227,38 @@
 		\}
 	}
 
-	\aux{todosLosCaminos}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\TLista{\ent}}}{
-		$
-			\existe{!m}{\TLista{\TLista{\ent}}}{
-				\left( |m| > 1 \right) \yLuego
-				\existe{p}{\TLista{\ent}}{
-					(
-					\left( |p| > 1 \right) \yLuego (
-					\left( p[0] = origen \right) \wedge
-					\left( p[|p|-1] = destino \right) \wedge
-					\paraTodo{k}{\ent}{
-						(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
-					}
-					)
-					) \implicaLuego \left( p \in m \right)
-				}
-			}
-		$
-	}
+	% \pred{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, resu : \TLista{\ent}}{$
+	% 	\existe{p}{\TLista{\ent}}{
+	% 	\existe{i}{\ent}{\left(
+	% 	0 \leq i < |todosLosCaminos(distancias, origen, destino)|
+	% 	\right) \yLuego \paraTodo{j}{\ent}{
+	% 	\left(
+	% 	(0 \leq j < |todosLosCaminos(distancias, origen, destino)|)
+	% 	% \wedge
+	% 	% (0 \leq h < |todosLosCaminos(distancias, origen, destino)|)
+	% 	\right)
+	% 	\implicaLuego \\
+	% 	( ((\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[i]|-1} distancias[n-1][n]) \leq $ \\ $(\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[j]|-1} distancias[n-1][n])) \implica $ \\ $
+	% 	\left( p = todosLosCaminos(distancias, origen, destino)[i] \right) )
+	% 	}}
+	% 	}
 
-	\aux{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent}{\TLista{\ent}}{$
+	% $}
+	\pred{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, resu : \TLista{\ent}}{$
+	\{
 		\existe{p}{\TLista{\ent}}{
-		\existe{i}{\ent}{\left(
-		0 \leq i < |todosLosCaminos(distancias, origen, destino)|
-		\right) \yLuego \paraTodo{j}{\ent}{
-		\left(
-		(0 \leq j < |todosLosCaminos(distancias, origen, destino)|)
-		% \wedge
-		% (0 \leq h < |todosLosCaminos(distancias, origen, destino)|)
-		\right)
-		\implicaLuego \\
-		\left( ((\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[i]|-1} distancias[n-1][n]) \leq $ \\ $(\sum_{n = 1}^{|todosLosCaminos(distancias, origen, destino)[j]|-1} distancias[n-1][n])) \implica $ \\ $
-		\left( p = todosLosCaminos(distancias, origen, destino)[i] \right) \right)
-		}}
+		esCamino(distancias, origen, destino, p) \yLuego \paraTodo{r}{\TLista{\ent}}{
+		esCamino(distancias, origen, destino, r) \implicaLuego
+		( ((\sum_{n = 1}^{|p|-1} distancias[p[n-1]][p[n]]) \leq $ \\ $(\sum_{m = 1}^{|r|-1} distancias[r[m-1]][r[m]])) \yLuego $ \\ $
+		\left( p = resu \right) )
 		}
+		}
+		\}
 
 	$}
-
-	\aux{existeCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent}{\bool}{{
+	\pred{existeCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent}{{
+		\{	
 				$
-					\True \longleftrightarrow
 					\existe{p}{\TLista{\ent}}{
 						\left( |p| > 1 \right) \yLuego (
 						\left( p[0] = desde \right) \wedge
@@ -260,7 +267,23 @@
 							(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
 						}
 						)
-					}  $}}
+					}  
+					\}$}
+					}
+	\pred{esCamino}{distancias : \TLista{\TLista{\ent}}, desde : \ent, hasta : \ent, resu : \TLista{\ent}}{{
+				$
+				\{
+					\existe{p}{\TLista{\ent}}{
+						\left( |p| > 1 \right) \yLuego (
+						\left( p[0] = desde \right) \wedge
+						\left( p[|p|-1] = hasta \right) \wedge
+						\paraTodo{k}{\ent}{
+							(0 \leq k < |p|-1) \implicaLuego (distancias[p[k]][p[k+1]] > 0)
+						}
+						) \yLuego (resu = p)
+					}  
+					\}
+					$}}
 
 \end{proc}
 

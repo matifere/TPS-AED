@@ -2,8 +2,8 @@ PWD c:/Users/mati/Documents/GitHub/TPS-AED/TP1
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex
-OUTPUT Tp1.log
+INPUT c:/Users/mati/Documents/GitHub/TPS-AED/TP1/TP1.tex
+OUTPUT TP1.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/size10.clo
@@ -94,7 +94,10 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-OUTPUT Tp1.aux
+INPUT ./Tp1.aux
+INPUT ./Tp1.aux
+INPUT Tp1.aux
+OUTPUT TP1.aux
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -107,7 +110,7 @@ INPUT ./logo_dc.jpg
 INPUT ./logo_dc.jpg
 INPUT ./logo_dc.jpg
 INPUT ./logo_dc.jpg
-OUTPUT Tp1.pdf
+OUTPUT TP1.pdf
 INPUT ./logo_dc.jpg
 INPUT c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

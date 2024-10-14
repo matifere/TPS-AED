@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1728824609.48476 "c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex" "Tp1.pdf" "Tp1" 1728824611.31652 2
+["pdflatex"] 1728941419.25281 "c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex" "Tp1.pdf" "Tp1" 1728941420.42471 2
   "AEDmacros.tex" 1725302426 5206 d09cbf32b9abb932d373d5310a2e68ee ""
-  "Tp1.aux" 1728824611 1388 5d9754a2d625864b9cd382c8346fb9ec "pdflatex"
-  "Tp1.tex" 1728824608 22430 ccc78ad68eea40782e9927718fbfd7bd ""
-  "c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex" 1728824608 22430 ccc78ad68eea40782e9927718fbfd7bd ""
+  "TP1.tex" 1728941296 23111 8300777baf00680a82ddfe8feefe171a ""
+  "Tp1.aux" 1728941420 1388 d85ad93fe13e5cf23920403ff3494e05 "pdflatex"
+  "c:/Users/mati/Documents/GitHub/TPS-AED/TP1/Tp1.tex" 1728941296 23111 8300777baf00680a82ddfe8feefe171a ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1728142988 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1728141480 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1728141480 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -100,6 +100,9 @@
   "logo_dc.jpg" 1725287858 128041 860ed529f2e122b3922f6ce21e3273f1 ""
   "logo_uba.jpg" 1725287858 229119 10f3a63be47e1e95e44f30008ec3af50 ""
   (generated)
+  "TP1.aux"
+  "TP1.log"
+  "TP1.pdf"
   "Tp1.aux"
   "Tp1.log"
   "Tp1.pdf"
