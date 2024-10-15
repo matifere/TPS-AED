@@ -187,7 +187,7 @@
 		% 				\left( conexi \acute{o} n[i][j] = multEntreMatrices(p[k-1], p[k]) \right) }  } \}$ \\
 
 		\asegura{
-			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ |p| = n-1 \wedge \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
+			$\{ \existe{p}{\TLista{\TLista{\TLista{\ent}}}}{ |p| = n \wedge \left( p[0] = C_{0} \right) \implicaLuego \paraTodo{k}{\ent}{
 						\left( \left( 0 < k < n \right)
 						\implicaLuego \left( multEntreMatrices(p[k-1], p[0], p[k])  \right)\right)
 						\yLuego \\
@@ -246,12 +246,11 @@
 	% $}
 	\pred{menorCamino}{distancias : \TLista{\TLista{\ent}}, origen : \ent, destino : \ent, resu : \TLista{\ent}}{$
 	\{
-		\existe{p}{\TLista{\ent}}{
-		esCamino(distancias, origen, destino, p) \yLuego \paraTodo{r}{\TLista{\ent}}{
+		
+		esCamino(distancias, origen, destino, resu) \yLuego \paraTodo{r}{\TLista{\ent}}{
 		esCamino(distancias, origen, destino, r) \implicaLuego
-		( ((\sum_{n = 1}^{|p|-1} distancias[p[n-1]][p[n]]) \leq $ \\ $(\sum_{m = 1}^{|r|-1} distancias[r[m-1]][r[m]])) \yLuego $ \\ $
-		\left( p = resu \right) )
-		}
+		( ((\sum_{n = 1}^{|resu|-1} distancias[resu[n-1]][resu[n]]) \leq $ \\ $(\sum_{m = 1}^{|r|-1} distancias[r[m-1]][r[m]])) )
+		
 		}
 		\}
 
