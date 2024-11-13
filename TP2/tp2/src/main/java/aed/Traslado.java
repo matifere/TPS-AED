@@ -15,4 +15,11 @@ public class Traslado {
         this.gananciaNeta = gananciaNeta;
         this.timestamp = timestamp;
     }
+
+
+    //no se si es la forma correcta pero creo que deberia andar para poder ordenar los elementos de forma distinta
+    public int compareTo(Traslado traslado/* , int indice */) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    }
 }

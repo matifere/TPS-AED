@@ -3,46 +3,50 @@ package aed;
 import java.util.ArrayList;
 
 public class BestEffort {
-    //Completar atributos privados
+    // Completar atributos privados
     private ArrayList ciudades;
     private Heap trasladosRed;
     private Heap trasladosAnt;
-    public BestEffort(int cantCiudades, Traslado[] traslados){
+
+    public BestEffort(int cantCiudades, Traslado[] traslados) {
+        for (int i = 0; i > cantCiudades; i++) {
+            Ciudad ciudad = new Ciudad(i, 0, 0);
+            ciudades.add(ciudad);
+        }
+    }
+
+    public void registrarTraslados(Traslado[] traslados) {
         // Implementar
     }
 
-    public void registrarTraslados(Traslado[] traslados){
-        // Implementar
-    }
-
-    public int[] despacharMasRedituables(int n){
+    public int[] despacharMasRedituables(int n) {
         // Implementar
         return null;
     }
 
-    public int[] despacharMasAntiguos(int n){
+    public int[] despacharMasAntiguos(int n) {
         // Implementar
         return null;
     }
 
-    public int ciudadConMayorSuperavit(){
+    public int ciudadConMayorSuperavit() {
         // Implementar
         return 0;
     }
 
-    public ArrayList<Integer> ciudadesConMayorGanancia(){
+    public ArrayList<Integer> ciudadesConMayorGanancia() {
         // Implementar
         return null;
     }
 
-    public ArrayList<Integer> ciudadesConMayorPerdida(){
+    public ArrayList<Integer> ciudadesConMayorPerdida() {
         // Implementar
         return null;
     }
 
-    public int gananciaPromedioPorTraslado(){
+    public int gananciaPromedioPorTraslado() {
         // Implementar
         return 0;
     }
-    
+
 }
