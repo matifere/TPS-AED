@@ -1,5 +1,6 @@
 package aed;
 
+
 public class Traslado {
     
     int id;
@@ -17,9 +18,10 @@ public class Traslado {
     }
 
 
-    //no se si es la forma correcta pero creo que deberia andar para poder ordenar los elementos de forma distinta
-    public int compareTo(Traslado traslado/* , int indice */) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    public int obtenerGananciaNeta(){
+        return gananciaNeta;
+    }
+    public int obtenerTiempo(){
+        return timestamp;
     }
 }

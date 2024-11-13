@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class Heap<T extends Comparable<T>> {
     private ArrayList<Traslado> heap;
+    private Comparador<Integer> comparador;
 
-    public Heap() {
-        heap = new ArrayList<>();
-
+    public Heap(Comparador<Integer> comparador) {
+        this.heap = new ArrayList<>();
+        this.comparador = comparador;
     }
-
+    
     // las siguientes tres funciones tienen sentido unicamente si el indice esta
     // entre 0<=indice<|heap|
 
@@ -36,32 +37,24 @@ public class Heap<T extends Comparable<T>> {
         siftUp(heap.size() - 1);
     }
 
-    //A partir de aca las cosas 'DEBERIAN' andar, todo esto esta unicamente en modo teorico xq todavia no implemente el compareTo
 
-    private void siftUp(int index) {
+    private void siftUp(int indice) {
 
-        while (index > 0 && heap.get(index).compareTo(heap.get(obtenerPadre(index))) > 0) { 
-            cambiar(index, obtenerPadre(index));
-            index = obtenerPadre(index);
+        while (indice > 0) { 
+            int padreIndice = obtenerPadre(indice);
+            if (comparador.comparar(heap.get(indice), heap.get(padreIndice)) > 0) {
+                cambiar(indice, padreIndice);
+                indice = padreIndice;
+            }
+            else {
+                break;
+            }
         }
+        
     }
 
-    private void siftDown(int index) {
-        int largest = index;
-        int left = obtenerHijoIzq(index);
-        int right = obtenerHijoDerecho(index);
+    void siftDown(int i){
 
-        if (left < heap.size() && heap.get(left).compareTo(heap.get(largest)) > 0) {
-            largest = left;
-        }
-
-        if (right < heap.size() && heap.get(right).compareTo(heap.get(largest)) > 0) {
-            largest = right;
-        }
-        if (largest != index) {
-            cambiar(index, largest);
-            siftDown(largest);
-        }
     }
 
     public void heapify(ArrayList<Traslado> elements) {
