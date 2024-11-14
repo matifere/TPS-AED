@@ -91,12 +91,6 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    public void heapify(ArrayList<Traslado> elements) {
-        heap = new ArrayList<>(elements);
-        for (int i = (heap.size() / 2) - 1; i >= 0; i--) {
-            siftDown(i);
-        }
-    }
 
     public Traslado obtenerMaximo() {
         return heap.get(0);

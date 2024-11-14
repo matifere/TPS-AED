@@ -240,19 +240,18 @@ public class BestEffortTests {
     void insertar_varios_elementos_por_ganancia() {
         Heap conjunto = new Heap(compararPorGanancia);
         Traslado[] nuevo = new Traslado[] {
-                new Traslado(1, 3, 4, 1, 7),
-                new Traslado(7, 6, 5, 40, 6),
-                new Traslado(6, 5, 6, 3, 5),
-                new Traslado(2, 2, 1, 41, 4),
-                new Traslado(3, 3, 4, 100, 3),
-                new Traslado(4, 1, 2, 30, 2),
-                new Traslado(5, 2, 1, 90, 1)
+            new Traslado(1, 3, 4, 10, 8),
+            new Traslado(2, 2, 2, 50, 6),
+            new Traslado(4, 4, 1, 75, 5),
+            new Traslado(3, 1, 3, 20, 7),
+            new Traslado(5, 5, 4, 35, 9)
         };
+        
 
         assertEquals(0, conjunto.cardinal());
         conjunto.insertar(nuevo);
-        assertEquals(7, conjunto.cardinal());
-        assertEquals(nuevo[4], conjunto.obtenerMaximo());
+        assertEquals(5, conjunto.cardinal());
+        assertEquals(nuevo[2], conjunto.obtenerMaximo());
 
     }
 
@@ -260,42 +259,39 @@ public class BestEffortTests {
     void insertar_varios_elementos_por_tiempo() {
         Heap conjunto = new Heap(compararPorTiempo);
         Traslado[] nuevo = new Traslado[] {
-                new Traslado(1, 3, 4, 1, 7),
-                new Traslado(7, 6, 5, 40, 6),
-                new Traslado(6, 5, 6, 3, 5),
-                new Traslado(2, 2, 1, 41, 4),
-                new Traslado(3, 3, 4, 100, 3),
-                new Traslado(4, 1, 2, 30, 2),
-                new Traslado(5, 2, 1, 90, 1)
+            new Traslado(8, 9, 3, 12, 2),
+            new Traslado(7, 6, 5, 11, 5),
+            new Traslado(3, 2, 1, 45, 6),
+            new Traslado(4, 3, 2, 60, 8)
         };
 
         assertEquals(0, conjunto.cardinal());
         conjunto.insertar(nuevo);
-        assertEquals(7, conjunto.cardinal());
-        assertEquals(nuevo[0], conjunto.obtenerMaximo());
+        assertEquals(4, conjunto.cardinal());
+        assertEquals(nuevo[3], conjunto.obtenerMaximo());
     }
 
     @Test
     void eliminar_primer_elemento() {
         Heap conjunto = new Heap(compararPorGanancia);
         Traslado[] nuevo = new Traslado[] {
-                new Traslado(1, 3, 4, 1, 7),
-                new Traslado(7, 6, 5, 40, 6),
-                new Traslado(6, 5, 6, 3, 5),
-                new Traslado(2, 2, 1, 41, 4),
-                new Traslado(3, 3, 4, 100, 3),
-                new Traslado(4, 1, 2, 30, 2),
-                new Traslado(5, 2, 1, 90, 1)
+            new Traslado(9, 2, 4, 80, 3),
+            new Traslado(6, 7, 1, 100, 4),
+            new Traslado(5, 8, 2, 25, 5),
+            new Traslado(3, 6, 3, 15, 2),
+            new Traslado(7, 4, 1, 55, 9),
+            new Traslado(2, 5, 5, 40, 1)
         };
 
         assertEquals(0, conjunto.cardinal());
         conjunto.insertar(nuevo);
-        assertEquals(7, conjunto.cardinal());
-        assertEquals(nuevo[4], conjunto.obtenerMaximo());
-        assertEquals(7, conjunto.cardinal());
-        assertEquals(nuevo[4], conjunto.eliminarPrimero());
         assertEquals(6, conjunto.cardinal());
-        assertEquals(nuevo[6], conjunto.obtenerMaximo());
+        assertEquals(nuevo[1], conjunto.obtenerMaximo());
+        assertEquals(6, conjunto.cardinal());
+        assertEquals(nuevo[1], conjunto.eliminarPrimero());
+        assertEquals(5, conjunto.cardinal());
+        assertEquals(nuevo[0], conjunto.obtenerMaximo());
+
 
     }
 
