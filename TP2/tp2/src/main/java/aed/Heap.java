@@ -10,10 +10,13 @@ public class Heap<T extends Comparable<T>> {
         this.heap = new ArrayList<>();
         this.comparador = comparador;
     }
-    
+
+    public int cardinal() { //esto es mas que nada para el test
+        return heap.size();
+    }
+
     // las siguientes tres funciones tienen sentido unicamente si el indice esta
     // entre 0<=indice<|heap|
-
     public int obtenerPadre(int indice) {
         return (indice - 1) / 2;
     }
@@ -39,9 +42,8 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-
     // nada q ver lo q habia aca
-    public Traslado eliminarPrimero(int n) {
+    public Traslado eliminarPrimero() {
         Traslado despacho = heap.get(0);
 
         Traslado max = heap.get(0);
@@ -52,40 +54,39 @@ public class Heap<T extends Comparable<T>> {
 
     }
 
-
     private void siftUp(int indice) {
 
-        while (indice > 0) { 
+        while (indice > 0) {
             int padreIndice = obtenerPadre(indice);
             if (comparador.comparar(heap.get(indice), heap.get(padreIndice)) > 0) {
                 cambiar(indice, padreIndice);
                 indice = padreIndice;
-            }
-            else {
+            } else {
                 break;
             }
         }
-        
+
     }
 
-    void siftDown(int indice){
-        int tamaño = heap.size();
+    void siftDown(int indice) {
+        int tamaño = this.cardinal();
         while (true) {
             int hijoIzq = obtenerHijoIzq(indice);
             int hijoDer = obtenerHijoDerecho(indice);
             int mayor = indice;
-            
+
             if (hijoIzq < tamaño && comparador.comparar(heap.get(hijoIzq), heap.get(mayor)) > 0) {
                 mayor = hijoIzq;
             }
 
-            if (hijoDer < tamaño && comparador.comparar(heap.get(hijoDer), heap.get(mayor)) < 0) {
+            if (hijoDer < tamaño && comparador.comparar(heap.get(hijoDer), heap.get(mayor)) > 0) {
                 mayor = hijoDer;
             }
 
             if (mayor == indice) {
                 break;
             }
+            cambiar(indice, mayor);
             indice = mayor;
         }
     }

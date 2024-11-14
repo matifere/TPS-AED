@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class BestEffort {
     // Completar atributos privados
-    
 
     Comparador<Traslado> compararPorGanancia = new Comparador<Traslado>() {
         @Override
@@ -24,12 +23,12 @@ public class BestEffort {
     private Heap trasladosAnt = new Heap(compararPorTiempo);
 
     public BestEffort(int cantCiudades, Traslado[] traslados) {
-        this.ciudades = new ArrayList<>();  
+        this.ciudades = new ArrayList<>();
         for (int i = 0; i < cantCiudades; i++) {
             Ciudad ciudad = new Ciudad(i, 0, 0);
             ciudades.add(ciudad);
 
-        registrarTraslados(traslados);
+            registrarTraslados(traslados);
         }
     }
 
