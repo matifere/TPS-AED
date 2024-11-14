@@ -53,8 +53,26 @@ public class Heap<T extends Comparable<T>> {
         
     }
 
-    void siftDown(int i){
+    void siftDown(int indice){
+        int tamaño = heap.size();
+        while (true) {
+            int hijoIzq = obtenerHijoIzq(indice);
+            int hijoDer = obtenerHijoDerecho(indice);
+            int mayor = indice;
+            
+            if (hijoIzq < tamaño && comparador.comparar(heap.get(hijoIzq), heap.get(mayor)) > 0) {
+                mayor = hijoIzq;
+            }
 
+            if (hijoDer < tamaño && comparador.comparar(heap.get(hijoDer), heap.get(mayor)) < 0) {
+                mayor = hijoDer;
+            }
+
+            if (mayor == indice) {
+                break;
+            }
+            indice = mayor;
+        }
     }
 
     public void heapify(ArrayList<Traslado> elements) {

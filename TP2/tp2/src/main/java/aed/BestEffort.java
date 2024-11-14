@@ -24,7 +24,7 @@ public class BestEffort {
     private Heap trasladosAnt = new Heap(compararPorTiempo);
 
     public BestEffort(int cantCiudades, Traslado[] traslados) {
-        for (int i = 0; i > cantCiudades; i++) {
+        for (int i = 0; i < cantCiudades; i++) {
             Ciudad ciudad = new Ciudad(i, 0, 0);
             ciudades.add(ciudad);
         }
