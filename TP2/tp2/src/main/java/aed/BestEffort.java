@@ -19,19 +19,23 @@ public class BestEffort {
         }
     };
 
-    private ArrayList ciudades;
+    private ArrayList<Ciudad> ciudades;
     private Heap trasladosRed = new Heap(compararPorGanancia);
     private Heap trasladosAnt = new Heap(compararPorTiempo);
 
     public BestEffort(int cantCiudades, Traslado[] traslados) {
+        this.ciudades = new ArrayList<>();  
         for (int i = 0; i < cantCiudades; i++) {
             Ciudad ciudad = new Ciudad(i, 0, 0);
             ciudades.add(ciudad);
+
+        registrarTraslados(traslados);
         }
     }
 
     public void registrarTraslados(Traslado[] traslados) {
-        // Implementar
+        trasladosRed.insertar(traslados);
+        trasladosAnt.insertar(traslados);
     }
 
     public int[] despacharMasRedituables(int n) {

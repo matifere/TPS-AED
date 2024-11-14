@@ -32,9 +32,26 @@ public class Heap<T extends Comparable<T>> {
         heap.set(j, temp);
     }
 
-    public void insertar(Traslado value) {
-        heap.add(value);
-        siftUp(heap.size() - 1);
+    public void insertar(Traslado[] traslados) {
+        for (Traslado traslado : traslados) {
+            heap.add(traslado);
+            siftUp(heap.size() - 1);
+        }
+    }
+
+    public void eliminar(int n) {
+        Traslado despacho = heap.get(0);
+
+        Ciudad origenDespacho = ciudades.get(despacho.origen);
+        Ciudad destinoDespacho = ciudades.get(despacho.destino);
+
+        origenDespacho.agregarGanancia(traslado.obtenerGananciaNeta());
+        destinoDespacho.agregarPerdida(traslado.obtenerGananciaNeta());
+        
+        heap.remove(0);
+
+        siftDown(0);
+
     }
 
 
