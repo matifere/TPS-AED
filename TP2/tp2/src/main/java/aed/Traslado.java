@@ -17,6 +17,9 @@ public class Traslado {
         this.timestamp = timestamp;
     }
 
+    public int devolverID(){
+        return id;
+    }
 
     public int obtenerGananciaNeta(){
         return gananciaNeta;
