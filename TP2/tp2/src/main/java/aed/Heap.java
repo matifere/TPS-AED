@@ -39,18 +39,16 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    public void eliminar(int n) {
+
+    // nada q ver lo q habia aca
+    public Traslado eliminarPrimero(int n) {
         Traslado despacho = heap.get(0);
 
-        Ciudad origenDespacho = ciudades.get(despacho.origen);
-        Ciudad destinoDespacho = ciudades.get(despacho.destino);
-
-        origenDespacho.agregarGanancia(traslado.obtenerGananciaNeta());
-        destinoDespacho.agregarPerdida(traslado.obtenerGananciaNeta());
-        
-        heap.remove(0);
-
+        Traslado max = heap.get(0);
+        heap.set(0, heap.get(heap.size() - 1));
+        heap.remove(heap.size() - 1);
         siftDown(0);
+        return max;
 
     }
 
