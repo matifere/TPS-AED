@@ -3,10 +3,10 @@ package aed;
 import java.util.ArrayList;
 
 public class Heap<T extends Comparable<T>> {
-    private ArrayList<Traslado> heap;
-    private Comparador<Integer> comparador;
+    private ArrayList<T> heap;
+    private Comparador<T> comparador;
 
-    public Heap(Comparador<Integer> comparador) {
+    public Heap(Comparador<T> comparador) {
         this.heap = new ArrayList<>();
         this.comparador = comparador;
     }
@@ -30,23 +30,23 @@ public class Heap<T extends Comparable<T>> {
     }
 
     private void cambiar(int i, int j) {
-        Traslado temp = heap.get(i);
+        T temp = heap.get(i);
         heap.set(i, heap.get(j));
         heap.set(j, temp);
     }
 
-    public void insertar(Traslado[] traslados) {
-        for (Traslado traslado : traslados) {
+    public void insertar(T[] traslados) {
+        for (T traslado : traslados) {
             heap.add(traslado);
             siftUp(heap.size() - 1);
         }
     }
 
     // nada q ver lo q habia aca
-    public Traslado eliminarPrimero() {
-        Traslado despacho = heap.get(0);
+    public T eliminarPrimero() {
+        T despacho = heap.get(0);
 
-        Traslado max = heap.get(0);
+        T max = heap.get(0);
         heap.set(0, heap.get(heap.size() - 1));
         heap.remove(heap.size() - 1);
         siftDown(0);
@@ -92,7 +92,7 @@ public class Heap<T extends Comparable<T>> {
     }
 
 
-    public Traslado obtenerMaximo() {
+    public T obtenerMaximo() {
         return heap.get(0);
     }
 }

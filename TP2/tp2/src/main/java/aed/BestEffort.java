@@ -27,8 +27,8 @@ public class BestEffort {
 
     // atributos privados
     private ArrayList<Ciudad> ciudades;
-    private Heap trasladosRed = new Heap(compararPorGanancia);
-    private Heap trasladosAnt = new Heap(compararPorTiempo);
+    private Heap<Traslado> trasladosRed = new Heap(compararPorGanancia);
+    private Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
 
 
     private ArrayList<Integer> ciudadMayorGanancia = new ArrayList<>();
