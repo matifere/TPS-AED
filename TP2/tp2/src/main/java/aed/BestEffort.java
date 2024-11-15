@@ -8,19 +8,19 @@ public class BestEffort {
     Comparador<Traslado> compararPorGanancia = new Comparador<Traslado>() {
         @Override
         public int comparar(Traslado t1, Traslado t2) {
-            return t1.obtenerGananciaNeta() - t2.obtenerGananciaNeta();
+            return Integer.compare(t1.obtenerGananciaNeta(), t2.obtenerGananciaNeta());
         }
     };
     Comparador<Traslado> compararPorTiempo = new Comparador<Traslado>() {
         @Override
         public int comparar(Traslado t1, Traslado t2) {
-            return t1.obtenerTiempo() - t2.obtenerTiempo();
+            return Integer.compare(t1.obtenerTiempo(), t2.obtenerTiempo());
         }
     };
-    ComparadorCiudad compararPorSuperavit = new ComparadorCiudad() {
+    Comparador<Ciudad> compararPorSuperavit = new Comparador<Ciudad>() {
         @Override
-        public int comparar(Ciudad o1, Ciudad o2) {
-            return c1.calculoSuperavit() - c2.calculoSuperavit();
+        public int comparar(Ciudad c1, Ciudad c2) {
+            return Integer.compare(c1.calculoSuperavit(), c2.calculoSuperavit());
         }
     };
     

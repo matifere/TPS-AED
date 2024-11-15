@@ -1,5 +1,5 @@
 package aed;
 
-public interface Comparador<Integer> {
-    int comparar(Traslado o1, Traslado o2);
+public interface Comparador<T> {
+    int comparar(T o1, T o2);
 }
