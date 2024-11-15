@@ -17,11 +17,19 @@ public class BestEffort {
             return t1.obtenerTiempo() - t2.obtenerTiempo();
         }
     };
+    ComparadorCiudad compararPorSuperavit = new ComparadorCiudad() {
+        @Override
+        public int comparar(Ciudad o1, Ciudad o2) {
+            return c1.calculoSuperavit() - c2.calculoSuperavit();
+        }
+    };
+    
 
     // atributos privados
     private ArrayList<Ciudad> ciudades;
     private Heap trasladosRed = new Heap(compararPorGanancia);
     private Heap trasladosAnt = new Heap(compararPorTiempo);
+
 
     private ArrayList<Integer> ciudadMayorGanancia = new ArrayList<>();
     private ArrayList<Integer> ciudadMayorPerdida = new ArrayList<>();
