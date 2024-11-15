@@ -4,6 +4,19 @@ import java.util.ArrayList;
 
 public class BestEffort {
 
+
+    /*
+     * AMIGOOOOOOOOOO
+     * intenta meterle lo de despachar mas antiguo
+     * es lit un copipaste de lo que esta para mas redituables
+     * 
+     * si te sobra tiempo metele a lo que quieras pero dejame las cosas escritas en un comentario
+     * 
+     * NO COMMITEEES NADA QUE NO ESTE HECHO DEL TODO
+     * tkm
+     */
+
+
     // comparadores
     Comparador<Traslado> compararPorGanancia = new Comparador<Traslado>() {
         @Override
@@ -50,16 +63,19 @@ public class BestEffort {
     }
 
     public int[] despacharMasRedituables(int n) {
+        int limiteDespachos = Math.min(n, trasladosRed.cardinal());
         int[] devolver = new int[n];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosRed.eliminarPrimero();
             devolver[i] = trasladoActual.id;
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia
+
             ciudades.get(trasladoActual.destino).agregarPerdida(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // destino y le agrega
             // la perdida
+
             // chequeamos si la ciudad actual tiene la mayor ganancia
             actualEsMayorGanancia(ciudades.get(trasladoActual.origen));
             // chequeamos tambien si tiene la mayor perdida
@@ -74,7 +90,7 @@ public class BestEffort {
         if (ciudadMayorGanancia.size() == 0) {
             ciudadMayorGanancia.add(ciudadCheck.idCiudad());
         } else {
-            int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(0)).GananciaCiudad();
+            int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(ciudadesConMayorGanancia().size()-1)).GananciaCiudad();
 
             if (valorMaxActual == ciudadCheck.GananciaCiudad()) {
                 ciudadMayorGanancia.add(ciudadCheck.idCiudad());
@@ -92,12 +108,13 @@ public class BestEffort {
         if (ciudadMayorPerdida.size() == 0) {
             ciudadMayorPerdida.add(ciudadCheck.idCiudad());
         } else {
-            int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(0)).PerdidaCiudad();
+            int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(ciudadesConMayorPerdida().size()-1)).PerdidaCiudad();
 
             if (valorMaxActual == ciudadCheck.PerdidaCiudad()) {
                 ciudadMayorPerdida.add(ciudadCheck.idCiudad());
 
-            } else if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
+            } 
+            if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
                 ciudadMayorPerdida = new ArrayList<>();
                 ciudadMayorPerdida.add(ciudadCheck.idCiudad());
             }
