@@ -1,6 +1,7 @@
 package aed;
 
-public class Ciudad {
+public class Ciudad implements Comparable<Ciudad> {
+
    private int id;
    private int gananciaCiudad;
    private int perdidaCiudad;
@@ -36,5 +37,10 @@ public class Ciudad {
 
     public int calculoSuperavit() {
        return superavit =  gananciaCiudad - perdidaCiudad;
+    }
+
+    @Override
+    public int compareTo(Ciudad otro) {
+        return Integer.compare(this.superavit, otro.superavit);
     }
 }

@@ -42,7 +42,8 @@ public class BestEffort {
     private ArrayList<Ciudad> ciudades;
     private Heap<Traslado> trasladosRed = new Heap(compararPorGanancia);
     private Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
-
+    private Heap<Ciudad> ciudadesPorSuper = new Heap(compararPorSuperavit);
+    
 
     private ArrayList<Integer> ciudadMayorGanancia = new ArrayList<>();
     private ArrayList<Integer> ciudadMayorPerdida = new ArrayList<>();
@@ -123,8 +124,28 @@ public class BestEffort {
     }
 
     public int[] despacharMasAntiguos(int n) {
-        // Implementar
-        return null;
+        int limiteDespachos = Math.min(n, trasladosAnt.cardinal());
+        int[] devolver = new int[n];
+        for (int i = 0; i < limiteDespachos; i++) {
+            Traslado trasladoActual = trasladosAnt.eliminarPrimero();
+            devolver[i] = trasladoActual.id;
+            ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
+                                                                                              // origen y le agrega la
+            // ganancia
+
+            ciudades.get(trasladoActual.destino).agregarPerdida(trasladoActual.gananciaNeta); // toma la ciudad de
+                                                                                              // destino y le agrega
+            // la perdida
+
+            // chequeamos si la ciudad actual tiene la mayor ganancia
+            actualEsMayorGanancia(ciudades.get(trasladoActual.origen));
+            // chequeamos tambien si tiene la mayor perdida
+            actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
+            
+
+        }
+        
+        return devolver;
     }
 
     public int ciudadConMayorSuperavit() {
@@ -144,6 +165,18 @@ public class BestEffort {
     public int gananciaPromedioPorTraslado() {
         // Implementar
         return 0;
+    }
+
+    public String imprimirCiudadesMayorPerdida() {
+        StringBuilder sb = new StringBuilder("Ciudades con mayor pérdida: ");
+        for (int id : ciudadMayorPerdida) {
+            sb.append("Ciudad ").append(id).append(", ");
+        }
+        if (!ciudadMayorPerdida.isEmpty()) {
+            sb.setLength(sb.length() - 2); 
+            sb.append("Ninguna");
+        }
+        return sb.toString();
     }
 
 }

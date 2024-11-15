@@ -80,9 +80,9 @@ public class BestEffortTests {
     @Test
     void despachar_mas_viejo_de_a_uno() {
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
-
+        System.out.print(sis.ciudadesConMayorGanancia());
         sis.despacharMasAntiguos(1);
-
+        System.out.print(sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
 
@@ -139,9 +139,10 @@ public class BestEffortTests {
         sis.registrarTraslados(nuevos);
 
         sis.despacharMasAntiguos(4);
+
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorPerdida());
-
+        
         sis.despacharMasRedituables(1);
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
