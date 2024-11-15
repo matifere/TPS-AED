@@ -27,7 +27,7 @@ public class BestEffort {
     Comparador<Traslado> compararPorTiempo = new Comparador<Traslado>() {
         @Override
         public int comparar(Traslado t1, Traslado t2) {
-            return Integer.compare(t1.obtenerTiempo(), t2.obtenerTiempo());
+            return -Integer.compare(t1.obtenerTiempo(), t2.obtenerTiempo());
         }
     };
     Comparador<Ciudad> compararPorSuperavit = new Comparador<Ciudad>() {
@@ -83,6 +83,7 @@ public class BestEffort {
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
         }
+        //int[] eliminarDelOtroHeap = despacharMasAntiguos(n);
         return devolver;
     }
 
@@ -128,7 +129,7 @@ public class BestEffort {
         int[] devolver = new int[n];
         for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosAnt.eliminarPrimero();
-            devolver[i] = trasladoActual.id;
+            devolver[i] = trasladoActual.id; //los ordeno de forma creciente
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia
@@ -144,7 +145,7 @@ public class BestEffort {
             
 
         }
-        
+        //int[] eliminarDelOtroHeap = despacharMasRedituables(n);
         return devolver;
     }
 

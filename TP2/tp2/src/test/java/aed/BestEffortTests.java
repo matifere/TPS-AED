@@ -17,8 +17,9 @@ public class BestEffortTests {
     @BeforeEach
     void init() {
         // Reiniciamos los valores de las ciudades y traslados antes de cada test
-        cantCiudades = 7;
+        cantCiudades = 8;
         listaTraslados = new Traslado[] {
+
                 new Traslado(1, 0, 1, 100, 10),
                 new Traslado(2, 0, 1, 400, 20),
                 new Traslado(3, 3, 4, 500, 50),
@@ -67,22 +68,20 @@ public class BestEffortTests {
         assertSetEquals(new ArrayList<>(Arrays.asList(0, 3)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasRedituables(3);
-        
-        assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
-        
 
+        assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
 
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
-
 
     }
 
     @Test
     void despachar_mas_viejo_de_a_uno() {
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
-        System.out.print(sis.ciudadesConMayorGanancia());
+        
         sis.despacharMasAntiguos(1);
-        System.out.print(sis.ciudadesConMayorGanancia());
+        System.out.print(Arrays.asList(0));
+
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
 
@@ -104,6 +103,7 @@ public class BestEffortTests {
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 3)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasAntiguos(3);
+        System.err.println(sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 
@@ -142,7 +142,7 @@ public class BestEffortTests {
 
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorPerdida());
-        
+
         sis.despacharMasRedituables(1);
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
@@ -217,8 +217,6 @@ public class BestEffortTests {
             return t1.obtenerTiempo() - t2.obtenerTiempo();
         }
     };
-    
-
 
     @Test
     void nuevo_conjunto_vacio() {
@@ -246,13 +244,12 @@ public class BestEffortTests {
     void insertar_varios_elementos_por_ganancia() {
         Heap conjunto = new Heap(compararPorGanancia);
         Traslado[] nuevo = new Traslado[] {
-            new Traslado(1, 3, 4, 10, 8),
-            new Traslado(2, 2, 2, 50, 6),
-            new Traslado(4, 4, 1, 75, 5),
-            new Traslado(3, 1, 3, 20, 7),
-            new Traslado(5, 5, 4, 35, 9)
+                new Traslado(1, 3, 4, 10, 8),
+                new Traslado(2, 2, 2, 50, 6),
+                new Traslado(4, 4, 1, 75, 5),
+                new Traslado(3, 1, 3, 20, 7),
+                new Traslado(5, 5, 4, 35, 9)
         };
-        
 
         assertEquals(0, conjunto.cardinal());
         conjunto.insertar(nuevo);
@@ -265,10 +262,10 @@ public class BestEffortTests {
     void insertar_varios_elementos_por_tiempo() {
         Heap conjunto = new Heap(compararPorTiempo);
         Traslado[] nuevo = new Traslado[] {
-            new Traslado(8, 9, 3, 12, 2),
-            new Traslado(7, 6, 5, 11, 5),
-            new Traslado(3, 2, 1, 45, 6),
-            new Traslado(4, 3, 2, 60, 8)
+                new Traslado(8, 9, 3, 12, 2),
+                new Traslado(7, 6, 5, 11, 5),
+                new Traslado(3, 2, 1, 45, 6),
+                new Traslado(4, 3, 2, 60, 8)
         };
 
         assertEquals(0, conjunto.cardinal());
@@ -281,12 +278,12 @@ public class BestEffortTests {
     void eliminar_primer_elemento() {
         Heap conjunto = new Heap(compararPorGanancia);
         Traslado[] nuevo = new Traslado[] {
-            new Traslado(9, 2, 4, 80, 3),
-            new Traslado(6, 7, 1, 100, 4),
-            new Traslado(5, 8, 2, 25, 5),
-            new Traslado(3, 6, 3, 15, 2),
-            new Traslado(7, 4, 1, 55, 9),
-            new Traslado(2, 5, 5, 40, 1)
+                new Traslado(9, 2, 4, 80, 3),
+                new Traslado(6, 7, 1, 100, 4),
+                new Traslado(5, 8, 2, 25, 5),
+                new Traslado(3, 6, 3, 15, 2),
+                new Traslado(7, 4, 1, 55, 9),
+                new Traslado(2, 5, 5, 40, 1)
         };
 
         assertEquals(0, conjunto.cardinal());
@@ -298,10 +295,6 @@ public class BestEffortTests {
         assertEquals(5, conjunto.cardinal());
         assertEquals(nuevo[0], conjunto.obtenerMaximo());
 
-
     }
 
-
-
-    
 }
