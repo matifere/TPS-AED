@@ -42,7 +42,6 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    // nada q ver lo q habia aca
     public T eliminarPrimero() {
         T despacho = heap.get(0);
 
@@ -54,17 +53,7 @@ public class Heap<T extends Comparable<T>> {
 
     }
 
-    public void eliminarPorIndice(int indice) {
-        if (indice >= heap.size()) return;
-
-        heap.set(indice, heap.get(heap.size() - 1));
-        heap.remove(heap.size() - 1);
-
-        if (indice < heap.size()) {
-            siftDown(indice);
-            siftUp(indice);
-        }
-    }
+    
 
     private void siftUp(int indice) {
 

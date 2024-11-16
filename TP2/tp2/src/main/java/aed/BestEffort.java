@@ -89,19 +89,19 @@ public class BestEffort {
         if (ciudadMayorGanancia.size() == 0) {
             ciudadMayorGanancia.add(ciudadCheck.idCiudad());
         } else {
-            if (ciudadCheck.idCiudad() != ciudadesConMayorGanancia().get(0)) {
-                int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(ciudadesConMayorGanancia().size() - 1))
-                        .GananciaCiudad();
 
-                if (valorMaxActual == ciudadCheck.GananciaCiudad()) {
-                    ciudadMayorGanancia.add(ciudadCheck.idCiudad());
+            int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(ciudadesConMayorGanancia().size() - 1))
+                    .GananciaCiudad();
 
-                } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
-                    ciudadMayorGanancia = new ArrayList<>();
-                    ciudadMayorGanancia.add(ciudadCheck.idCiudad());
-                }
-                // si es menor no hace nada
+            if (valorMaxActual == ciudadCheck.GananciaCiudad()
+                    && ciudadCheck.idCiudad() != ciudadesConMayorGanancia().get(0)) {
+                ciudadMayorGanancia.add(ciudadCheck.idCiudad());
+
+            } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
+                ciudadMayorGanancia = new ArrayList<>();
+                ciudadMayorGanancia.add(ciudadCheck.idCiudad());
             }
+            // si es menor no hace nada
 
         }
     }
@@ -111,20 +111,20 @@ public class BestEffort {
         if (ciudadMayorPerdida.size() == 0) {
             ciudadMayorPerdida.add(ciudadCheck.idCiudad());
         } else {
-            if (ciudadCheck.idCiudad() != ciudadesConMayorPerdida().get(0)) {
-                int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(ciudadesConMayorPerdida().size() - 1))
-                        .PerdidaCiudad();
 
-                if (valorMaxActual == ciudadCheck.PerdidaCiudad()) {
-                    ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+            int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(ciudadesConMayorPerdida().size() - 1))
+                    .PerdidaCiudad();
 
-                }
-                if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
-                    ciudadMayorPerdida = new ArrayList<>();
-                    ciudadMayorPerdida.add(ciudadCheck.idCiudad());
-                }
-                // si es menor no hace nada
+            if (valorMaxActual == ciudadCheck.PerdidaCiudad()
+                    && ciudadCheck.idCiudad() != ciudadesConMayorPerdida().get(0)) {
+                ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+
             }
+            if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
+                ciudadMayorPerdida = new ArrayList<>();
+                ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+            }
+            // si es menor no hace nada
 
         }
     }
