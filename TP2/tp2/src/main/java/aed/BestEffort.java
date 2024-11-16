@@ -4,18 +4,17 @@ import java.util.ArrayList;
 
 public class BestEffort {
 
-
     /*
      * AMIGOOOOOOOOOO
      * intenta meterle lo de despachar mas antiguo
      * es lit un copipaste de lo que esta para mas redituables
      * 
-     * si te sobra tiempo metele a lo que quieras pero dejame las cosas escritas en un comentario
+     * si te sobra tiempo metele a lo que quieras pero dejame las cosas escritas en
+     * un comentario
      * 
      * NO COMMITEEES NADA QUE NO ESTE HECHO DEL TODO
      * tkm
      */
-
 
     // comparadores
     Comparador<Traslado> compararPorGanancia = new Comparador<Traslado>() {
@@ -36,14 +35,12 @@ public class BestEffort {
             return Integer.compare(c1.calculoSuperavit(), c2.calculoSuperavit());
         }
     };
-    
 
     // atributos privados
     private ArrayList<Ciudad> ciudades;
     private Heap<Traslado> trasladosRed = new Heap(compararPorGanancia);
     private Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
     private Heap<Ciudad> ciudadesPorSuper = new Heap(compararPorSuperavit);
-    
 
     private ArrayList<Integer> ciudadMayorGanancia = new ArrayList<>();
     private ArrayList<Integer> ciudadMayorPerdida = new ArrayList<>();
@@ -83,7 +80,7 @@ public class BestEffort {
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
         }
-        //int[] eliminarDelOtroHeap = despacharMasAntiguos(n);
+        // int[] eliminarDelOtroHeap = despacharMasAntiguos(n);
         return devolver;
     }
 
@@ -92,16 +89,20 @@ public class BestEffort {
         if (ciudadMayorGanancia.size() == 0) {
             ciudadMayorGanancia.add(ciudadCheck.idCiudad());
         } else {
-            int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(ciudadesConMayorGanancia().size()-1)).GananciaCiudad();
+            if (ciudadCheck.idCiudad() != ciudadesConMayorGanancia().get(0)) {
+                int valorMaxActual = ciudades.get(ciudadMayorGanancia.get(ciudadesConMayorGanancia().size() - 1))
+                        .GananciaCiudad();
 
-            if (valorMaxActual == ciudadCheck.GananciaCiudad()) {
-                ciudadMayorGanancia.add(ciudadCheck.idCiudad());
+                if (valorMaxActual == ciudadCheck.GananciaCiudad()) {
+                    ciudadMayorGanancia.add(ciudadCheck.idCiudad());
 
-            } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
-                ciudadMayorGanancia = new ArrayList<>();
-                ciudadMayorGanancia.add(ciudadCheck.idCiudad());
+                } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
+                    ciudadMayorGanancia = new ArrayList<>();
+                    ciudadMayorGanancia.add(ciudadCheck.idCiudad());
+                }
+                // si es menor no hace nada
             }
-            // si es menor no hace nada
+
         }
     }
 
@@ -110,17 +111,21 @@ public class BestEffort {
         if (ciudadMayorPerdida.size() == 0) {
             ciudadMayorPerdida.add(ciudadCheck.idCiudad());
         } else {
-            int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(ciudadesConMayorPerdida().size()-1)).PerdidaCiudad();
+            if (ciudadCheck.idCiudad() != ciudadesConMayorPerdida().get(0)) {
+                int valorMaxActual = ciudades.get(ciudadMayorPerdida.get(ciudadesConMayorPerdida().size() - 1))
+                        .PerdidaCiudad();
 
-            if (valorMaxActual == ciudadCheck.PerdidaCiudad()) {
-                ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+                if (valorMaxActual == ciudadCheck.PerdidaCiudad()) {
+                    ciudadMayorPerdida.add(ciudadCheck.idCiudad());
 
-            } 
-            if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
-                ciudadMayorPerdida = new ArrayList<>();
-                ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+                }
+                if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
+                    ciudadMayorPerdida = new ArrayList<>();
+                    ciudadMayorPerdida.add(ciudadCheck.idCiudad());
+                }
+                // si es menor no hace nada
             }
-            // si es menor no hace nada
+
         }
     }
 
@@ -129,7 +134,7 @@ public class BestEffort {
         int[] devolver = new int[n];
         for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosAnt.eliminarPrimero();
-            devolver[i] = trasladoActual.id; //los ordeno de forma creciente
+            devolver[i] = trasladoActual.id; // los ordeno de forma creciente
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia
@@ -142,10 +147,9 @@ public class BestEffort {
             actualEsMayorGanancia(ciudades.get(trasladoActual.origen));
             // chequeamos tambien si tiene la mayor perdida
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
-            
 
         }
-        //int[] eliminarDelOtroHeap = despacharMasRedituables(n);
+        // int[] eliminarDelOtroHeap = despacharMasRedituables(n);
         return devolver;
     }
 
@@ -174,7 +178,7 @@ public class BestEffort {
             sb.append("Ciudad ").append(id).append(", ");
         }
         if (!ciudadMayorPerdida.isEmpty()) {
-            sb.setLength(sb.length() - 2); 
+            sb.setLength(sb.length() - 2);
             sb.append("Ninguna");
         }
         return sb.toString();
