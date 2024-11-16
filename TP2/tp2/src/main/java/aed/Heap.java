@@ -54,6 +54,18 @@ public class Heap<T extends Comparable<T>> {
 
     }
 
+    public void eliminarPorIndice(int indice) {
+        if (indice >= heap.size()) return;
+
+        heap.set(indice, heap.get(heap.size() - 1));
+        heap.remove(heap.size() - 1);
+
+        if (indice < heap.size()) {
+            siftDown(indice);
+            siftUp(indice);
+        }
+    }
+
     private void siftUp(int indice) {
 
         while (indice > 0) {
