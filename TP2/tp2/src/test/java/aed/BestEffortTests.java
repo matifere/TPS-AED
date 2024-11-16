@@ -17,9 +17,8 @@ public class BestEffortTests {
     @BeforeEach
     void init() {
         // Reiniciamos los valores de las ciudades y traslados antes de cada test
-        cantCiudades = 8;
+        cantCiudades = 7;
         listaTraslados = new Traslado[] {
-
                 new Traslado(1, 0, 1, 100, 10),
                 new Traslado(2, 0, 1, 400, 20),
                 new Traslado(3, 3, 4, 500, 50),
@@ -119,6 +118,7 @@ public class BestEffortTests {
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasAntiguos(1);
+        System.err.println(sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 

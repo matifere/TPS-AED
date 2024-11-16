@@ -96,4 +96,11 @@ public class Heap<T extends Comparable<T>> {
     public T obtenerMaximo() {
         return heap.get(0);
     }
+
+
+    //devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar como O(1)
+    public ArrayList<T> obtenerComoArrayList() {
+        return new ArrayList<>(heap); 
+    }
+    
 }
