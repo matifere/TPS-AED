@@ -112,7 +112,7 @@ public class BestEffort {
                 ciudadMayorGanancia.insertar(insertar);
 
             } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
-                ciudadMayorGanancia = new Heap(compararPorMayor);
+                ciudadMayorGanancia.eliminarTodo();
                 ciudadMayorGanancia.insertar(insertar);
             }
             // si es menor no hace nada
@@ -137,7 +137,7 @@ public class BestEffort {
 
             }
             if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
-                ciudadMayorPerdida = new Heap(compararPorMenor);
+                ciudadMayorPerdida.eliminarTodo();
                 ciudadMayorPerdida.insertar(insertar);
             }
             // si es menor no hace nada
@@ -189,15 +189,15 @@ public class BestEffort {
     }
 
     // public String imprimirCiudadesMayorPerdida() {
-    //     StringBuilder sb = new StringBuilder("Ciudades con mayor pérdida: ");
-    //     for (int id : ciudadMayorPerdida) {
-    //         sb.append("Ciudad ").append(id).append(", ");
-    //     }
-    //     if (!ciudadMayorPerdida.isEmpty()) {
-    //         sb.setLength(sb.length() - 2);
-    //         sb.append("Ninguna");
-    //     }
-    //     return sb.toString();
+    // StringBuilder sb = new StringBuilder("Ciudades con mayor pérdida: ");
+    // for (int id : ciudadMayorPerdida) {
+    // sb.append("Ciudad ").append(id).append(", ");
+    // }
+    // if (!ciudadMayorPerdida.isEmpty()) {
+    // sb.setLength(sb.length() - 2);
+    // sb.append("Ninguna");
+    // }
+    // return sb.toString();
     // }
 
 }

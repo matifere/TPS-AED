@@ -97,7 +97,9 @@ public class Heap<T extends Comparable<T>> {
         return heap.get(0);
     }
 
-
+    public void eliminarTodo(){
+        heap.clear();
+    }
     //devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar como O(1)
     public ArrayList<T> obtenerComoArrayList() {
         return new ArrayList<>(heap); 
