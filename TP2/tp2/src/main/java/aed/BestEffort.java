@@ -5,14 +5,7 @@ import java.util.ArrayList;
 public class BestEffort {
 
     /*
-     * LOCOO
-     * el problema es el siguiente:
-     * nosotros tenemos dos listas
-     * en la primera guardamos x ganancia y en la otra por tiempo
-     * el tema es que cuando eliminamos un traslado en una no se elimina en la otra (porque eso le dijimos al codigo)
-     * 
-     * cuestion que hay que lograr eso sin que se nos cague la complejidad
-     *
+     * Ou yeaaaaaaa
      * 
      * NO COMMITEEES NADA QUE NO ESTE HECHO DEL TODO
      * tkm
@@ -78,16 +71,16 @@ public class BestEffort {
         int limiteDespachos = Math.min(n, trasladosRed.cardinal());
         int[] devolver = new int[n];
         for (int i = 0; i < limiteDespachos; i++) {
-            
+
             Traslado trasladoActual = trasladosRed.eliminarPrimero();
             devolver[i] = trasladoActual.id;
-            
+
             System.out.println("Despachando pedido " + trasladoActual.id);
 
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia
-            
+
             ciudades.get(trasladoActual.destino).agregarPerdida(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // destino y le agrega
             // la perdida
@@ -98,7 +91,9 @@ public class BestEffort {
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
         }
-        // int[] eliminarDelOtroHeap = despacharMasAntiguos(n);
+
+        //hacemos que el otro heap tenga los mismos elementos
+        trasladosAnt.heapify(trasladosRed.obtenerComoArrayList());
         return devolver;
     }
 
@@ -106,7 +101,8 @@ public class BestEffort {
     private void actualEsMayorGanancia(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
-        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
+        System.out
+                .println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
         System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
 
         if (ciudadMayorGanancia.cardinal() == 0) {
@@ -133,7 +129,8 @@ public class BestEffort {
     private void actualEsMayorPerdida(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
-        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
+        System.out
+                .println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
         System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
         if (ciudadMayorPerdida.cardinal() == 0) {
             ciudadMayorPerdida.insertar(insertar);
@@ -178,7 +175,10 @@ public class BestEffort {
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
         }
-        // int[] eliminarDelOtroHeap = despacharMasRedituables(n);
+
+        //hacemos que el otro heap tenga los mismos elementos
+        trasladosRed.heapify(trasladosAnt.obtenerComoArrayList());
+
         return devolver;
     }
 
@@ -200,7 +200,5 @@ public class BestEffort {
         // Implementar
         return 0;
     }
-
-
 
 }

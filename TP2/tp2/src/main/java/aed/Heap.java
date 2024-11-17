@@ -11,7 +11,7 @@ public class Heap<T extends Comparable<T>> {
         this.comparador = comparador;
     }
 
-    public int cardinal() { //esto es mas que nada para el test
+    public int cardinal() { // esto es mas que nada para el test
         return heap.size();
     }
 
@@ -42,10 +42,8 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    
-
     public T eliminarPrimero() {
-        
+
         System.out.println("Heap antes eliminacion: " + obtenerComoArrayList());
 
         T max = heap.get(0);
@@ -55,10 +53,7 @@ public class Heap<T extends Comparable<T>> {
         System.out.println("Heap despues eliminacion: " + obtenerComoArrayList());
         return max;
 
-
     }
-
-    
 
     private void siftUp(int indice) {
 
@@ -97,17 +92,30 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-
     public T obtenerMaximo() {
         return heap.get(0);
     }
 
-    public void eliminarTodo(){
+    public void eliminarTodo() {
         heap.clear();
     }
-    //devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar como O(1)
+
+    // devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar
+    // como O(1)
     public ArrayList<T> obtenerComoArrayList() {
-        return new ArrayList<>(heap); 
+        return new ArrayList<>(heap);
     }
-    
+
+    // vamos a usar esto para reescribir los traslados entre heaps, como tiene una
+    // complejidad O(n) no va a afectar lo que nos piden (O(n(log(T) + log(C))))
+    public void heapify(ArrayList<T> arrayAheap) {
+        
+        this.heap = new ArrayList<>(arrayAheap);
+
+        int ultimoNodo = (heap.size() - 2) / 2;
+        for (int i = ultimoNodo; i >= 0; i--) {
+            siftDown(i);
+        }
+    }
+
 }
