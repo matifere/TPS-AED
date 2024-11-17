@@ -15,8 +15,9 @@ public class Heap<T extends Comparable<T>> {
         return heap.size();
     }
 
-    // las siguientes funciones son privadas ya que no las vamos a utilizar
+    // las siguientes cuatro funciones son privadas ya que no las vamos a utilizar
     // fuera del funcionamiento interno del heap
+    // todas tienen una complejidad O(1)
     private int obtenerPadre(int indice) {
         return (indice - 1) / 2;
     }
@@ -35,6 +36,17 @@ public class Heap<T extends Comparable<T>> {
         heap.set(j, temp);
     }
 
+    /*
+     * sobre la complejidad de insertar:
+     * insertar tiene una complejidad O(nlog(n)) (O(log(n)) en caso de que se
+     * inserte un unico elemento)
+     * 
+     * El arbol tiene un largo O(log(n))
+     * por lo tanto si en el peor caso se recorre siempre el arbol hasta el final n
+     * veces, tenemos O(nlog(n))
+     * esto se realiza en el siftUp
+     * 
+     */
     public void insertar(T[] traslados) {
         for (T traslado : traslados) {
             heap.add(traslado);
@@ -42,14 +54,19 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    public T eliminarPrimero() {
+    /*
+     * la complejidad de eliminar primero nos queda en O(Log(n))
+     * pues en principio tenemos unicamente OE hasta el siftDown que toma
+     * complejidad O(log(n))
+     */
 
+    public T eliminarPrimero() {
 
         T max = heap.get(0);
         heap.set(0, heap.get(heap.size() - 1));
         heap.remove(heap.size() - 1);
         siftDown(0);
-        
+
         return max;
 
     }

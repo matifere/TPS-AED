@@ -240,13 +240,16 @@ public class BestEffort {
      * 
      */
 
+    /*
+     * sobre la complejidad de las funciones auxiliares:
+     * como todas realizan OE, y no existe ningun bucle 
+     * la complejidad de ambas queda en O(1)
+     */
+
     // funcion para chequear si la ciudad actual es candidata a mayor ganancia
     private void actualEsMayorGanancia(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
-        System.out
-                .println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
-        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
 
         if (ciudadMayorGanancia.cardinal() == 0) {
             ciudadMayorGanancia.insertar(insertar);
@@ -272,9 +275,7 @@ public class BestEffort {
     private void actualEsMayorPerdida(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
-        System.out
-                .println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
-        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
+
         if (ciudadMayorPerdida.cardinal() == 0) {
             ciudadMayorPerdida.insertar(insertar);
         } else {
