@@ -57,7 +57,7 @@ public class Heap<T extends Comparable<T>> {
     /*
      * la complejidad de eliminar primero nos queda en O(Log(n))
      * pues en principio tenemos unicamente OE hasta el siftDown que toma
-     * complejidad O(log(n))
+     * complejidad O(log(n)), que igual que antes toma esa complejidad si tiene que recorrer todo el arbol
      */
 
     public T eliminarPrimero() {
