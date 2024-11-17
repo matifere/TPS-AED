@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public class BestEffort {
 
     /*
-     * AMIGOOOOOOOOOO
-     * intenta meterle lo de despachar mas antiguo
-     * es lit un copipaste de lo que esta para mas redituables
+     * LOCOO
+     * el problema es el siguiente:
+     * nosotros tenemos dos listas
+     * en la primera guardamos x ganancia y en la otra por tiempo
+     * el tema es que cuando eliminamos un traslado en una no se elimina en la otra (porque eso le dijimos al codigo)
      * 
-     * si te sobra tiempo metele a lo que quieras pero dejame las cosas escritas en
-     * un comentario
+     * cuestion que hay que lograr eso sin que se nos cague la complejidad
+     *
      * 
      * NO COMMITEEES NADA QUE NO ESTE HECHO DEL TODO
      * tkm
@@ -199,16 +201,6 @@ public class BestEffort {
         return 0;
     }
 
-    // public String imprimirCiudadesMayorPerdida() {
-    // StringBuilder sb = new StringBuilder("Ciudades con mayor pérdida: ");
-    // for (int id : ciudadMayorPerdida) {
-    // sb.append("Ciudad ").append(id).append(", ");
-    // }
-    // if (!ciudadMayorPerdida.isEmpty()) {
-    // sb.setLength(sb.length() - 2);
-    // sb.append("Ninguna");
-    // }
-    // return sb.toString();
-    // }
+
 
 }
