@@ -71,21 +71,60 @@ public class BestEffort {
      */
 
     public BestEffort(int cantCiudades, Traslado[] traslados) {
+        /*
+         * Sobre la complejidad:
+         * como escencialmente estamos iterando sobre una cantidad fija de ciudades y
+         * traslados, obtenemos una funcion lineal en ambos casos, tengamos en cuenta
+         * que para los traslados estamos usando heapify lo que nos deja la complejidad
+         * en O(n)
+         * 
+         */
+
         this.ciudades = new ArrayList<>();
+        ArrayList<Traslado> trasladosParaHeapify = new ArrayList<>();
         for (int i = 0; i < cantCiudades; i++) {
             Ciudad ciudad = new Ciudad(i, 0, 0);
             ciudades.add(ciudad);
         }
-        registrarTraslados(traslados);
+        for (int i = 0; i < traslados.length; i++) {
+
+            trasladosParaHeapify.add(traslados[i]);
+        }
+        trasladosRed.heapify(trasladosParaHeapify);
+        trasladosAnt.heapify(trasladosParaHeapify);
 
     }
 
     public void registrarTraslados(Traslado[] traslados) {
+        /*
+         * sobre la complejidad:
+         * (mas info en la clase Heap)
+         * cada insercion tiene un coste O(log(k))
+         * como son n inserciones (tomando n como el largo de traslados) tenemos
+         * O(nlog(n))
+         */
         trasladosRed.insertar(traslados);
         trasladosAnt.insertar(traslados);
     }
 
     public int[] despacharMasRedituables(int n) {
+
+        /*
+         * sobre la complejidad:
+         * aca estamos usando la funcion insertar (nuevamente), como se comento antes
+         * esta funcion toma una complejidad O(nlog(k)) siendo n la cantidad de
+         * como la usamos tanto para la cantidad de ciudades como para los traslados
+         * nos queda O(n(log(T)+log(C))
+         * 
+         * cabe aclarar que en el medio estamos haciendo operaciones con complejidades
+         * menores que no afectan a lo anterior
+         * entre ellas operaciones que cambian un valor global O(1)
+         * y una operacion importante que controla que los dos heaps tengan los mismos
+         * elementos:
+         * 
+         * trasladosAnt.heapify(trasladosRed.obtenerComoArrayList()); -> O(n)
+         */
+
         int limiteDespachos = Math.min(n, trasladosRed.cardinal());
         int[] devolver = new int[n];
 
@@ -96,8 +135,6 @@ public class BestEffort {
 
             Traslado trasladoActual = trasladosRed.eliminarPrimero();
             devolver[i] = trasladoActual.id;
-
-            System.out.println("Despachando pedido " + trasladoActual.id);
 
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
@@ -128,9 +165,14 @@ public class BestEffort {
         return devolver;
     }
 
-    
-
     public int[] despacharMasAntiguos(int n) {
+
+        /*
+         * sobre la complejidad:
+         * como este punto lo encaramos de la misma forma que el anterior, la
+         * complejidad es la misma
+         */
+
         int limiteDespachos = Math.min(n, trasladosAnt.cardinal());
         int[] devolver = new int[n];
 
