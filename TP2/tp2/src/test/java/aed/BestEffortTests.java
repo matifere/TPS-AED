@@ -69,7 +69,6 @@ public class BestEffortTests {
         sis.despacharMasRedituables(3);
 
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
-        System.out.println(sis.ciudadesConMayorPerdida());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 
     }
@@ -79,7 +78,6 @@ public class BestEffortTests {
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
         
         sis.despacharMasAntiguos(1);
-        System.out.print(Arrays.asList(0));
 
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
@@ -102,7 +100,6 @@ public class BestEffortTests {
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 3)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasAntiguos(3);
-        System.err.println(sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 
@@ -111,15 +108,20 @@ public class BestEffortTests {
     @Test
     void despachar_mixtos() {
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
-
+        
         sis.despacharMasRedituables(3);
         sis.despacharMasAntiguos(3);
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
-        System.err.println(sis.ciudadesConMayorGanancia());
-
+        System.out.print(sis.ciudadesConMayorGanancia());
+        System.out.print(sis.ciudadesConMayorPerdida());
+        
         sis.despacharMasAntiguos(1);
-        System.err.println(sis.ciudadesConMayorGanancia());
+         
+        System.out.print(sis.ciudadesConMayorGanancia());
+        System.out.print(sis.ciudadesConMayorPerdida());
+
+
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 

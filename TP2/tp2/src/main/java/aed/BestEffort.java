@@ -76,12 +76,16 @@ public class BestEffort {
         int limiteDespachos = Math.min(n, trasladosRed.cardinal());
         int[] devolver = new int[n];
         for (int i = 0; i < limiteDespachos; i++) {
+            
             Traslado trasladoActual = trasladosRed.eliminarPrimero();
             devolver[i] = trasladoActual.id;
+            
+            System.out.println("Despachando pedido " + trasladoActual.id);
+
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia
-
+            
             ciudades.get(trasladoActual.destino).agregarPerdida(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // destino y le agrega
             // la perdida
@@ -100,6 +104,9 @@ public class BestEffort {
     private void actualEsMayorGanancia(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
+        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
+        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
+
         if (ciudadMayorGanancia.cardinal() == 0) {
             ciudadMayorGanancia.insertar(insertar);
         } else {
@@ -124,6 +131,8 @@ public class BestEffort {
     private void actualEsMayorPerdida(Ciudad ciudadCheck) {
         Integer[] insertar = new Integer[1];
         insertar[0] = ciudadCheck.idCiudad();
+        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Ganancia actual: " + ciudadCheck.GananciaCiudad());
+        System.out.println("Ciudad " + ciudadCheck.idCiudad() + ":" + "Perdida actual: " + ciudadCheck.PerdidaCiudad());
         if (ciudadMayorPerdida.cardinal() == 0) {
             ciudadMayorPerdida.insertar(insertar);
         } else {
@@ -151,6 +160,8 @@ public class BestEffort {
         for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosAnt.eliminarPrimero();
             devolver[i] = trasladoActual.id; // los ordeno de forma creciente
+            System.out.println("Despachando pedido " + trasladoActual.id);
+
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
             // ganancia

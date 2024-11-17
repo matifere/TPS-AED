@@ -42,14 +42,19 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
+    
+
     public T eliminarPrimero() {
-        T despacho = heap.get(0);
+        
+        System.out.println("Heap antes eliminacion: " + obtenerComoArrayList());
 
         T max = heap.get(0);
         heap.set(0, heap.get(heap.size() - 1));
         heap.remove(heap.size() - 1);
         siftDown(0);
+        System.out.println("Heap despues eliminacion: " + obtenerComoArrayList());
         return max;
+
 
     }
 
