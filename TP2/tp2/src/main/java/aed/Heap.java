@@ -11,21 +11,21 @@ public class Heap<T extends Comparable<T>> {
         this.comparador = comparador;
     }
 
-    public int cardinal() { // esto es mas que nada para el test
+    public int cardinal() {
         return heap.size();
     }
 
-    // las siguientes tres funciones tienen sentido unicamente si el indice esta
-    // entre 0<=indice<|heap|
-    public int obtenerPadre(int indice) {
+    // las siguientes funciones son privadas ya que no las vamos a utilizar
+    // fuera del funcionamiento interno del heap
+    private int obtenerPadre(int indice) {
         return (indice - 1) / 2;
     }
 
-    public int obtenerHijoIzq(int indice) {
+    private int obtenerHijoIzq(int indice) {
         return 2 * indice + 1;
     }
 
-    public int obtenerHijoDerecho(int indice) {
+    private int obtenerHijoDerecho(int indice) {
         return 2 * indice + 2;
     }
 
@@ -107,9 +107,10 @@ public class Heap<T extends Comparable<T>> {
     }
 
     // vamos a usar esto para reescribir los traslados entre heaps, como tiene una
-    // complejidad O(n) no va a afectar lo que nos piden (O(n(log(T) + log(C))))
+    // complejidad O(n) que es menor a (O(n(log(T) + log(C)))), no nos va a afeactar
+    // en la complejidad
     public void heapify(ArrayList<T> arrayAheap) {
-        
+
         this.heap = new ArrayList<>(arrayAheap);
 
         int ultimoNodo = (heap.size() - 2) / 2;

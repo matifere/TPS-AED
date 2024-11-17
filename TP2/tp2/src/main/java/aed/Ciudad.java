@@ -12,6 +12,9 @@ public class Ciudad implements Comparable<Ciudad> {
         this.perdidaCiudad = perdidaCiudad;
         calculoSuperavit();
     }
+
+    
+
     public int idCiudad() {
         return id;
     }
