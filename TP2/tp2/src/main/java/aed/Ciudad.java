@@ -2,18 +2,17 @@ package aed;
 
 public class Ciudad implements Comparable<Ciudad> {
 
-   private int id;
-   private int gananciaCiudad;
-   private int perdidaCiudad;
-   private int superavit;
-    public Ciudad(int id, int gananciaCiudad, int perdidaCiudad){
+    private int id;
+    private int gananciaCiudad;
+    private int perdidaCiudad;
+    private int superavit;
+
+    public Ciudad(int id, int gananciaCiudad, int perdidaCiudad) {
         this.id = id;
         this.gananciaCiudad = gananciaCiudad;
         this.perdidaCiudad = perdidaCiudad;
         calculoSuperavit();
     }
-
-    
 
     public int idCiudad() {
         return id;
@@ -26,12 +25,11 @@ public class Ciudad implements Comparable<Ciudad> {
     public int PerdidaCiudad() {
         return perdidaCiudad;
     }
-    
+
     public void agregarGanancia(int ganancia) {
         this.gananciaCiudad += ganancia;
         calculoSuperavit();
     }
-
 
     public void agregarPerdida(int perdida) {
         this.perdidaCiudad += perdida;
@@ -39,10 +37,10 @@ public class Ciudad implements Comparable<Ciudad> {
     }
 
     public void calculoSuperavit() {
-        this.superavit =  gananciaCiudad - perdidaCiudad;
+        this.superavit = gananciaCiudad - perdidaCiudad;
     }
 
-    public int devolverSuperavit(){
+    public int devolverSuperavit() {
         return superavit;
     }
 

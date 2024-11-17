@@ -113,13 +113,8 @@ public class BestEffortTests {
         sis.despacharMasAntiguos(3);
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
-        System.out.print(sis.ciudadesConMayorGanancia());
-        System.out.print(sis.ciudadesConMayorPerdida());
 
         sis.despacharMasAntiguos(1);
-
-        System.out.print(sis.ciudadesConMayorGanancia());
-        System.out.print(sis.ciudadesConMayorPerdida());
 
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());

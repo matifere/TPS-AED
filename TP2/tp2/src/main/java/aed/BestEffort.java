@@ -182,7 +182,7 @@ public class BestEffort {
         for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosAnt.eliminarPrimero();
             devolver[i] = trasladoActual.id; // los ordeno de forma creciente
-            System.out.println("Despachando pedido " + trasladoActual.id);
+            
 
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
