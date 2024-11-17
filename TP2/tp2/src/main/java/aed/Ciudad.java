@@ -10,7 +10,7 @@ public class Ciudad implements Comparable<Ciudad> {
         this.id = id;
         this.gananciaCiudad = gananciaCiudad;
         this.perdidaCiudad = perdidaCiudad;
-        this.superavit = calculoSuperavit();
+        calculoSuperavit();
     }
     public int idCiudad() {
         return id;
@@ -26,17 +26,21 @@ public class Ciudad implements Comparable<Ciudad> {
     
     public void agregarGanancia(int ganancia) {
         this.gananciaCiudad += ganancia;
-        this.superavit = calculoSuperavit();
+        calculoSuperavit();
     }
 
 
     public void agregarPerdida(int perdida) {
         this.perdidaCiudad += perdida;
-        this.superavit = calculoSuperavit();
+        calculoSuperavit();
     }
 
-    public int calculoSuperavit() {
-       return superavit =  gananciaCiudad - perdidaCiudad;
+    public void calculoSuperavit() {
+        this.superavit =  gananciaCiudad - perdidaCiudad;
+    }
+
+    public int devolverSuperavit(){
+        return superavit;
     }
 
     @Override

@@ -27,7 +27,11 @@ public class BestEffort {
     Comparador<Ciudad> compararPorSuperavit = new Comparador<Ciudad>() {
         @Override
         public int comparar(Ciudad c1, Ciudad c2) {
-            return Integer.compare(c1.calculoSuperavit(), c2.calculoSuperavit());
+            if (Integer.compare(c1.devolverSuperavit(), c2.devolverSuperavit()) != 0) {
+                return Integer.compare(c1.devolverSuperavit(), c2.devolverSuperavit());
+            } else {
+                return Integer.compare(c1.idCiudad(), c2.idCiudad());
+            }
         }
     };
     Comparador<Integer> compararPorMayor = new Comparador<Integer>() {
@@ -90,9 +94,15 @@ public class BestEffort {
             // chequeamos tambien si tiene la mayor perdida
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
+            // agrego al heap de superavit
+            Ciudad[] ciudadesSuper = new Ciudad[2];
+            ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
+            ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
+            ciudadesPorSuper.insertar(ciudadesSuper);
+
         }
 
-        //hacemos que el otro heap tenga los mismos elementos
+        // hacemos que el otro heap tenga los mismos elementos
         trasladosAnt.heapify(trasladosRed.obtenerComoArrayList());
         return devolver;
     }
@@ -174,17 +184,22 @@ public class BestEffort {
             // chequeamos tambien si tiene la mayor perdida
             actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
 
+            // agrego al heap de superavit
+            Ciudad[] ciudadesSuper = new Ciudad[2];
+            ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
+            ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
+            ciudadesPorSuper.insertar(ciudadesSuper);
         }
 
-        //hacemos que el otro heap tenga los mismos elementos
+        // hacemos que el otro heap tenga los mismos elementos
         trasladosRed.heapify(trasladosAnt.obtenerComoArrayList());
 
         return devolver;
     }
 
     public int ciudadConMayorSuperavit() {
-        // Implementar
-        return 0;
+        
+        return ciudadesPorSuper.obtenerMaximo().idCiudad();
     }
 
     public ArrayList<Integer> ciudadesConMayorGanancia() {
