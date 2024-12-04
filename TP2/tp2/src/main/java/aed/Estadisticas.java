@@ -23,4 +23,6 @@ public class Estadisticas<T extends Comparable<T>>{
         this.ciudadMayorGanancia = ciudadMayorGanancia;
         this.ciudadMayorPerdida = ciudadMayorPerdida;
     }
+
+    
 }
