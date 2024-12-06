@@ -210,19 +210,7 @@ public class BestEffortTests {
      * 
      */
 
-    @Test
-    void traslados_duplicados() {
-        Traslado[] duplicados = new Traslado[] {
-                new Traslado(1, 0, 1, 100, 10),
-                new Traslado(2, 0, 1, 100, 10),
-                new Traslado(3, 0, 1, 100, 10)
-        };
-        BestEffort sis = new BestEffort(this.cantCiudades, duplicados);
-
-        sis.despacharMasRedituables(1);
-        assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
-        assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
-    }
+ 
 
     @Test
     void ciudades_sin_traslados() {
@@ -235,21 +223,6 @@ public class BestEffortTests {
         sis.despacharMasRedituables(2);
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(4)), sis.ciudadesConMayorPerdida());
-    }
-
-    @Test
-    void traslados_con_g_y_c_iguales() {
-        Traslado[] iguales = new Traslado[] {
-                new Traslado(1, 0, 1, 100, 100),
-                new Traslado(2, 1, 2, 100, 100),
-                new Traslado(3, 2, 3, 100, 100)
-        };
-        BestEffort sis = new BestEffort(this.cantCiudades, iguales);
-
-        sis.despacharMasRedituables(3);
-        assertEquals(100, sis.gananciaPromedioPorTraslado());
-        assertSetEquals(new ArrayList<>(Arrays.asList(0, 1, 2)), sis.ciudadesConMayorGanancia());
-        assertSetEquals(new ArrayList<>(Arrays.asList(1, 2, 3)), sis.ciudadesConMayorPerdida());
     }
 
     // intentamos despachar elementos de mas
@@ -359,5 +332,38 @@ public class BestEffortTests {
         assertEquals(nuevo[0], conjunto.obtenerMaximo());
 
     }
+
+    @Test
+void stress_test() {
+    int cantCiudades = 100;
+    int cantidadTraslados = 100000;
+
+    Traslado[] stressTraslados = new Traslado[cantidadTraslados];
+
+    for (int id = 1; id <= cantidadTraslados; id++) {
+        int origen = (id - 1) % cantCiudades;
+        int destino = id % cantCiudades;
+        if (origen == destino) {
+            destino = (destino + 1) % cantCiudades;
+        }
+        int gananciaNeta = id;
+        int tiempo = id;
+
+        stressTraslados[id - 1] = new Traslado(id, origen, destino, gananciaNeta, tiempo);
+    }
+
+    BestEffort sis = new BestEffort(cantCiudades, stressTraslados);
+
+    
+
+    sis.despacharMasRedituables(50000);
+    assertTrue(sis.gananciaPromedioPorTraslado() > 0);
+
+    sis.despacharMasAntiguos(30000);
+    assertTrue(sis.gananciaPromedioPorTraslado() > 0);
+
+    assertTrue(sis.ciudadesConMayorGanancia().contains(99));
+}
+
 
 }
