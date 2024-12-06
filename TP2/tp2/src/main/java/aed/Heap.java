@@ -170,6 +170,7 @@ public class Heap<T extends Comparable<T>> {
 
     public void eliminarTodo() {
         heap.clear();
+        otroHeap.eliminarTodo();
     }
 
     // devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar

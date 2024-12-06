@@ -34,7 +34,7 @@ public class Estadisticas {
         if (ciudadMayorGanancia.isEmpty()) {
             valorMaxActual = 0;
         } else {
-            int idCiudad = ciudadMayorGanancia.get(0);
+            int idCiudad = ciudadMayorGanancia.get(ciudadMayorGanancia.size() - 1);
             valorMaxActual = ciudades.get(idCiudad).GananciaCiudad();
         }
 
@@ -55,7 +55,7 @@ public class Estadisticas {
         if (ciudadMayorPerdida.isEmpty()) {
             valorMaxActual = 0;
         } else {
-            int idCiudad = ciudadMayorPerdida.get(0);
+            int idCiudad = ciudadMayorPerdida.get(ciudadMayorPerdida.size() - 1);
             valorMaxActual = ciudades.get(idCiudad).PerdidaCiudad();
         }
 

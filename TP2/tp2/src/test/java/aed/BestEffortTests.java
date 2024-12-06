@@ -111,6 +111,7 @@ public class BestEffortTests {
 
         sis.despacharMasRedituables(3);
         sis.despacharMasAntiguos(3);
+        
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         System.err.println(sis.ciudadesConMayorPerdida());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());

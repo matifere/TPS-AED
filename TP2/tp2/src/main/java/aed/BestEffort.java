@@ -82,7 +82,7 @@ public class BestEffort {
 
         //cuando se inicia el programa queremos coordinar los heaps redituables y anteriores
         trasladosRed.conectarHeap(trasladosAnt);
-        //trasladosAnt.conectarHeap(trasladosRed);
+        trasladosAnt.conectarHeap(trasladosRed);
 
     }
 
@@ -95,7 +95,7 @@ public class BestEffort {
          * O(nlog(n))
          */
         trasladosRed.insertar(traslados);
-        trasladosAnt.insertar(traslados);
+        //trasladosAnt.insertar(traslados);
     }
 
     public int[] despacharMasRedituables(int n) {
