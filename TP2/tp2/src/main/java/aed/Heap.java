@@ -43,7 +43,7 @@ public class Heap<T extends Comparable<T>> {
 
         NodoHeap(T valor) {
             this.valor = valor;
-            this.indiceEnConectado = 0; // Inicialmente sin conexión
+            this.indiceEnConectado = 0; 
         }
     }
 
@@ -52,7 +52,7 @@ public class Heap<T extends Comparable<T>> {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
 
-        // Si el heap está conectado, actualizamos el índice en el otro heap
+        // Si el heap está conectado actualizamos el indice del otroheap
         if (otroHeap != null) {
             otroHeap.heap.get(heap.get(i).indiceEnConectado).indiceEnConectado = i;
             otroHeap.heap.get(heap.get(j).indiceEnConectado).indiceEnConectado = j;
@@ -76,7 +76,7 @@ public class Heap<T extends Comparable<T>> {
 
             heap.add(nodo);
             siftUp(heap.size() - 1);
-            // Si está conectado, también insertamos en el otro heap
+            // insertamos en el otro heap (si existe otro relacionado)
             if (otroHeap != null) {
                 NodoHeap<T> nodoConectado = new NodoHeap<>(traslado);
                 otroHeap.heap.add(nodoConectado);
