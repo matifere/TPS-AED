@@ -31,18 +31,6 @@ public class BestEffort {
             }
         }
     };
-    Comparador<Integer> compararPorMayor = new Comparador<Integer>() {
-        @Override
-        public int comparar(Integer c1, Integer c2) {
-            return Integer.compare(c1, c2);
-        }
-    };
-    Comparador<Integer> compararPorMenor = new Comparador<Integer>() {
-        @Override
-        public int comparar(Integer c1, Integer c2) {
-            return -Integer.compare(c1, c2);
-        }
-    };
 
     /*
      * 
@@ -56,9 +44,8 @@ public class BestEffort {
     private Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
 
     // atributos para control de estadisticas
-    private Heap<Ciudad> ciudadesPorSuper = new Heap(compararPorSuperavit);
-    private Heap<Integer> ciudadMayorGanancia = new Heap(compararPorMayor);
-    private Heap<Integer> ciudadMayorPerdida = new Heap(compararPorMenor);
+    private Estadisticas estadisticas = new Estadisticas(compararPorSuperavit);
+
 
     // atributos para promedio
     private int gananciaTotal = 0;
@@ -118,15 +105,13 @@ public class BestEffort {
          * 
          * cabe aclarar que en el medio estamos haciendo operaciones con complejidades
          * menores que no afectan a lo anterior
-         * entre ellas operaciones que cambian un valor global O(1)
-         * y una operacion importante que controla que los dos heaps tengan los mismos
-         * elementos:
          * 
-         * trasladosAnt.heapify(trasladosRed.obtenerComoArrayList()); -> O(n)
+         * TODO
+         * hay que conectar los heaps para no tener que usar heapify
          */
 
         int limiteDespachos = Math.min(n, trasladosRed.cardinal());
-        int[] devolver = new int[n];
+        int[] devolver = new int[limiteDespachos];
 
         // agrego el limite al contador
         contadorParaPromedio += limiteDespachos;
@@ -145,16 +130,16 @@ public class BestEffort {
             // la perdida
 
             // chequeamos si la ciudad actual tiene la mayor ganancia
-            actualEsMayorGanancia(ciudades.get(trasladoActual.origen));
+            estadisticas.actualEsMayorGanancia(ciudades.get(trasladoActual.origen), ciudades);
             // chequeamos tambien si tiene la mayor perdida
-            actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
+            estadisticas.actualEsMayorPerdida(ciudades.get(trasladoActual.destino), ciudades);
 
             // agrego al heap de superavit
             Ciudad[] ciudadesSuper = new Ciudad[2];
             ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
             ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
-            ciudadesPorSuper.insertar(ciudadesSuper);
-
+            //ciudadesPorSuper.insertar(ciudadesSuper);
+            estadisticas.insertarCiudadesSuperavit(ciudadesSuper);
             // sumo la ganancia a la ganancia para promedio
             gananciaTotal += trasladoActual.gananciaNeta;
 
@@ -174,7 +159,7 @@ public class BestEffort {
          */
 
         int limiteDespachos = Math.min(n, trasladosAnt.cardinal());
-        int[] devolver = new int[n];
+        int[] devolver = new int[limiteDespachos];
 
         // agrego el limite al contador
         contadorParaPromedio += limiteDespachos;
@@ -193,15 +178,16 @@ public class BestEffort {
             // la perdida
 
             // chequeamos si la ciudad actual tiene la mayor ganancia
-            actualEsMayorGanancia(ciudades.get(trasladoActual.origen));
+            estadisticas.actualEsMayorGanancia(ciudades.get(trasladoActual.origen), ciudades);
             // chequeamos tambien si tiene la mayor perdida
-            actualEsMayorPerdida(ciudades.get(trasladoActual.destino));
+            estadisticas.actualEsMayorPerdida(ciudades.get(trasladoActual.destino), ciudades);
 
             // agrego al heap de superavit
             Ciudad[] ciudadesSuper = new Ciudad[2];
             ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
             ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
-            ciudadesPorSuper.insertar(ciudadesSuper);
+            //ciudadesPorSuper.insertar(ciudadesSuper);
+            estadisticas.insertarCiudadesSuperavit(ciudadesSuper);
 
             // sumo la ganancia a la ganancia para promedio
             gananciaTotal += trasladoActual.gananciaNeta;
@@ -217,16 +203,16 @@ public class BestEffort {
 
     public int ciudadConMayorSuperavit() {
 
-        return ciudadesPorSuper.obtenerMaximo().idCiudad();
+        return estadisticas.obtenerCiudadConMayorSuperavit();
     }
 
     public ArrayList<Integer> ciudadesConMayorGanancia() {
-        return ciudadMayorGanancia.obtenerComoArrayList();
+        return estadisticas.ciudadesConMayorGanancia();
     }
 
     public ArrayList<Integer> ciudadesConMayorPerdida() {
 
-        return ciudadMayorPerdida.obtenerComoArrayList();
+        return estadisticas.ciudadesConMayorPerdida();
     }
 
     public int gananciaPromedioPorTraslado() {
@@ -234,66 +220,4 @@ public class BestEffort {
         return gananciaTotal / contadorParaPromedio;
     }
 
-    /*
-     * 
-     * FUNCIONES AUXILIARES
-     * 
-     */
-
-    /*
-     * sobre la complejidad de las funciones auxiliares:
-     * como todas realizan OE, y no existe ningun bucle 
-     * la complejidad de ambas queda en O(1)
-     */
-
-    // funcion para chequear si la ciudad actual es candidata a mayor ganancia
-    private void actualEsMayorGanancia(Ciudad ciudadCheck) {
-        Integer[] insertar = new Integer[1];
-        insertar[0] = ciudadCheck.idCiudad();
-
-        if (ciudadMayorGanancia.cardinal() == 0) {
-            ciudadMayorGanancia.insertar(insertar);
-        } else {
-
-            int valorMaxActual = ciudades.get(ciudadMayorGanancia.obtenerMaximo())
-                    .GananciaCiudad();
-
-            if (valorMaxActual == ciudadCheck.GananciaCiudad()
-                    && ciudadCheck.idCiudad() != ciudadesConMayorGanancia().get(0)) {
-                ciudadMayorGanancia.insertar(insertar);
-
-            } else if (valorMaxActual < ciudadCheck.GananciaCiudad()) {
-                ciudadMayorGanancia.eliminarTodo();
-                ciudadMayorGanancia.insertar(insertar);
-            }
-            // si es menor no hace nada
-
-        }
-    }
-
-    // funcion para chequear si la ciudad actual es candidata a mayor perdida
-    private void actualEsMayorPerdida(Ciudad ciudadCheck) {
-        Integer[] insertar = new Integer[1];
-        insertar[0] = ciudadCheck.idCiudad();
-
-        if (ciudadMayorPerdida.cardinal() == 0) {
-            ciudadMayorPerdida.insertar(insertar);
-        } else {
-
-            int valorMaxActual = ciudades.get(ciudadMayorPerdida.obtenerMaximo())
-                    .PerdidaCiudad();
-
-            if (valorMaxActual == ciudadCheck.PerdidaCiudad()
-                    && ciudadCheck.idCiudad() != ciudadesConMayorPerdida().get(0)) {
-                ciudadMayorPerdida.insertar(insertar);
-
-            }
-            if (valorMaxActual < ciudadCheck.PerdidaCiudad()) {
-                ciudadMayorPerdida.eliminarTodo();
-                ciudadMayorPerdida.insertar(insertar);
-            }
-            // si es menor no hace nada
-
-        }
-    }
 }
