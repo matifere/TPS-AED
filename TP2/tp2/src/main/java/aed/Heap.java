@@ -3,23 +3,22 @@ package aed;
 import java.util.ArrayList;
 
 public class Heap<T extends Comparable<T>> {
-    private ArrayList<T> heap;
+    private ArrayList<NodoHeap<T>> heap;
     private Comparador<T> comparador;
-
-    /*
-     * la idea es tener una lista donde todos los elementos del heap redituables
-     * tengan un registro de los elementos de anteriores, de esta forma sabemos
-     * siempre que elementos quitar de ambos heaps manteniendo la complejidad
-     */
-    private ArrayList<T> indicesCorrespondientes;
+    private Heap<T> otroHeap; // atributo para mantener heaps conectados
 
     public Heap(Comparador<T> comparador) {
         this.heap = new ArrayList<>();
         this.comparador = comparador;
+        this.otroHeap = null;
     }
 
     public int cardinal() {
         return heap.size();
+    }
+
+    public void conectarHeap(Heap<T> conn) {
+        otroHeap = conn;
     }
 
     // las siguientes cuatro funciones son privadas ya que no las vamos a utilizar
@@ -37,10 +36,27 @@ public class Heap<T extends Comparable<T>> {
         return 2 * indice + 2;
     }
 
+    // Clase auxiliar para almacenar el valor y el índice en el otro heap
+    private static class NodoHeap<T> {
+        T valor;
+        int indiceEnConectado;
+
+        NodoHeap(T valor) {
+            this.valor = valor;
+            this.indiceEnConectado = 0; // Inicialmente sin conexión
+        }
+    }
+
     private void cambiar(int i, int j) {
-        T temp = heap.get(i);
+        NodoHeap<T> temp = heap.get(i);
         heap.set(i, heap.get(j));
         heap.set(j, temp);
+
+        // Si el heap está conectado, actualizamos el índice en el otro heap
+        if (otroHeap != null) {
+            otroHeap.heap.get(heap.get(i).indiceEnConectado).indiceEnConectado = i;
+            otroHeap.heap.get(heap.get(j).indiceEnConectado).indiceEnConectado = j;
+        }
     }
 
     /*
@@ -56,9 +72,22 @@ public class Heap<T extends Comparable<T>> {
      */
     public void insertar(T[] traslados) {
         for (T traslado : traslados) {
-            heap.add(traslado);
+            NodoHeap<T> nodo = new NodoHeap<>(traslado);
+
+            heap.add(nodo);
             siftUp(heap.size() - 1);
+            // Si está conectado, también insertamos en el otro heap
+            if (otroHeap != null) {
+                NodoHeap<T> nodoConectado = new NodoHeap<>(traslado);
+                otroHeap.heap.add(nodoConectado);
+                int indiceEnConectado = otroHeap.heap.size() - 1;
+                nodo.indiceEnConectado = indiceEnConectado;
+                nodoConectado.indiceEnConectado = heap.size() - 1;
+                otroHeap.siftUp(indiceEnConectado);
+            }
+
         }
+
     }
 
     /*
@@ -70,12 +99,31 @@ public class Heap<T extends Comparable<T>> {
 
     public T eliminarPrimero() {
 
-        T max = heap.get(0);
-        heap.set(0, heap.get(heap.size() - 1));
-        heap.remove(heap.size() - 1);
-        siftDown(0);
+        if (heap.isEmpty()) return null;
 
-        return max;
+        NodoHeap<T> nodo = heap.get(0);
+        T valor = nodo.valor;
+        NodoHeap<T> ultimo = heap.remove(heap.size() - 1);
+
+        if (!heap.isEmpty()) {
+            heap.set(0, ultimo);
+            siftDown(0);
+        }
+
+        // Eliminar del otro heap
+        if (otroHeap != null) {
+            int indiceEnConectado = nodo.indiceEnConectado;
+            NodoHeap<T> nodoConectado = otroHeap.heap.get(indiceEnConectado);
+            NodoHeap<T> ultimoConectado = otroHeap.heap.remove(otroHeap.heap.size() - 1);
+
+            if (indiceEnConectado < otroHeap.heap.size()) {
+                otroHeap.heap.set(indiceEnConectado, ultimoConectado);
+                otroHeap.siftDown(indiceEnConectado);
+                otroHeap.siftUp(indiceEnConectado);
+            }
+        }
+
+        return valor;
 
     }
 
@@ -83,7 +131,7 @@ public class Heap<T extends Comparable<T>> {
 
         while (indice > 0) {
             int padreIndice = obtenerPadre(indice);
-            if (comparador.comparar(heap.get(indice), heap.get(padreIndice)) > 0) {
+            if (comparador.comparar(heap.get(indice).valor, heap.get(padreIndice).valor) > 0) {
                 cambiar(indice, padreIndice);
                 indice = padreIndice;
             } else {
@@ -93,18 +141,18 @@ public class Heap<T extends Comparable<T>> {
 
     }
 
-    void siftDown(int indice) {
+    private void siftDown(int indice) {
         int tamaño = this.cardinal();
         while (true) {
             int hijoIzq = obtenerHijoIzq(indice);
             int hijoDer = obtenerHijoDerecho(indice);
             int mayor = indice;
 
-            if (hijoIzq < tamaño && comparador.comparar(heap.get(hijoIzq), heap.get(mayor)) > 0) {
+            if (hijoIzq < tamaño && comparador.comparar(heap.get(hijoIzq).valor, heap.get(mayor).valor) > 0) {
                 mayor = hijoIzq;
             }
 
-            if (hijoDer < tamaño && comparador.comparar(heap.get(hijoDer), heap.get(mayor)) > 0) {
+            if (hijoDer < tamaño && comparador.comparar(heap.get(hijoDer).valor, heap.get(mayor).valor) > 0) {
                 mayor = hijoDer;
             }
 
@@ -117,7 +165,7 @@ public class Heap<T extends Comparable<T>> {
     }
 
     public T obtenerMaximo() {
-        return heap.get(0);
+        return heap.get(0).valor;
     }
 
     public void eliminarTodo() {
@@ -125,17 +173,24 @@ public class Heap<T extends Comparable<T>> {
     }
 
     // devuelve el heap como ArrayList, segun el enunciado esto lo podemos tomar
-    // como O(1)
+    // como O(n) debido a que utiliza un bucle for con n
     public ArrayList<T> obtenerComoArrayList() {
-        return new ArrayList<>(heap);
+        ArrayList<T> lista = new ArrayList<>();
+        for (NodoHeap<T> nodo : heap) {
+            lista.add(nodo.valor);
+        }
+        return lista;
     }
 
     // vamos a usar esto para reescribir los traslados entre heaps, como tiene una
     // complejidad O(n) que es menor a (O(n(log(T) + log(C)))), no nos va a afeactar
     // en la complejidad
     public void heapify(ArrayList<T> arrayAheap) {
-
-        this.heap = new ArrayList<>(arrayAheap);
+        this.heap.clear();
+        for (T valor : arrayAheap) {
+            NodoHeap<T> nodo = new NodoHeap<>(valor);
+            this.heap.add(nodo);
+        }
 
         int ultimoNodo = (heap.size() - 2) / 2;
         for (int i = ultimoNodo; i >= 0; i--) {

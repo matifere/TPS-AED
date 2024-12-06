@@ -80,6 +80,10 @@ public class BestEffort {
         trasladosRed.heapify(trasladosParaHeapify);
         trasladosAnt.heapify(trasladosParaHeapify);
 
+        //cuando se inicia el programa queremos coordinar los heaps redituables y anteriores
+        trasladosRed.conectarHeap(trasladosAnt);
+        //trasladosAnt.conectarHeap(trasladosRed);
+
     }
 
     public void registrarTraslados(Traslado[] traslados) {
@@ -146,7 +150,7 @@ public class BestEffort {
         }
 
         // hacemos que el otro heap tenga los mismos elementos
-        trasladosAnt.heapify(trasladosRed.obtenerComoArrayList());
+        //trasladosAnt.heapify(trasladosRed.obtenerComoArrayList());
         return devolver;
     }
 
@@ -194,7 +198,7 @@ public class BestEffort {
         }
 
         // hacemos que el otro heap tenga los mismos elementos
-        trasladosRed.heapify(trasladosAnt.obtenerComoArrayList());
+        //trasladosRed.heapify(trasladosAnt.obtenerComoArrayList());
 
         return devolver;
     }
