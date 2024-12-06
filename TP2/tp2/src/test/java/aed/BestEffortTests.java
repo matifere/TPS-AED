@@ -257,6 +257,42 @@ public class BestEffortTests {
         }
     };
 
+    Comparador<Integer> compararPorMayor= new Comparador<Integer>() {
+        @Override
+        public int comparar(Integer t1, Integer t2) {
+            return Integer.compare(t1, t2);
+        }
+    };
+    Comparador<Integer> compararPorMenor= new Comparador<Integer>() {
+        @Override
+        public int comparar(Integer t1, Integer t2) {
+            return -Integer.compare(t1, t2);
+        }
+    };
+
+    @Test
+    void comportamiento_multiples_Heaps() {
+        Heap conjuntoMayor = new Heap<>(compararPorMayor);
+        Heap conjuntoMenor =new Heap<>(compararPorMenor);
+        Integer[] nuevo = new Integer[10]; 
+        for (int i = 0; i < nuevo.length; i++) {
+            nuevo[i] = i;
+        }
+        assertEquals(0, conjuntoMayor.cardinal());
+        assertEquals(0, conjuntoMenor.cardinal());
+        conjuntoMayor.conectarHeap(conjuntoMenor);
+        conjuntoMenor.conectarHeap(conjuntoMayor);
+        conjuntoMayor.insertar(nuevo);
+        assertEquals(10, conjuntoMayor.cardinal());
+        assertEquals(10, conjuntoMenor.cardinal());
+
+        conjuntoMenor.eliminarPrimero();
+        assertEquals(9, conjuntoMayor.cardinal());
+
+        
+
+    }
+
     @Test
     void nuevo_conjunto_vacio() {
         Heap conjunto = new Heap(compararPorGanancia);
