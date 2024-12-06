@@ -6,6 +6,13 @@ public class Heap<T extends Comparable<T>> {
     private ArrayList<T> heap;
     private Comparador<T> comparador;
 
+    /*
+     * la idea es tener una lista donde todos los elementos del heap redituables
+     * tengan un registro de los elementos de anteriores, de esta forma sabemos
+     * siempre que elementos quitar de ambos heaps manteniendo la complejidad
+     */
+    private ArrayList<T> indicesCorrespondientes;
+
     public Heap(Comparador<T> comparador) {
         this.heap = new ArrayList<>();
         this.comparador = comparador;
@@ -57,7 +64,8 @@ public class Heap<T extends Comparable<T>> {
     /*
      * la complejidad de eliminar primero nos queda en O(Log(n))
      * pues en principio tenemos unicamente OE hasta el siftDown que toma
-     * complejidad O(log(n)), que igual que antes toma esa complejidad si tiene que recorrer todo el arbol
+     * complejidad O(log(n)), que igual que antes toma esa complejidad si tiene que
+     * recorrer todo el arbol
      */
 
     public T eliminarPrimero() {
