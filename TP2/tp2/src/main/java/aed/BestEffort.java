@@ -40,16 +40,16 @@ public class BestEffort {
 
     // atributos para traslados/ciudades
     private ArrayList<Ciudad> ciudades;
-    private Heap<Traslado> trasladosRed = new Heap(compararPorGanancia);
-    private Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
+    public Heap<Traslado> trasladosRed = new Heap(compararPorGanancia);
+    public Heap<Traslado> trasladosAnt = new Heap(compararPorTiempo);
 
     // atributos para control de estadisticas
     private Estadisticas estadisticas = new Estadisticas(compararPorSuperavit);
 
 
     // atributos para promedio
-    private int gananciaTotal = 0;
-    private int contadorParaPromedio = 0;
+    public int gananciaTotal = 0;
+    public int contadorParaPromedio = 0;
 
     /*
      * 

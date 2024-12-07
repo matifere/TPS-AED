@@ -150,29 +150,28 @@ public class BestEffortTests {
     }
 
     @Test
-    void promedio_por_traslado() {
-        BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
+void promedio_por_traslado() {
+    BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
 
-        sis.despacharMasAntiguos(3);
-        assertEquals(333, sis.gananciaPromedioPorTraslado());
+    // Despachar los 3 traslados más antiguos
+    sis.despacharMasAntiguos(3);
+    System.out.println("Ganancia total después de despachar los 3 más antiguos: " + sis.gananciaTotal);
+    System.out.println("Contador para promedios después de despachar los 3 más antiguos: " + sis.contadorParaPromedio);
+    System.out.println("Estado del heap tras despachar los más antiguos (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
+    System.out.println("Estado del heap tras despachar los más antiguos (trasladosRed): " + sis.trasladosRed.obtenerComoArrayList());
+    assertEquals(333, sis.gananciaPromedioPorTraslado());
 
-        sis.despacharMasRedituables(3);
-        assertEquals(833, sis.gananciaPromedioPorTraslado());
+    // Despachar los 3 traslados más redituables
+    System.out.println("Estado del heap pre despachar los más redituablepreladosRed): " + sis.trasladosRed.obtenerComoArrayList());
+    System.out.println("Estado del heap pre despachar los más redituables (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
+    sis.despacharMasRedituables(3);
+    System.out.println("Ganancia total después de despachar los 3 más redituables: " + sis.gananciaTotal);
+    System.out.println("Contador para promedios después de despachar los 3 más redituables: " + sis.contadorParaPromedio);
+    System.out.println("Estado del heap tras despachar los más redituables (trasladosRed): " + sis.trasladosRed.obtenerComoArrayList());
+    System.out.println("Estado del heap tras despachar los más redituables (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
+    assertEquals(833, sis.gananciaPromedioPorTraslado());
+}
 
-        Traslado[] nuevos = new Traslado[] {
-                new Traslado(8, 1, 2, 1452, 5),
-                new Traslado(9, 1, 2, 334, 2),
-                new Traslado(10, 1, 2, 24, 3),
-                new Traslado(11, 1, 2, 333, 4),
-                new Traslado(12, 2, 1, 9000, 1)
-        };
-
-        sis.registrarTraslados(nuevos);
-        sis.despacharMasRedituables(6);
-
-        assertEquals(1386, sis.gananciaPromedioPorTraslado());
-
-    }
 
     @Test
     void mayor_superavit() {

@@ -33,4 +33,9 @@ public class Traslado implements Comparable<Traslado> {
     public int compareTo(Traslado otro) {
         return Integer.compare(this.gananciaNeta, otro.gananciaNeta);
     }
+
+    @Override
+    public String toString() {
+        return "Traslado{id=" + id + ", origen=" + origen + ", destino=" + destino + ", ganancia=" + gananciaNeta + ", timestamp=" + timestamp + "}";
+    }
 }
