@@ -111,7 +111,7 @@ public class BestEffortTests {
 
         sis.despacharMasRedituables(3);
         sis.despacharMasAntiguos(3);
-        
+
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         System.err.println(sis.ciudadesConMayorPerdida());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
@@ -150,28 +150,48 @@ public class BestEffortTests {
     }
 
     @Test
-void promedio_por_traslado() {
-    BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
+    void promedio_por_traslado() {
+        BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
 
-    // Despachar los 3 traslados más antiguos
-    sis.despacharMasAntiguos(3);
-    System.out.println("Ganancia total después de despachar los 3 más antiguos: " + sis.gananciaTotal);
-    System.out.println("Contador para promedios después de despachar los 3 más antiguos: " + sis.contadorParaPromedio);
-    System.out.println("Estado del heap tras despachar los más antiguos (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
-    System.out.println("Estado del heap tras despachar los más antiguos (trasladosRed): " + sis.trasladosRed.obtenerComoArrayList());
-    assertEquals(333, sis.gananciaPromedioPorTraslado());
+        // Despachar los 3 traslados más antiguos
+        sis.despacharMasAntiguos(3);
+        System.out.println("Ganancia total después de despachar los 3 más antiguos: " + sis.gananciaTotal);
+        System.out.println(
+                "Contador para promedios después de despachar los 3 más antiguos: " + sis.contadorParaPromedio);
+        System.out.println("Estado del heap tras despachar los más antiguos (trasladosAnt): "
+                + sis.trasladosAnt.obtenerComoArrayList());
+        System.out.println("Estado del heap tras despachar los más antiguos (trasladosRed): "
+                + sis.trasladosRed.obtenerComoArrayList());
+        assertEquals(333, sis.gananciaPromedioPorTraslado());
 
-    // Despachar los 3 traslados más redituables
-    System.out.println("Estado del heap pre despachar los más redituablepreladosRed): " + sis.trasladosRed.obtenerComoArrayList());
-    System.out.println("Estado del heap pre despachar los más redituables (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
-    sis.despacharMasRedituables(3);
-    System.out.println("Ganancia total después de despachar los 3 más redituables: " + sis.gananciaTotal);
-    System.out.println("Contador para promedios después de despachar los 3 más redituables: " + sis.contadorParaPromedio);
-    System.out.println("Estado del heap tras despachar los más redituables (trasladosRed): " + sis.trasladosRed.obtenerComoArrayList());
-    System.out.println("Estado del heap tras despachar los más redituables (trasladosAnt): " + sis.trasladosAnt.obtenerComoArrayList());
-    assertEquals(833, sis.gananciaPromedioPorTraslado());
-}
+        // Despachar los 3 traslados más redituables
+        System.out.println("Estado del heap pre despachar los más redituablepreladosRed): "
+                + sis.trasladosRed.obtenerComoArrayList());
+        System.out.println("Estado del heap pre despachar los más redituables (trasladosAnt): "
+                + sis.trasladosAnt.obtenerComoArrayList());
+        sis.despacharMasRedituables(3);
+        System.out.println("Ganancia total después de despachar los 3 más redituables: " + sis.gananciaTotal);
+        System.out.println(
+                "Contador para promedios después de despachar los 3 más redituables: " + sis.contadorParaPromedio);
+        System.out.println("Estado del heap tras despachar los más redituables (trasladosRed): "
+                + sis.trasladosRed.obtenerComoArrayList());
+        System.out.println("Estado del heap tras despachar los más redituables (trasladosAnt): "
+                + sis.trasladosAnt.obtenerComoArrayList());
+        assertEquals(833, sis.gananciaPromedioPorTraslado());
+        Traslado[] nuevos = new Traslado[] {
+                new Traslado(8, 1, 2, 1452, 5),
+                new Traslado(9, 1, 2, 334, 2),
+                new Traslado(10, 1, 2, 24, 3),
+                new Traslado(11, 1, 2, 333, 4),
+                new Traslado(12, 2, 1, 9000, 1)
+        };
 
+        sis.registrarTraslados(nuevos);
+        sis.despacharMasRedituables(6);
+
+        assertEquals(1386, sis.gananciaPromedioPorTraslado());
+
+    }
 
     @Test
     void mayor_superavit() {
@@ -211,8 +231,6 @@ void promedio_por_traslado() {
      * TRASLADOS
      * 
      */
-
- 
 
     @Test
     void ciudades_sin_traslados() {
@@ -256,13 +274,13 @@ void promedio_por_traslado() {
         }
     };
 
-    Comparador<Integer> compararPorMayor= new Comparador<Integer>() {
+    Comparador<Integer> compararPorMayor = new Comparador<Integer>() {
         @Override
         public int comparar(Integer t1, Integer t2) {
             return Integer.compare(t1, t2);
         }
     };
-    Comparador<Integer> compararPorMenor= new Comparador<Integer>() {
+    Comparador<Integer> compararPorMenor = new Comparador<Integer>() {
         @Override
         public int comparar(Integer t1, Integer t2) {
             return -Integer.compare(t1, t2);
@@ -272,8 +290,8 @@ void promedio_por_traslado() {
     @Test
     void comportamiento_multiples_Heaps() {
         Heap conjuntoMayor = new Heap<>(compararPorMayor);
-        Heap conjuntoMenor =new Heap<>(compararPorMenor);
-        Integer[] nuevo = new Integer[10]; 
+        Heap conjuntoMenor = new Heap<>(compararPorMenor);
+        Integer[] nuevo = new Integer[10];
         for (int i = 0; i < nuevo.length; i++) {
             nuevo[i] = i;
         }
@@ -287,8 +305,6 @@ void promedio_por_traslado() {
 
         conjuntoMenor.eliminarPrimero();
         assertEquals(9, conjuntoMayor.cardinal());
-
-        
 
     }
 
@@ -372,36 +388,33 @@ void promedio_por_traslado() {
     }
 
     @Test
-void stress_test() {
-    int cantCiudades = 100;
-    int cantidadTraslados = 100000;
+    void stress_test() {
+        int cantCiudades = 100;
+        int cantidadTraslados = 100000;
 
-    Traslado[] stressTraslados = new Traslado[cantidadTraslados];
+        Traslado[] stressTraslados = new Traslado[cantidadTraslados];
 
-    for (int id = 1; id <= cantidadTraslados; id++) {
-        int origen = (id - 1) % cantCiudades;
-        int destino = id % cantCiudades;
-        if (origen == destino) {
-            destino = (destino + 1) % cantCiudades;
+        for (int id = 1; id <= cantidadTraslados; id++) {
+            int origen = (id - 1) % cantCiudades;
+            int destino = id % cantCiudades;
+            if (origen == destino) {
+                destino = (destino + 1) % cantCiudades;
+            }
+            int gananciaNeta = id;
+            int tiempo = id;
+
+            stressTraslados[id - 1] = new Traslado(id, origen, destino, gananciaNeta, tiempo);
         }
-        int gananciaNeta = id;
-        int tiempo = id;
 
-        stressTraslados[id - 1] = new Traslado(id, origen, destino, gananciaNeta, tiempo);
+        BestEffort sis = new BestEffort(cantCiudades, stressTraslados);
+
+        sis.despacharMasRedituables(50000);
+        assertTrue(sis.gananciaPromedioPorTraslado() > 0);
+
+        sis.despacharMasAntiguos(30000);
+        assertTrue(sis.gananciaPromedioPorTraslado() > 0);
+
+        assertTrue(sis.ciudadesConMayorGanancia().contains(99));
     }
-
-    BestEffort sis = new BestEffort(cantCiudades, stressTraslados);
-
-    
-
-    sis.despacharMasRedituables(50000);
-    assertTrue(sis.gananciaPromedioPorTraslado() > 0);
-
-    sis.despacharMasAntiguos(30000);
-    assertTrue(sis.gananciaPromedioPorTraslado() > 0);
-
-    assertTrue(sis.ciudadesConMayorGanancia().contains(99));
-}
-
 
 }
