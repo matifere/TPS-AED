@@ -42,7 +42,7 @@ public class Estadisticas {
             ciudadMayorGanancia.clear();
             ciudadMayorGanancia.add(ciudadCheck.idCiudad());
         } else if (ciudadCheck.GananciaCiudad() == valorMaxActual) {
-            if (!ciudadMayorGanancia.contains(ciudadCheck.idCiudad())) {
+            if (ciudadMayorGanancia.get(ciudadMayorGanancia.size()-1) != ciudadCheck.idCiudad()) {
                 ciudadMayorGanancia.add(ciudadCheck.idCiudad());
             }
         }
@@ -63,7 +63,7 @@ public class Estadisticas {
             ciudadMayorPerdida.clear();
             ciudadMayorPerdida.add(ciudadCheck.idCiudad());
         } else if (ciudadCheck.PerdidaCiudad() == valorMaxActual) {
-            if (!ciudadMayorPerdida.contains(ciudadCheck.idCiudad())) {
+            if (ciudadMayorPerdida.get(ciudadMayorPerdida.size() - 1) != ciudadCheck.idCiudad()) {
                 ciudadMayorPerdida.add(ciudadCheck.idCiudad());
             }
         }
