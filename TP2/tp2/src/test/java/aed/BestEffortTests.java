@@ -111,9 +111,9 @@ public class BestEffortTests {
 
         sis.despacharMasRedituables(3);
         sis.despacharMasAntiguos(3);
+        System.err.println(sis.ciudadesConMayorGanancia());
 
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
-        System.err.println(sis.ciudadesConMayorPerdida());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasAntiguos(1);
@@ -305,6 +305,14 @@ public class BestEffortTests {
 
         conjuntoMenor.eliminarPrimero();
         assertEquals(9, conjuntoMayor.cardinal());
+        assertEquals(8, conjuntoMayor.obtenerMaximo());
+        assertEquals(1, conjuntoMenor.obtenerMaximo());
+        for (int i = 0; i < conjuntoMayor.cardinal()-1; i++) {
+            conjuntoMenor.eliminarPrimero();
+        }
+        assertEquals(conjuntoMenor.cardinal(), conjuntoMayor.cardinal());
+        assertEquals(conjuntoMayor.obtenerMaximo(), 8);
+        assertEquals(conjuntoMenor.obtenerMaximo(), 8);
 
     }
 
