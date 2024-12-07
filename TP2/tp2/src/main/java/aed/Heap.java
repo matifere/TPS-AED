@@ -36,7 +36,7 @@ public class Heap<T extends Comparable<T>> {
         return 2 * indice + 2;
     }
 
-    // Clase auxiliar para almacenar el valor y el índice en el otro heap
+    // Clase auxiliar para almacenar el valor y el indice en el otro heap
     private static class NodoHeap<T> {
         T valor;
         int indiceEnConectado;
