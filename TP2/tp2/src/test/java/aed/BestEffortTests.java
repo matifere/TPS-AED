@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -287,6 +288,84 @@ public class BestEffortTests {
         }
     };
 
+    // tests nuevos en base a los problemas que trae conectar heaps
+    @Test
+    void testCambiar() {
+        Heap<Integer> heap = new Heap<>(compararPorMenor);
+        Integer[] valores = { 10, 20, 30 };
+
+        for (Integer valor : valores) {
+            heap.insertar(new Integer[] { valor });
+        }
+
+        heap.cambiar(0, 1); // Intercambiamos los nodos en las posiciones 0 y 1
+
+        ArrayList<Integer> resultado = heap.obtenerComoArrayList();
+        assertEquals(20, resultado.get(0)); // Verificamos que el nuevo valor en la raíz es 20
+        assertEquals(10, resultado.get(1)); // Verificamos que el segundo valor es 10
+        assertEquals(30, resultado.get(2)); // Verificamos que el tercer valor no cambió
+    }
+
+
+
+    @Test
+    void siftUp_debe_mantener_propiedad_del_heap() {
+        Heap<Integer> heap = new Heap<>(compararPorMayor);
+        Integer[] elementos = { 10, 5, 20 };
+        heap.insertar(elementos);
+
+        ArrayList<Integer> esperado = new ArrayList<>(List.of(20, 5, 10)); // 20 debería estar en la raíz
+        assertEquals(esperado, heap.obtenerComoArrayList());
+    }
+
+    @Test
+    void siftDown_debe_mantener_propiedad_del_heap() {
+        Heap<Integer> heap = new Heap<>(compararPorMayor);
+        Integer[] elementos = { 30, 20, 10 };
+        heap.insertar(elementos);
+
+        heap.eliminarPrimero(); // Elimina 30
+        ArrayList<Integer> esperado = new ArrayList<>(List.of(20, 10)); // 20 debería estar en la raíz
+        assertEquals(esperado, heap.obtenerComoArrayList());
+    }
+
+    @Test
+    void conectarHeap_debe_sincronizar_dos_heaps() {
+        Heap<Integer> heapMayor = new Heap<>(compararPorMayor);
+        Heap<Integer> heapMenor = new Heap<>(compararPorMenor);
+
+        heapMayor.conectarHeap(heapMenor);
+        heapMenor.conectarHeap(heapMayor);
+
+        Integer[] elementos = { 10, 20, 30 };
+        heapMayor.insertar(elementos);
+
+        assertEquals(3, heapMayor.cardinal());
+        assertEquals(3, heapMenor.cardinal());
+
+        assertEquals(30, heapMayor.obtenerMaximo());
+        assertEquals(10, heapMenor.obtenerMaximo());
+    }
+
+    @Test
+    void eliminarPrimero_debe_actualizar_heaps_conectados() {
+        Heap<Integer> heapMayor = new Heap<>(compararPorMayor);
+        Heap<Integer> heapMenor = new Heap<>(compararPorMenor);
+
+        heapMayor.conectarHeap(heapMenor);
+        heapMenor.conectarHeap(heapMayor);
+
+        Integer[] elementos = { 10, 20, 30 };
+        heapMayor.insertar(elementos);
+
+        heapMayor.eliminarPrimero(); // Elimina 30
+        assertEquals(2, heapMayor.cardinal());
+        assertEquals(2, heapMenor.cardinal());
+
+        assertEquals(20, heapMayor.obtenerMaximo());
+        assertEquals(10, heapMenor.obtenerMaximo());
+    }
+
     @Test
     void comportamiento_multiples_Heaps() {
         Heap conjuntoMayor = new Heap<>(compararPorMayor);
@@ -302,17 +381,26 @@ public class BestEffortTests {
         conjuntoMayor.insertar(nuevo);
         assertEquals(10, conjuntoMayor.cardinal());
         assertEquals(10, conjuntoMenor.cardinal());
+        System.err.println(conjuntoMenor.obtenerComoArrayList().toString());
+        System.err.println(conjuntoMayor.obtenerComoArrayList().toString());
 
-        conjuntoMenor.eliminarPrimero();
+        System.err.println(conjuntoMenor.eliminarPrimero());
+
+        System.err.println(conjuntoMenor.obtenerComoArrayList().toString());
+        System.err.println(conjuntoMayor.obtenerComoArrayList().toString());
         assertEquals(9, conjuntoMayor.cardinal());
-        assertEquals(8, conjuntoMayor.obtenerMaximo());
+        assertEquals(9, conjuntoMayor.obtenerMaximo());
         assertEquals(1, conjuntoMenor.obtenerMaximo());
-        for (int i = 0; i < conjuntoMayor.cardinal()-1; i++) {
-            conjuntoMenor.eliminarPrimero();
+        for (int i = 0; i < 8; i++) {
+            System.err.println(conjuntoMenor.eliminarPrimero());
+
+            System.err.println(conjuntoMenor.obtenerComoArrayList().toString());
+            System.err.println(conjuntoMayor.obtenerComoArrayList().toString());
+
         }
         assertEquals(conjuntoMenor.cardinal(), conjuntoMayor.cardinal());
-        assertEquals(conjuntoMayor.obtenerMaximo(), 8);
-        assertEquals(conjuntoMenor.obtenerMaximo(), 8);
+        assertEquals(9, conjuntoMayor.obtenerMaximo());
+        assertEquals(9, conjuntoMenor.obtenerMaximo());
 
     }
 

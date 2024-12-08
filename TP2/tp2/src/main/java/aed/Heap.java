@@ -8,7 +8,7 @@ public class Heap<T extends Comparable<T>> {
     private Heap<T> otroHeap; // atributo para mantener heaps conectados
 
     public Heap(Comparador<T> comparador) {
-        this.heap = new ArrayList<>();
+        this.heap = new ArrayList<NodoHeap<T>>();
         this.comparador = comparador;
         this.otroHeap = null;
     }
@@ -43,25 +43,37 @@ public class Heap<T extends Comparable<T>> {
 
         NodoHeap(T valor) {
             this.valor = valor;
-            this.indiceEnConectado = 0; 
+            this.indiceEnConectado = 0;
         }
     }
 
-    private void cambiar(int i, int j) {
-        NodoHeap<T> temp = heap.get(i);
-        heap.set(i, heap.get(j));
-        heap.set(j, temp);
+    public void cambiar(int i, int j) {
+        if (i == j)
+            return; 
+    
+        NodoHeap<T> nodoI = heap.get(i);
+        NodoHeap<T> nodoJ = heap.get(j);
+        heap.set(i, nodoJ);
+        heap.set(j, nodoI);
+    
 
-        // Si el heap está conectado actualizamos el indice del otroheap
+        nodoI.indiceEnConectado = i;
+        nodoJ.indiceEnConectado = j;
+
         if (otroHeap != null) {
-            if (heap.get(i).indiceEnConectado < otroHeap.heap.size()) {
-                otroHeap.heap.get(heap.get(i).indiceEnConectado).indiceEnConectado = i;
+            if (nodoI.indiceEnConectado < otroHeap.heap.size()) {
+                NodoHeap<T> nodoConectadoI = otroHeap.heap.get(nodoI.indiceEnConectado);
+                nodoConectadoI.indiceEnConectado = j;
             }
-            if (heap.get(j).indiceEnConectado < otroHeap.heap.size()) {
-                otroHeap.heap.get(heap.get(j).indiceEnConectado).indiceEnConectado = j;
+    
+            if (nodoJ.indiceEnConectado < otroHeap.heap.size()) {
+                NodoHeap<T> nodoConectadoJ = otroHeap.heap.get(nodoJ.indiceEnConectado);
+                nodoConectadoJ.indiceEnConectado = i;
             }
         }
     }
+    
+    
 
     /*
      * sobre la complejidad de insertar:
@@ -79,7 +91,7 @@ public class Heap<T extends Comparable<T>> {
             NodoHeap<T> nodo = new NodoHeap<>(traslado);
             heap.add(nodo);
             siftUp(heap.size() - 1);
-    
+
             if (otroHeap != null) {
                 NodoHeap<T> nodoConectado = new NodoHeap<>(traslado);
                 otroHeap.heap.add(nodoConectado);
@@ -90,7 +102,6 @@ public class Heap<T extends Comparable<T>> {
             }
         }
     }
-    
 
     /*
      * la complejidad de eliminar primero nos queda en O(Log(n))
@@ -100,37 +111,40 @@ public class Heap<T extends Comparable<T>> {
      */
 
      public T eliminarPrimero() {
-    if (heap.isEmpty()) return null;
+        if (heap.isEmpty())
+            return null;
+    
+        NodoHeap<T> nodo = heap.get(0);
+        T valor = nodo.valor;
+    
+        NodoHeap<T> ultimo = heap.remove(heap.size() - 1);
+        if (!heap.isEmpty()) {
+            heap.set(0, ultimo);
+            siftDown(0);
+        }
+    
+        if (otroHeap != null) {
 
-    NodoHeap<T> nodo = heap.get(0);
-    T valor = nodo.valor;
-    NodoHeap<T> ultimo = heap.remove(heap.size() - 1);
-
-    if (!heap.isEmpty()) {
-        heap.set(0, ultimo);
-        siftDown(0);
-    }
-
-    if (otroHeap != null) {
-        int indiceEnConectado = nodo.indiceEnConectado;
-        if (indiceEnConectado < otroHeap.heap.size()) {
-            NodoHeap<T> nodoConectado = otroHeap.heap.get(indiceEnConectado);
-            if (indiceEnConectado < otroHeap.heap.size()) {
-                NodoHeap<T> ultimoConectado = otroHeap.heap.remove(otroHeap.heap.size() - 1);
-
-                if (indiceEnConectado < otroHeap.heap.size()) {
-                    otroHeap.heap.set(indiceEnConectado, ultimoConectado);
-                    ultimoConectado.indiceEnConectado = indiceEnConectado;
-                    otroHeap.siftDown(indiceEnConectado);
-                    otroHeap.siftUp(indiceEnConectado);
+            //aca estamos buscando el valor y eso esta mal, hay que agarrarlo de una para que nos quede bien la complejidad
+            for (int i = 0; i < otroHeap.heap.size(); i++) {
+                if (otroHeap.heap.get(i).valor.equals(valor)) {
+                    NodoHeap<T> nodoConectado = otroHeap.heap.get(i);
+                    NodoHeap<T> ultimoConectado = otroHeap.heap.remove(otroHeap.heap.size() - 1);
+    
+                    if (i < otroHeap.heap.size()) {
+                        otroHeap.heap.set(i, ultimoConectado);
+                        otroHeap.siftDown(i);
+                        otroHeap.siftUp(i);
+                    }
+                    break;
                 }
             }
         }
+    
+        return valor; 
     }
-
-    return valor;
-}
-
+    
+    
     
     
     
