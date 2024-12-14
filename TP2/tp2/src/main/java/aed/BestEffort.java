@@ -80,9 +80,7 @@ public class BestEffort {
         trasladosRed.heapify(trasladosParaHeapify);
         trasladosAnt.heapify(trasladosParaHeapify);
 
-        //cuando se inicia el programa queremos coordinar los heaps redituables y anteriores
-        trasladosRed.conectarHeap(trasladosAnt);
-        trasladosAnt.conectarHeap(trasladosRed);
+        
 
     }
 
