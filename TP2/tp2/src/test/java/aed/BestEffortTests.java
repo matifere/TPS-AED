@@ -420,4 +420,12 @@ public class BestEffortTests {
         
     }
 
+
+    @Test
+    void imprimir(){
+        Heap<Integer> heap = new Heap<>(compararPorMayor);
+        
+
+        System.err.println(heap.toString());
+    }
 }

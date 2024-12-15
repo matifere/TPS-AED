@@ -57,7 +57,8 @@ public class Heap<T extends Comparable<T>> {
     /*
      * la complejidad de eliminar primero nos queda en O(Log(n))
      * pues en principio tenemos unicamente OE hasta el siftDown que toma
-     * complejidad O(log(n)), que igual que antes toma esa complejidad si tiene que recorrer todo el arbol
+     * complejidad O(log(n)), que igual que antes toma esa complejidad si tiene que
+     * recorrer todo el arbol
      */
 
     public T eliminarPrimero() {
@@ -72,17 +73,16 @@ public class Heap<T extends Comparable<T>> {
     }
 
     public void eliminarPorIndice(int indice) {
-        
+
         heap.set(indice, heap.get(heap.size() - 1));
         heap.remove(heap.size() - 1);
-    
+
         if (indice > 0 && comparador.comparar(heap.get(indice), heap.get(obtenerPadre(indice))) > 0) {
             siftUp(indice);
         } else {
             siftDown(indice);
         }
     }
-    
 
     private void siftUp(int indice) {
 
@@ -146,6 +146,11 @@ public class Heap<T extends Comparable<T>> {
         for (int i = ultimoNodo; i >= 0; i--) {
             siftDown(i);
         }
+    }
+
+    @Override
+    public String toString() {
+        return heap.toString();
     }
 
 }
