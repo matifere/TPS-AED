@@ -51,7 +51,11 @@ public class Heap<T extends Comparable<T>> {
         for (T traslado : traslados) {
             heap.add(traslado);
             siftUp(heap.size() - 1);
+            if(traslado instanceof Traslado){
+                
+            }
         }
+        
     }
 
     /*
@@ -151,6 +155,7 @@ public class Heap<T extends Comparable<T>> {
     @Override
     public String toString() {
         return heap.toString();
+        
     }
 
 }
