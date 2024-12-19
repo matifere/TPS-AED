@@ -109,10 +109,11 @@ public class BestEffortTests {
     @Test
     void despachar_mixtos() {
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
+        
 
         sis.despacharMasRedituables(3);
         sis.despacharMasAntiguos(3);
-        System.err.println(sis.ciudadesConMayorGanancia());
+       
 
         assertSetEquals(new ArrayList<>(Arrays.asList(1, 6)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(3)), sis.ciudadesConMayorPerdida());
@@ -144,7 +145,6 @@ public class BestEffortTests {
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorPerdida());
 
         sis.despacharMasRedituables(1);
-        System.err.println(sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(0)), sis.ciudadesConMayorGanancia());
         assertSetEquals(new ArrayList<>(Arrays.asList(1)), sis.ciudadesConMayorPerdida());
 
@@ -410,31 +410,5 @@ public class BestEffortTests {
     }
 
 
-    @Test
-    void imprimir(){
-        Traslado[] traslados = new Traslado[5];
-        traslados[0] = new Traslado(0, 0, 1, 100, 25);
-        traslados[1] = new Traslado(1, 0, 1, 99, 27);
-        traslados[2] = new Traslado(2, 0, 1, 98, 26);
-        traslados[3] = new Traslado(3, 0, 1, 97, 24);
-        traslados[4] = new Traslado(4, 0, 1, 96, 23);
-
-        Heap<Traslado> heapRed = new Heap<>(compararPorGanancia);
-        Heap<Traslado> heapAnt = new Heap<>(compararPorTiempo);
-        heapRed.insertar(traslados);
-        
-
-        System.out.println(heapRed.toString());
-        System.out.println("FIN");
-        heapAnt.insertar(traslados);
-        System.out.println(heapAnt.toString());
-
-        //elimino el primer red  y lo saco del otro heap
-        heapRed.eliminarPorIndice(heapAnt.eliminarPrimero().indiceRed);
-        System.out.println("---------------");
-        System.out.println(heapRed.toString());
-        System.out.println(heapAnt.toString());
-
-
-    }
+    
 }

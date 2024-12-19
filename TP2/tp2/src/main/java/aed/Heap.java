@@ -35,12 +35,11 @@ public class Heap<T extends Comparable<T>> {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
 
-        
         if (heap.get(i) instanceof Traslado) {
             Traslado trasladoI = (Traslado) heap.get(i);
             Traslado trasladoJ = (Traslado) heap.get(j);
 
-            if (comparador.toString().contains("Ganancia")) { 
+            if (comparador.toString().contains("Ganancia")) {
                 trasladoI.RedCambiarIndice(i);
                 trasladoJ.RedCambiarIndice(j);
 
@@ -101,16 +100,6 @@ public class Heap<T extends Comparable<T>> {
 
         siftDown(0);
 
-        if (max instanceof Traslado) {
-            Traslado traslado = (Traslado) max;
-            if (comparador.toString().contains("Ganancia")) {
-                traslado.RedCambiarIndice(0); // esto no es super necesario pero lo pongo por las dudas, indica que no
-                                               // esta en el heap
-            } else {
-                traslado.AntCambiarIndice(0);
-            }
-        }
-
         actualizarIndicesParciales(0);
 
         return max;
@@ -153,7 +142,7 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    // esto esta armado como un min
+    
     void siftDown(int indice) {
         int tamaño = this.cardinal();
         while (true) {
@@ -226,14 +215,27 @@ public class Heap<T extends Comparable<T>> {
         return new ArrayList<>(heap);
     }
 
-    // vamos a usar esto para reescribir los traslados entre heaps, como tiene una
-    // complejidad O(n) que es menor a (O(n(log(T) + log(C)))), no nos va a afeactar
-    // en la complejidad
+    // la funion heapify contiene una complejidad O(n) por mas que se actualizen los
+    // indices de los traslados, ya que la actualizacion contiene una complejidad de
+    // O(log(n)) que es menor a O(n)
     public void heapify(ArrayList<T> arrayAheap) {
-
         this.heap = new ArrayList<>(arrayAheap);
 
         int ultimoNodo = (heap.size() - 2) / 2;
+
+        
+        for (int i = 0; i < heap.size(); i++) {
+            if (heap.get(i) instanceof Traslado) {
+                Traslado traslado = (Traslado) heap.get(i);
+                if (comparador.toString().contains("Ganancia")) {
+                    traslado.RedCambiarIndice(i);
+                } else {
+                    traslado.AntCambiarIndice(i);
+                }
+            }
+        }
+
+        
         for (int i = ultimoNodo; i >= 0; i--) {
             siftDown(i);
         }
