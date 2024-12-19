@@ -21,7 +21,6 @@ public class Traslado implements Comparable<Traslado> {
 
     }
 
-
     public int devolverID() {
         return id;
     }
@@ -43,19 +42,22 @@ public class Traslado implements Comparable<Traslado> {
     @Override
     public String toString() {
         return "Traslado{id=" + id + ", origen=" + origen + ", destino=" + destino + ", ganancia=" + gananciaNeta
-                + ", timestamp=" + timestamp + "}";
+                + ", timestamp=" + timestamp + ", indiceAnt= " + indiceAnt + ", indeceRed=" + indiceRed + "}";
     }
 
-    public void RedCambiarIndice( int nuevoIndice){
+    public void RedCambiarIndice(int nuevoIndice) {
         indiceRed = nuevoIndice;
     }
-    public int RedObtener(){
+
+    public int RedObtener() {
         return indiceRed;
     }
-    public void AntCambiarIndice( int nuevoIndice){
+
+    public void AntCambiarIndice(int nuevoIndice) {
         indiceAnt = nuevoIndice;
     }
-    public int AntObtener(){
+
+    public int AntObtener() {
         return indiceAnt;
     }
 }

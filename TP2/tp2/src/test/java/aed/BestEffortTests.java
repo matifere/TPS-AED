@@ -152,32 +152,17 @@ public class BestEffortTests {
 
     @Test
     void promedio_por_traslado() {
+
+        //se eliminaron comentarios al pedo
         BestEffort sis = new BestEffort(this.cantCiudades, this.listaTraslados);
 
         // Despachar los 3 traslados más antiguos
         sis.despacharMasAntiguos(3);
-        System.out.println("Ganancia total después de despachar los 3 más antiguos: " + sis.gananciaTotal);
-        System.out.println(
-                "Contador para promedios después de despachar los 3 más antiguos: " + sis.contadorParaPromedio);
-        System.out.println("Estado del heap tras despachar los más antiguos (trasladosAnt): "
-                + sis.trasladosAnt.obtenerComoArrayList());
-        System.out.println("Estado del heap tras despachar los más antiguos (trasladosRed): "
-                + sis.trasladosRed.obtenerComoArrayList());
         assertEquals(333, sis.gananciaPromedioPorTraslado());
 
         // Despachar los 3 traslados más redituables
-        System.out.println("Estado del heap pre despachar los más redituablepreladosRed): "
-                + sis.trasladosRed.obtenerComoArrayList());
-        System.out.println("Estado del heap pre despachar los más redituables (trasladosAnt): "
-                + sis.trasladosAnt.obtenerComoArrayList());
         sis.despacharMasRedituables(3);
-        System.out.println("Ganancia total después de despachar los 3 más redituables: " + sis.gananciaTotal);
-        System.out.println(
-                "Contador para promedios después de despachar los 3 más redituables: " + sis.contadorParaPromedio);
-        System.out.println("Estado del heap tras despachar los más redituables (trasladosRed): "
-                + sis.trasladosRed.obtenerComoArrayList());
-        System.out.println("Estado del heap tras despachar los más redituables (trasladosAnt): "
-                + sis.trasladosAnt.obtenerComoArrayList());
+        
         assertEquals(833, sis.gananciaPromedioPorTraslado());
         Traslado[] nuevos = new Traslado[] {
                 new Traslado(8, 1, 2, 1452, 5),
@@ -266,6 +251,10 @@ public class BestEffortTests {
         @Override
         public int comparar(Traslado t1, Traslado t2) {
             return t1.obtenerGananciaNeta() - t2.obtenerGananciaNeta();
+        }
+        @Override
+        public String toString(){
+            return "Ganancia";
         }
     };
     Comparador<Traslado> compararPorTiempo = new Comparador<Traslado>() {
@@ -423,9 +412,29 @@ public class BestEffortTests {
 
     @Test
     void imprimir(){
-        Heap<Integer> heap = new Heap<>(compararPorMayor);
+        Traslado[] traslados = new Traslado[5];
+        traslados[0] = new Traslado(0, 0, 1, 100, 25);
+        traslados[1] = new Traslado(1, 0, 1, 99, 27);
+        traslados[2] = new Traslado(2, 0, 1, 98, 26);
+        traslados[3] = new Traslado(3, 0, 1, 97, 24);
+        traslados[4] = new Traslado(4, 0, 1, 96, 23);
+
+        Heap<Traslado> heapRed = new Heap<>(compararPorGanancia);
+        Heap<Traslado> heapAnt = new Heap<>(compararPorTiempo);
+        heapRed.insertar(traslados);
         
 
-        System.err.println(heap.toString());
+        System.out.println(heapRed.toString());
+        System.out.println("FIN");
+        heapAnt.insertar(traslados);
+        System.out.println(heapAnt.toString());
+
+        //elimino el primer red  y lo saco del otro heap
+        heapRed.eliminarPorIndice(heapAnt.eliminarPrimero().indiceRed);
+        System.out.println("---------------");
+        System.out.println(heapRed.toString());
+        System.out.println(heapAnt.toString());
+
+
     }
 }

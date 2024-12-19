@@ -14,6 +14,10 @@ public class BestEffort {
         public int comparar(Traslado t1, Traslado t2) {
             return Integer.compare(t1.obtenerGananciaNeta(), t2.obtenerGananciaNeta());
         }
+        @Override
+        public String toString(){
+            return "Ganancia";
+        }
     };
     Comparador<Traslado> compararPorTiempo = new Comparador<Traslado>() {
         @Override
