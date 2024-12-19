@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class BestEffort {
 
+    // Actualizar índices de los nodos afectados
     /*
      * 
      * COMPARADORES
@@ -14,8 +15,9 @@ public class BestEffort {
         public int comparar(Traslado t1, Traslado t2) {
             return Integer.compare(t1.obtenerGananciaNeta(), t2.obtenerGananciaNeta());
         }
+
         @Override
-        public String toString(){
+        public String toString() {
             return "Ganancia";
         }
     };
@@ -50,7 +52,6 @@ public class BestEffort {
     // atributos para control de estadisticas
     private Estadisticas estadisticas = new Estadisticas(compararPorSuperavit);
 
-
     // atributos para promedio
     public int gananciaTotal = 0;
     public int contadorParaPromedio = 0;
@@ -84,8 +85,6 @@ public class BestEffort {
         trasladosRed.heapify(trasladosParaHeapify);
         trasladosAnt.heapify(trasladosParaHeapify);
 
-        
-
     }
 
     public void registrarTraslados(Traslado[] traslados) {
@@ -97,7 +96,7 @@ public class BestEffort {
          * O(nlog(n))
          */
         trasladosRed.insertar(traslados);
-        //trasladosAnt.insertar(traslados);
+        trasladosAnt.insertar(traslados);
     }
 
     public int[] despacharMasRedituables(int n) {
@@ -125,6 +124,10 @@ public class BestEffort {
         for (int i = 0; i < limiteDespachos; i++) {
 
             Traslado trasladoActual = trasladosRed.eliminarPrimero();
+
+            // eliminar del heapAnt
+            trasladosAnt.eliminarPorIndice(trasladoActual.AntObtener());
+
             devolver[i] = trasladoActual.id;
 
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
@@ -144,15 +147,13 @@ public class BestEffort {
             Ciudad[] ciudadesSuper = new Ciudad[2];
             ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
             ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
-            //ciudadesPorSuper.insertar(ciudadesSuper);
+            // ciudadesPorSuper.insertar(ciudadesSuper);
             estadisticas.insertarCiudadesSuperavit(ciudadesSuper);
             // sumo la ganancia a la ganancia para promedio
             gananciaTotal += trasladoActual.gananciaNeta;
 
         }
 
-        // hacemos que el otro heap tenga los mismos elementos
-        //trasladosAnt.heapify(trasladosRed.obtenerComoArrayList());
         return devolver;
     }
 
@@ -172,8 +173,11 @@ public class BestEffort {
 
         for (int i = 0; i < limiteDespachos; i++) {
             Traslado trasladoActual = trasladosAnt.eliminarPrimero();
+
+            // eliminamos en el otr heap
+            trasladosRed.eliminarPorIndice(trasladoActual.RedObtener());
+
             devolver[i] = trasladoActual.id; // los ordeno de forma creciente
-            
 
             ciudades.get(trasladoActual.origen).agregarGanancia(trasladoActual.gananciaNeta); // toma la ciudad de
                                                                                               // origen y le agrega la
@@ -192,15 +196,14 @@ public class BestEffort {
             Ciudad[] ciudadesSuper = new Ciudad[2];
             ciudadesSuper[0] = ciudades.get(trasladoActual.origen);
             ciudadesSuper[1] = ciudades.get(trasladoActual.destino);
-            //ciudadesPorSuper.insertar(ciudadesSuper);
+            // ciudadesPorSuper.insertar(ciudadesSuper);
             estadisticas.insertarCiudadesSuperavit(ciudadesSuper);
 
             // sumo la ganancia a la ganancia para promedio
             gananciaTotal += trasladoActual.gananciaNeta;
         }
 
-        // hacemos que el otro heap tenga los mismos elementos
-        //trasladosRed.heapify(trasladosAnt.obtenerComoArrayList());
+        
 
         return devolver;
     }

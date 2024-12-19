@@ -35,19 +35,18 @@ public class Heap<T extends Comparable<T>> {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
 
-        // Actualizar índices si los elementos son de tipo Traslado
+        
         if (heap.get(i) instanceof Traslado) {
             Traslado trasladoI = (Traslado) heap.get(i);
             Traslado trasladoJ = (Traslado) heap.get(j);
-            System.err.println("se entro en el instanceof");
-            if (comparador.toString().contains("Ganancia")) { // Si es el heap por ganancia
+
+            if (comparador.toString().contains("Ganancia")) { 
                 trasladoI.RedCambiarIndice(i);
                 trasladoJ.RedCambiarIndice(j);
-                System.err.println("esto esta yendo por ganancia");
+
             } else { // Si es el heap por tiempo
                 trasladoI.AntCambiarIndice(i);
                 trasladoJ.AntCambiarIndice(j);
-                System.err.println("esto esta yendo por tiempo");
 
             }
         }
@@ -72,17 +71,14 @@ public class Heap<T extends Comparable<T>> {
                 Traslado trasladoActual = (Traslado) traslado;
                 if (comparador.toString().contains("Ganancia")) {
                     trasladoActual.RedCambiarIndice(indice);
-                    System.err.println(trasladoActual.RedObtener());
+
                 } else {
                     trasladoActual.AntCambiarIndice(indice);
-                    System.err.println(trasladoActual.AntObtener());
 
                 }
             }
             siftUp(indice);
 
-            // Actualizar el índice final después de su ubicación definitiva
-            
         }
     }
 
@@ -105,17 +101,16 @@ public class Heap<T extends Comparable<T>> {
 
         siftDown(0);
 
-        // Limpiar el índice del elemento eliminado
         if (max instanceof Traslado) {
             Traslado traslado = (Traslado) max;
             if (comparador.toString().contains("Ganancia")) {
-                traslado.RedCambiarIndice(-1); // -1 indica que ya no está en el heap
+                traslado.RedCambiarIndice(0); // esto no es super necesario pero lo pongo por las dudas, indica que no
+                                               // esta en el heap
             } else {
-                traslado.AntCambiarIndice(-1);
+                traslado.AntCambiarIndice(0);
             }
         }
 
-        // Actualizar índices de los nodos afectados
         actualizarIndicesParciales(0);
 
         return max;
@@ -133,7 +128,6 @@ public class Heap<T extends Comparable<T>> {
                 siftDown(indice);
             }
 
-            // Actualizar índices solo de los nodos afectados
             actualizarIndicesParciales(indice);
         }
     }
@@ -149,7 +143,6 @@ public class Heap<T extends Comparable<T>> {
             }
         }
 
-        // Actualizar el índice final después de su ubicación definitiva
         if (heap.get(indice) instanceof Traslado) {
             Traslado traslado = (Traslado) heap.get(indice);
             if (comparador.toString().contains("Ganancia")) {
@@ -185,8 +178,16 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
+    /*
+     * sobre la siguiente funcion:
+     * como sabemos que cuando eliminamos un elemento o lo insertamos esto NO afecta
+     * a todos los elementos del heap, si no que solamente a la rama del arbol en la
+     * que nos encontramos, podemos usar eso para obtener una funcion con
+     * complejidad O(log(n)) que ordene los indices del heap.
+     */
+
     private void actualizarIndicesParciales(int indice) {
-        // Recorrer los nodos afectados a partir del índice dado
+
         while (indice < heap.size()) {
             T elemento = heap.get(indice);
             if (elemento instanceof Traslado) {
@@ -198,17 +199,15 @@ public class Heap<T extends Comparable<T>> {
                 }
             }
 
-            // Continuar con los hijos afectados
             int hijoIzq = obtenerHijoIzq(indice);
             int hijoDer = obtenerHijoDerecho(indice);
 
-            // Determinar el próximo nodo a procesar (siempre en la rama activa)
             if (hijoIzq < heap.size() && comparador.comparar(heap.get(hijoIzq), heap.get(indice)) > 0) {
                 indice = hijoIzq;
             } else if (hijoDer < heap.size() && comparador.comparar(heap.get(hijoDer), heap.get(indice)) > 0) {
                 indice = hijoDer;
             } else {
-                break; // No hay más hijos que procesar
+                break;
             }
         }
     }
@@ -240,9 +239,11 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
+    // funcion para debug
+
     @Override
     public String toString() {
-        String finalString  = new String();
+        String finalString = new String();
         finalString = "[";
         if (heap.get(0) instanceof Traslado) {
             for (int indice = 0; indice < heap.size(); indice++) {
