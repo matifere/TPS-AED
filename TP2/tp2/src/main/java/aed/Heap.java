@@ -35,6 +35,8 @@ public class Heap<T extends Comparable<T>> {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
 
+        // se trata de manera distinta a los heaps traslados, guardando/cambiando sus
+        // indices segun corresponda
         if (heap.get(i) instanceof Traslado) {
             Traslado trasladoI = (Traslado) heap.get(i);
             Traslado trasladoJ = (Traslado) heap.get(j);
@@ -43,7 +45,7 @@ public class Heap<T extends Comparable<T>> {
                 trasladoI.RedCambiarIndice(i);
                 trasladoJ.RedCambiarIndice(j);
 
-            } else { // Si es el heap por tiempo
+            } else {
                 trasladoI.AntCambiarIndice(i);
                 trasladoJ.AntCambiarIndice(j);
 
@@ -142,7 +144,6 @@ public class Heap<T extends Comparable<T>> {
         }
     }
 
-    
     void siftDown(int indice) {
         int tamaño = this.cardinal();
         while (true) {
@@ -223,7 +224,6 @@ public class Heap<T extends Comparable<T>> {
 
         int ultimoNodo = (heap.size() - 2) / 2;
 
-        
         for (int i = 0; i < heap.size(); i++) {
             if (heap.get(i) instanceof Traslado) {
                 Traslado traslado = (Traslado) heap.get(i);
@@ -235,7 +235,6 @@ public class Heap<T extends Comparable<T>> {
             }
         }
 
-        
         for (int i = ultimoNodo; i >= 0; i--) {
             siftDown(i);
         }

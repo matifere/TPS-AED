@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class BestEffort {
 
-    // Actualizar índices de los nodos afectados
     /*
      * 
      * COMPARADORES
@@ -111,8 +110,7 @@ public class BestEffort {
          * cabe aclarar que en el medio estamos haciendo operaciones con complejidades
          * menores que no afectan a lo anterior
          * 
-         * TODO
-         * hay que conectar los heaps para no tener que usar heapify
+         
          */
 
         int limiteDespachos = Math.min(n, trasladosRed.cardinal());
